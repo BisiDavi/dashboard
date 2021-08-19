@@ -4,7 +4,7 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import { Divider, Typography } from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
-import { loginFormStyles } from "@styles/Loginform.style";
+import { authFormStyles } from "@styles/Authform.style";
 
 export default function Loginform() {
   const recoveryContent = {
@@ -15,24 +15,25 @@ export default function Loginform() {
     { name: "Create new Account", link: "/auth/register" },
     { name: "Forgot password", link: "/auth/password-recovery" },
   ];
-  const classes = loginFormStyles()
-  
+
+  const classes = authFormStyles();
+
   return (
     <AuthCard content={recoveryContent}>
-      <form>
+      <form className={classes.form}>
         <TextField
           variant="outlined"
           type="email"
           name="email"
+          className={classes.input}
           label="Email Address"
-          placeholder="Email Address"
         />
         <TextField
           variant="outlined"
           name="password"
           type="password"
+          className={classes.input}
           label="Password"
-          placeholder="Password"
         />
         <Button variant="contained">Log In</Button>
         <Alert severity="info">

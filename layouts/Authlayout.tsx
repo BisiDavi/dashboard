@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { PropsWithChildren } from "react";
-import { Container, CssBaseline,Grid } from "@material-ui/core";
+import { Container, CssBaseline, Grid } from "@material-ui/core";
 import Logo from "@components/Logo";
 import { AuthStyles } from "@styles/Authlayout.style";
 
@@ -8,8 +8,7 @@ export default function Authlayout({
   children,
   title,
 }: PropsWithChildren<AuthLayout>) {
-  
-    const classes = AuthStyles();
+  const classes = AuthStyles();
 
   return (
     <>
@@ -17,14 +16,14 @@ export default function Authlayout({
         <title>{title} | Awesome Dashboard</title>
       </Head>
       <CssBaseline />
-      <Container className={classes.container} maxWidth="xl">
-        <Logo />
-        <Grid container>
-          <Grid xs={4} item>
-            {children}
+      <Grid container>
+        <Container className={classes.container} maxWidth="xl">
+          <Grid className={classes.authGrid} item>
+            <Logo />
+            <Grid className={classes.content} item>{children}</Grid>
           </Grid>
-        </Grid>
-      </Container>
+        </Container>
+      </Grid>
     </>
   );
 }

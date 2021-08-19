@@ -1,27 +1,25 @@
 import { PropsWithChildren } from "react";
-import { Card, Typography, Grid } from "@material-ui/core";
+import { Card, Typography } from "@material-ui/core";
 import CardContent from "@material-ui/core/CardContent";
-
-import Logo from "@components/Logo";
+import { authCardStyles } from "@styles/AuthCard.style";
 
 export default function AuthCard({
   content,
   children,
 }: PropsWithChildren<AuthCardProps>) {
+  const classes = authCardStyles();
   return (
-        <Card>
-          <CardContent>
-            <div className="header">
-              <div>
-                <Typography component="h1">{content.title}</Typography>
-                <Typography component="p">{content.text}</Typography>
-              </div>
-              <Logo />
-            </div>
-            <div className="auth-form">{children}</div>
-          </CardContent>
-        </Card>
-     
+    <Card className={classes.card}>
+      <CardContent>
+        <div className={classes.header}>
+          <div>
+            <Typography component="h1">{content.title}</Typography>
+            <Typography component="p">{content.text}</Typography>
+          </div>
+        </div>
+        <div className={classes.authform}>{children}</div>
+      </CardContent>
+    </Card>
   );
 }
 
