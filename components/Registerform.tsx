@@ -1,7 +1,7 @@
 import AuthCard from "@components/AuthCard";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import { Divider, Input, Typography, makeStyles } from "@material-ui/core";
+import { Divider, Checkbox, Typography, makeStyles } from "@material-ui/core";
 
 export default function Registerform() {
   const recoveryContent = {
@@ -26,7 +26,7 @@ export default function Registerform() {
 
         <Button>Register</Button>
         <div>
-          <Input type="checkbox" />{" "}
+          <Checkbox  />{" "}
           <Typography component="p">
             I have read the <a href="#">Terms and Conditions</a>
           </Typography>

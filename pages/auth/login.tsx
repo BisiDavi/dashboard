@@ -1,9 +1,10 @@
 import Loginform from "@components/Loginform";
+import Authlayout from "@layouts/Authlayout";
 
 export default function Login() {
   return (
-    <div>
+    <Authlayout title="Login">
       <Loginform />
-    </div>
+    </Authlayout>
   );
 }

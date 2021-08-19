@@ -8,8 +8,13 @@ export default function Passwordrecoveryform() {
   };
   return (
     <AuthCard content={recoveryContent}>
-      <TextField placeholder="Email Address" />
-      <Button>Recover Password</Button>
+      <TextField
+        name="email"
+        label="Email Address"
+        variant="outlined"
+        placeholder="Email Address"
+      />
+      <Button variant="contained">Recover Password</Button>
     </AuthCard>
   );
 }

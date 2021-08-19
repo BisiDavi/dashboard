@@ -1,14 +1,10 @@
-import { Container, CssBaseline } from "@material-ui/core";
-
 import Passwordrecoveryform from "@components/Passwordrecoveryform";
+import Authlayout from "@layouts/Authlayout";
 
 export default function Passwordrecovery() {
   return (
-    <>
-      <CssBaseline />
-      <Container maxWidth="xl">
-        <Passwordrecoveryform />
-      </Container>
-    </>
+    <Authlayout title="Register">
+      <Passwordrecoveryform />
+    </Authlayout>
   );
 }

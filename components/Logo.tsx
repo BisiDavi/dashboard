@@ -2,8 +2,11 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   logo: {
-    color: "white",
-    fontSize: "18px",
+    "& h1": {
+      color: "black",
+      fontSize: "18px",
+      fontWeight: "bold",
+    },
   },
 });
 export default function Logo() {

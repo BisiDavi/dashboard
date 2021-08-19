@@ -1,9 +1,10 @@
 import Registerform from "@components/Registerform";
+import Authlayout from "@layouts/Authlayout";
 
 export default function Register() {
   return (
-    <div>
+    <Authlayout title="Register">
       <Registerform />
-    </div>
+    </Authlayout>
   );
 }
