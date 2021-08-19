@@ -1,8 +1,9 @@
 import Head from "next/head";
 import { PropsWithChildren } from "react";
-import { Container, CssBaseline, Grid } from "@material-ui/core";
+import { Container, CssBaseline, Grid} from "@material-ui/core";
 import Logo from "@components/Logo";
 import { AuthStyles } from "@styles/Authlayout.style";
+import AuthDrawer from "@components/AuthDrawer";
 
 export default function Authlayout({
   children,
@@ -25,6 +26,7 @@ export default function Authlayout({
             </Grid>
           </Grid>
         </Grid>
+        <AuthDrawer />
       </Container>
     </>
   );

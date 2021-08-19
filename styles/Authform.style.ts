@@ -37,6 +37,7 @@ export const authFormStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
   },
   divider: {
+    marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
   },
   conditions: {

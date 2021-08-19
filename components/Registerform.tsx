@@ -40,7 +40,7 @@ export default function Registerform() {
             I have read the <a href="#">Terms and Conditions</a>
           </Typography>
         </div>
-        <Divider />
+        <Divider className={classes.divider} />
         <Link href="/auth/login" passHref>
           <Typography component="a">Having an account, Login.</Typography>
         </Link>
