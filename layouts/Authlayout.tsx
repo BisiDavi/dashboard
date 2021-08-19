@@ -16,14 +16,16 @@ export default function Authlayout({
         <title>{title} | Awesome Dashboard</title>
       </Head>
       <CssBaseline />
-      <Grid container>
-        <Container className={classes.container} maxWidth="xl">
-          <Grid className={classes.authGrid} item>
+      <Container className={classes.container} maxWidth="xl">
+        <Grid container className={classes.gridContainer}>
+          <Grid className={classes.authGrid} item xs={4}>
             <Logo />
-            <Grid className={classes.content} item>{children}</Grid>
+            <Grid className={classes.content} item>
+              {children}
+            </Grid>
           </Grid>
-        </Container>
-      </Grid>
+        </Grid>
+      </Container>
     </>
   );
 }

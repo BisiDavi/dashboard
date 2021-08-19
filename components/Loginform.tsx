@@ -9,7 +9,7 @@ import { authFormStyles } from "@styles/Authform.style";
 export default function Loginform() {
   const recoveryContent = {
     title: "Log in",
-    text: "Welcome, Log in to access the dashboard",
+    text: "Welcome, log in to access the dashboard",
   };
   const links = [
     { name: "Create new Account", link: "/auth/register" },
@@ -24,6 +24,7 @@ export default function Loginform() {
         <TextField
           variant="outlined"
           type="email"
+          fullWidth
           name="email"
           className={classes.input}
           label="Email Address"
@@ -36,10 +37,10 @@ export default function Loginform() {
           label="Password"
         />
         <Button variant="contained">Log In</Button>
-        <Alert severity="info">
-          You can use admin@dashboard and Password123!
+        <Alert className={classes.alert} severity="info">
+          You can use <b>admin@dashboard</b> and <b>Password123!</b>
         </Alert>
-        <Divider />
+        <Divider className={classes.divider} />
         {links.map((item, index) => (
           <Link href={item.link} key={index} passHref>
             <Typography component="a">{item.name}</Typography>

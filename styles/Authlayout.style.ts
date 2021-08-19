@@ -8,7 +8,7 @@ export const AuthStyles = makeStyles((theme) => ({
     margin: "auto",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "space-evenly",
+    justifyContent: "center",
   },
   "& h1": {
     textAlign: "center",
@@ -16,10 +16,14 @@ export const AuthStyles = makeStyles((theme) => ({
   content: {
     marginTop: theme.spacing(4),
     marginBottom: theme.spacing(4),
+    width: "100%",
   },
   authGrid: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+  },
+  gridContainer: {
+    justifyContent: "center",
   },
 }));

@@ -2,16 +2,24 @@ import { makeStyles } from "@material-ui/core";
 
 export const authCardStyles = makeStyles((theme) => ({
   card: {
-    padding: theme.spacing(4),
+    paddingLeft: theme.spacing(3),
+    paddingRight: theme.spacing(3),
+    width: "100%",
   },
   header: {
     display: "flex",
     alignItems: "center",
+    fontFamily: "Nunito",
     justifyContent: "space-between",
     "& div": {
       flexDirection: "column",
       "& h1": {
-        color: "red",
+        fontSize: theme.spacing(5),
+        lineHeight: theme.spacing(1) * 0.25,
+        fontWeight: "bold",
+      },
+      "& p": {
+        fontSize: theme.spacing(2),
       },
     },
   },
