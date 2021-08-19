@@ -2,6 +2,12 @@ import { makeStyles } from "@material-ui/core";
 
 export const AuthStyles = makeStyles({
   container: {
-    height: "100vh",
+    minHeight: "100vh",
+    backgroundColor: "rgb(244, 245, 247)",
+    display: "flex",
+    margin: "auto",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

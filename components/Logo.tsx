@@ -13,7 +13,7 @@ export default function Logo() {
   const classes = useStyles();
   return (
     <div className={classes.logo}>
-      <h1>Admin</h1>
+      <h1>Office Dashboard</h1>
     </div>
   );
 }
