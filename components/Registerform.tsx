@@ -1,3 +1,4 @@
+import Link from "next/link";
 import AuthCard from "@components/AuthCard";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -26,13 +27,15 @@ export default function Registerform() {
 
         <Button>Register</Button>
         <div>
-          <Checkbox  />{" "}
+          <Checkbox />{" "}
           <Typography component="p">
             I have read the <a href="#">Terms and Conditions</a>
           </Typography>
         </div>
         <Divider />
-        <Typography>Having an account, Login.</Typography>
+        <Link href="/auth/login" passHref>
+          <Typography component="a">Having an account, Login.</Typography>
+        </Link>
       </form>
     </AuthCard>
   );

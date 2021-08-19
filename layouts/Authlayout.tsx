@@ -1,23 +1,21 @@
 import Head from "next/head";
 import { PropsWithChildren } from "react";
-import { Container, CssBaseline, makeStyles } from "@material-ui/core";
+import { Container, CssBaseline } from "@material-ui/core";
 import Logo from "@components/Logo";
-import {} from "@material-ui/core";
-
-const useStyles = makeStyles({});
+import { AuthStyles } from "@styles/Authlayout.style";
 
 export default function Authlayout({
   children,
   title,
 }: PropsWithChildren<AuthLayout>) {
-  const classes = useStyles();
+  const classes = AuthStyles();
   return (
     <>
       <Head>
-        <title>{title}| Awesome Dashboard</title>
+        <title>{title} | Awesome Dashboard</title>
       </Head>
       <CssBaseline />
-      <Container maxWidth="xl">
+      <Container className={classes.container}>
         <Logo />
         {children}
       </Container>
