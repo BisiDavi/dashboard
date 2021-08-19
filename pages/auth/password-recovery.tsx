@@ -1,9 +1,14 @@
-import React from 'react'
+import { Container, CssBaseline } from "@material-ui/core";
+
+import Passwordrecoveryform from "@components/Passwordrecoveryform";
 
 export default function Passwordrecovery() {
-    return (
-        <div>
-            
-        </div>
-    )
+  return (
+    <>
+      <CssBaseline />
+      <Container maxWidth="xl">
+        <Passwordrecoveryform />
+      </Container>
+    </>
+  );
 }
