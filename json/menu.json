@@ -1,0 +1,53 @@
+[
+  {
+    "category": "GENERAL",
+    "menu": [
+      { "icon": "overview", "name": "Overview", "link": "/overview" },
+      { "icon": "analytics", "name": "Analytics", "link": "/analytics" },
+      { "icon": "finance", "name": "Finance", "link": "/finance" },
+      { "icon": "account", "name": "Account", "link": "/account" }
+    ]
+  },
+  {
+    "category": "MANAGEMENT",
+    "menu": [
+      {
+        "icon": "customers",
+        "name": "Customers",
+        "link": "/customers",
+        "submenu": [
+          { "name": "List", "link": "/list" },
+          { "name": "Details", "link": "/details" },
+          { "name": "Edit", "link": "/edit" }
+        ]
+      },
+      {
+        "icon": "products",
+        "name": "Products",
+        "link": "/products",
+        "submenu": [
+          { "name": "List", "link": "/list" },
+          { "name": "Create", "link": "/create" }
+        ]
+      },
+      {
+        "icon": "orders",
+        "name": "orders",
+        "link": "/orders",
+        "submenu": [
+          { "name": "List", "link": "/list" },
+          { "name": "Details", "link": "/details" }
+        ]
+      },
+      {
+        "icon": "invoices",
+        "name": "invoices",
+        "link": "/invoices",
+        "submenu": [
+          { "name": "List", "link": "/list" },
+          { "name": "Details", "link": "/details" }
+        ]
+      }
+    ]
+  }
+]

@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Nunito", "Lato", Helvetica Neue, sans-serif;
+  font-family: "Nunito", "Lato", "Roboto", Helvetica Neue, sans-serif;
 }
 
 a {

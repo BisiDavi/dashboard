@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/core";
-import { colors } from "@styles/colors.styles";
 
 export const AuthStyles = makeStyles((theme) => ({
   container: {
@@ -26,14 +25,5 @@ export const AuthStyles = makeStyles((theme) => ({
   },
   gridContainer: {
     justifyContent: "center",
-  },
-  toggleTheme: {
-    position: "absolute",
-    top: theme.spacing(8),
-    right: theme.spacing(4),
-    "& button": {
-      backgroundColor: colors.blue,
-      color: "white",
-    },
   },
 }));
