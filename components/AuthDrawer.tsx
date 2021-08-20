@@ -73,7 +73,7 @@ export default function AuthDrawer() {
   return (
     <>
       <Fab onClick={toggleDrawer}>
-        <SettingsIcon color="primary" aria-label="show settings" />
+        <SettingsIcon color="inherit" aria-label="show settings" />
       </Fab>
       <SwipeableDrawer
         anchor="right"

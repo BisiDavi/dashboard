@@ -1,5 +1,5 @@
 {
-  "name": "wobb-landingpage",
+  "name": "admin-dashboard",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,10 +15,13 @@
     "cypress": "^8.3.0",
     "formik": "^2.2.9",
     "next": "11.1.0",
+    "nprogress": "^0.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-redux": "^7.2.4",
     "redux": "^4.1.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0",
     "yup": "^0.32.9"
   },
   "devDependencies": {

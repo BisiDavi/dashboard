@@ -1,21 +1,22 @@
 import { makeStyles } from "@material-ui/core";
+import { colors } from "@styles/colors.styles";
 
 export const AuthStyles = makeStyles((theme) => ({
   container: {
     minHeight: "100vh",
-    backgroundColor: "rgb(244, 245, 247)",
+    backgroundColor: theme.palette.background.default,
     display: "flex",
     margin: "auto",
     flexDirection: "column",
     alignItems: "center",
+    position: "relative",
     justifyContent: "center",
   },
   "& h1": {
     textAlign: "center",
   },
   content: {
-    marginTop: theme.spacing(4),
-    marginBottom: theme.spacing(4),
+    margin: theme.spacing(4, 0),
     width: "100%",
   },
   authGrid: {
@@ -25,5 +26,14 @@ export const AuthStyles = makeStyles((theme) => ({
   },
   gridContainer: {
     justifyContent: "center",
+  },
+  fab: {
+    position: "absolute",
+    bottom: theme.spacing(8),
+    right: theme.spacing(4),
+    "& button": {
+      backgroundColor: colors.blue,
+      color: "white",
+    },
   },
 }));

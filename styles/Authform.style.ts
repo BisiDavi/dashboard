@@ -3,8 +3,7 @@ import { colors } from "@styles/colors.styles";
 
 export const authFormStyles = makeStyles((theme) => ({
   input: {
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(2),
+    margin: theme.spacing(2, 0),
     width: "100%",
   },
   form: {
@@ -13,11 +12,11 @@ export const authFormStyles = makeStyles((theme) => ({
     width: "100%",
 
     "& button": {
-      backgroundColor: colors.blue,
+      //   backgroundColor: colors.blue,
+      backgroundColor: theme.palette.primary.main,
       color: "white",
-      marginTop: theme.spacing(2),
-      marginBottom: theme.spacing(2),
-      padding: theme.spacing(1),
+      margin: theme.spacing(2, 0),
+      padding: theme.spacing(1, 0),
     },
 
     "& button:hover": {
@@ -25,20 +24,17 @@ export const authFormStyles = makeStyles((theme) => ({
     },
 
     "& a": {
-      marginTop: theme.spacing(1),
-      marginBottom: theme.spacing(1),
+      margin: theme.spacing(1, 0),
     },
     "& a:hover": {
       color: colors.red,
     },
   },
   alert: {
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(2),
+    margin: theme.spacing(2, 0),
   },
   divider: {
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(2),
+    margin: theme.spacing(2, 0),
   },
   conditions: {
     display: "flex",

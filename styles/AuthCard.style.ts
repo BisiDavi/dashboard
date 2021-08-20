@@ -2,8 +2,7 @@ import { makeStyles } from "@material-ui/core";
 
 export const authCardStyles = makeStyles((theme) => ({
   card: {
-    paddingLeft: theme.spacing(3),
-    paddingRight: theme.spacing(3),
+    padding: theme.spacing(0, 3),
     width: "100%",
   },
   header: {
