@@ -4,7 +4,7 @@ import { Container, Grid } from "@material-ui/core";
 
 import Logo from "@components/Logo";
 import { AuthStyles } from "@styles/Authlayout.style";
-import AuthDrawer from "@components/AuthDrawer";
+import ToggleTheme from "@components/ToggleTheme";
 
 export default function Authlayout({
   children,
@@ -26,8 +26,8 @@ export default function Authlayout({
             </Grid>
           </Grid>
         </Grid>
-        <div className={classes.fab}>
-          <AuthDrawer />
+        <div className={classes.toggleTheme}>
+          <ToggleTheme />
         </div>
       </Container>
     </>

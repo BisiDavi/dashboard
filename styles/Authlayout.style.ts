@@ -27,9 +27,9 @@ export const AuthStyles = makeStyles((theme) => ({
   gridContainer: {
     justifyContent: "center",
   },
-  fab: {
+  toggleTheme: {
     position: "absolute",
-    bottom: theme.spacing(8),
+    top: theme.spacing(8),
     right: theme.spacing(4),
     "& button": {
       backgroundColor: colors.blue,

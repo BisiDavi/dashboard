@@ -20,5 +20,5 @@ export default function useTheme() {
     [prefersDarkMode]
   );
 
-  return { appliedTheme };
+  return { theme, appliedTheme };
 }
