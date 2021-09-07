@@ -9,12 +9,6 @@ export default function Pagelayout({ children }: PropsWithChildren<{}>) {
   const theme = useTheme();
   const [open, setOpen] = useState(true);
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  console.log("theme", theme.breakpoints.up("lg"));
-
   return (
     <Grid container className={classes.root}>
       <Grid item xs={12}>

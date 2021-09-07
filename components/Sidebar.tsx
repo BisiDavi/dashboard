@@ -10,22 +10,18 @@ import {
   ListItemIcon,
   Typography,
 } from "@material-ui/core";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
 import menus from "@json/menu.json";
+import menuIcons from "./MenuIcons";
 
 const useStyles = makeStyles({
   list: {
-    width: 250,
-  },
-  fullList: {
-    width: "auto",
+    width: "100%",
   },
 });
 
 export default function Sidebar() {
   const classes = useStyles();
-  const [showDrawer, setShowDrawer] = useState(false);
+  const [showDrawer, setShowDrawer] = useState(true);
 
   const toggleDrawer = (event: React.KeyboardEvent | React.MouseEvent) => {
     if (
@@ -50,34 +46,16 @@ export default function Sidebar() {
       <List>
         {menus.map(({ category, menu }) => (
           <div key={category}>
-            <Typography component="h4">{category}</Typography>
+            <Typography component="h3">{category}</Typography>
             {menu.map((item) => (
               <Link href={item.link} key={item} passHref>
                 <ListItem button>
+                  <ListItemIcon>{menuIcons(item.icon)}</ListItemIcon>
                   <ListItemText primary={item.name} />
                 </ListItem>
               </Link>
             ))}
           </div>
-        ))}
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
         ))}
       </List>
     </div>
@@ -85,8 +63,8 @@ export default function Sidebar() {
 
   return (
     <SwipeableDrawer
-      anchor="right"
-      open={showDrawer}
+      anchor="left"
+      open={true}
       onClose={toggleDrawer}
       onOpen={toggleDrawer}
     >
