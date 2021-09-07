@@ -37,9 +37,6 @@ export default function Sidebar() {
     <Paper className={classes.sidebar}>
       <div
         className={classes.list}
-        role="presentation"
-        onClick={toggleDrawer}
-        onKeyDown={toggleDrawer}
       >
         <List>
           {menus.map(({ category, menu }) => (

@@ -7,17 +7,18 @@ export const pagelayoutStyle = makeStyles((theme: Theme) =>
       flexDirection: "column",
     },
     appBarContainer: {
-      position: "sticky",
-      top: "0",
       zIndex: 1000,
       width: "100%",
       left: "0",
-      height: "100px",
+      position: "fixed",
+      top: "0px",
     },
     content: {
       display: "flex",
       alignItems: "flex-start",
       justifyContent: "space-between",
+      position: "relative",
+      top: "80px",
     },
     sidebarContainer: {
       height: "100vh",
