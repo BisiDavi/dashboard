@@ -4,6 +4,7 @@ export const sidebarStyle = makeStyles((theme: Theme) =>
   createStyles({
     sidebar: {
       height: "100vh",
+      padding: theme.spacing(2),
     },
     list: {
       width: "100%",
