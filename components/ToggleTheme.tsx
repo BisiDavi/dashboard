@@ -5,24 +5,28 @@ import { toggleThemeAction } from "@store/themeAction";
 import useTheme from "@hooks/useTheme";
 
 const useStyles = makeStyles({
-  button: {
-    borderRadius: "50%",
-    padding: 20,
-  },
+    button: {
+        borderRadius: "50%",
+        padding: 20,
+    },
 });
 export default function ToggleTheme() {
-  const dispatch = useDispatch();
-  const { theme } = useTheme();
+    const dispatch = useDispatch();
+    const { theme } = useTheme();
 
-  const classes = useStyles();
+    const classes = useStyles();
 
-  function themeHandler() {
-    dispatch(toggleThemeAction());
-  }
+    function themeHandler() {
+        dispatch(toggleThemeAction());
+    }
 
-  return (
-    <Button className={classes.button} onClick={themeHandler}>
-      {theme === "light" ? <BsSun fontSize={25} /> : <BsMoon fontSize={25} />}
-    </Button>
-  );
+    return (
+        <Button className={classes.button} onClick={themeHandler}>
+            {theme === "light" ? (
+                <BsSun fontSize={25} />
+            ) : (
+                <BsMoon fontSize={25} />
+            )}
+        </Button>
+    );
 }

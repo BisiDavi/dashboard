@@ -1,8 +1,9 @@
+import { PersistGate } from "redux-persist/integration/react";
 import { useEffect, useState } from "react";
 import Router from "next/router";
 import NProgress from "nprogress";
 import { Provider } from "react-redux";
-import store from "@store/store";
+import store, { persistor } from "@store/store";
 import Layout from "@layouts/Layout";
 
 import "nprogress/nprogress.css";
@@ -33,9 +34,11 @@ function MyApp({ Component, pageProps }) {
     }, []);
     return (
         <Provider store={store}>
-            <Layout>
-                <Component {...pageProps} />
-            </Layout>
+            <PersistGate persistor={persistor}>
+                <Layout>
+                    <Component {...pageProps} />
+                </Layout>
+            </PersistGate>
         </Provider>
     );
 }

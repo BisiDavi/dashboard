@@ -1,13 +1,26 @@
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
+import { persistStore, persistReducer } from "redux-persist";
 import { composeWithDevTools } from "redux-devtools-extension";
-import rootReducer from "./rootReducer";
+import storage from "@utils/storage";
+import RootReducer from "./rootReducer";
 
 const middleware = [thunk];
 
+const persistConfig = {
+    key: "dashboard",
+    storage,
+};
+
+const persistedReducer = persistReducer(persistConfig, RootReducer);
+
 const store = createStore(
-  rootReducer,
-  composeWithDevTools(applyMiddleware(...middleware))
+    persistedReducer,
+    process.env.NEXT_PUBLIC_ENVIRONMENT === "dev"
+        ? composeWithDevTools(applyMiddleware(...middleware))
+        : applyMiddleware(...middleware),
 );
+
+export const persistor = persistStore(store);
 
 export default store;

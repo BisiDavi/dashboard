@@ -2,25 +2,40 @@ import {
     Card,
     Button,
     Typography,
+    Divider,
     CardActions,
     CardContent,
 } from "@material-ui/core";
+import { PropsWithChildren } from "react-transition-group/node_modules/@types/react";
+import displayIcons from "utils/displayIcons";
+import { viewCardStyle } from "@styles/ViewCard.style";
 
-export default function ViewCard() {
+interface ViewCard {
+    content: {
+        btnVariant: "outlined" | "contained" | "text";
+        btnText: string;
+        icon: string;
+    };
+}
+
+export default function ViewCard({
+    content,
+    children,
+}: PropsWithChildren<ViewCard>) {
+    const classes = viewCardStyle();
     return (
         <Card>
-            <CardContent>
-                <Typography>Word of the Day</Typography>
-
-                <Typography>adjective</Typography>
-                <Typography variant="body2">
-                    well meaning and kindly.
-                    <br />
-                    {'"a benevolent smile"'}
-                </Typography>
-            </CardContent>
+            <CardContent>{children}</CardContent>
+            <Divider />
             <CardActions>
-                <Button size="small">Learn More</Button>
+                <Button
+                    className={classes.button}
+                    variant={content.btnVariant}
+                    size="small"
+                >
+                    {content.btnText}
+                    {displayIcons(content.icon)}
+                </Button>
             </CardActions>
         </Card>
     );
