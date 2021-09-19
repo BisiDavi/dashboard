@@ -1,59 +1,65 @@
 import Link from "next/link";
 import { useState } from "react";
 import {
-  makeStyles,
-  List,
-  Divider,
-  ListItem,
-  ListItemText,
-  ListItemIcon,
-  Typography,
-  Paper,
+    makeStyles,
+    List,
+    ListItem,
+    ListItemText,
+    ListItemIcon,
+    Typography,
+    Paper,
 } from "@material-ui/core";
 import menus from "@json/menu.json";
 import menuIcons from "./MenuIcons";
 import { sidebarStyle } from "@styles/Sidebar.style";
 
-const useStyles = makeStyles({});
-
 export default function Sidebar() {
-  const classes = sidebarStyle();
-  const [showDrawer, setShowDrawer] = useState(true);
+    const classes = sidebarStyle();
+    const [showDrawer, setShowDrawer] = useState(true);
 
-  const toggleDrawer = (event: React.KeyboardEvent | React.MouseEvent) => {
-    if (
-      event &&
-      event.type === "keydown" &&
-      ((event as React.KeyboardEvent).key === "Tab" ||
-        (event as React.KeyboardEvent).key === "Shift")
-    ) {
-      return;
-    }
+    const toggleDrawer = (event: React.KeyboardEvent | React.MouseEvent) => {
+        if (
+            event &&
+            event.type === "keydown" &&
+            ((event as React.KeyboardEvent).key === "Tab" ||
+                (event as React.KeyboardEvent).key === "Shift")
+        ) {
+            return;
+        }
 
-    setShowDrawer(!showDrawer);
-  };
+        setShowDrawer(!showDrawer);
+    };
 
-  return (
-    <Paper className={classes.sidebar}>
-      <div
-        className={classes.list}
-      >
-        <List>
-          {menus.map(({ category, menu }) => (
-            <div key={category}>
-              <Typography component="h3">{category}</Typography>
-              {menu.map((item) => (
-                <Link href={item.link} key={item} passHref>
-                  <ListItem button>
-                    <ListItemIcon>{menuIcons(item.icon)}</ListItemIcon>
-                    <ListItemText primary={item.name} />
-                  </ListItem>
-                </Link>
-              ))}
+    return (
+        <Paper className={classes.sidebar}>
+            <div className={classes.list}>
+                <List>
+                    {menus.map(({ category, menu }) => (
+                        <div key={category}>
+                            <Typography
+                                className={classes.category}
+                                component="h3"
+                            >
+                                {category}
+                            </Typography>
+                            {menu.map((item, index) => (
+                                <Link
+                                    href={item.link}
+                                    key={`${item}-${index}`}
+                                    passHref
+                                >
+                                    <ListItem button>
+                                        <ListItemIcon>
+                                            {menuIcons(item.icon)}
+                                        </ListItemIcon>
+                                        <ListItemText primary={item.name} />
+                                    </ListItem>
+                                </Link>
+                            ))}
+                        </div>
+                    ))}
+                </List>
             </div>
-          ))}
-        </List>
-      </div>
-    </Paper>
-  );
+        </Paper>
+    );
 }

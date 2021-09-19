@@ -1,13 +1,12 @@
-import React, { useState, PropsWithChildren } from "react";
-import { useTheme, Grid } from "@material-ui/core";
+import React, {  PropsWithChildren } from "react";
+import {  Grid } from "@material-ui/core";
 import { pagelayoutStyle } from "@styles/Pagelayout.style";
 import Sidebar from "@components/Sidebar";
 import Header from "@components/Header";
 
 export default function Pagelayout({ children }: PropsWithChildren<{}>) {
   const classes = pagelayoutStyle();
-  const theme = useTheme();
-  const [open, setOpen] = useState(true);
+
 
   return (
     <Grid container className={classes.root}>
