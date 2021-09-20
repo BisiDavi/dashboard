@@ -11,7 +11,7 @@ export default function CoinRate() {
     const classes = coinRateStyles();
     useEffect(() => {
         cryptoAxiosInstance
-            .get("/ticker?interval=1d&convert=USD&per-page=12&page=1")
+            .get("/ticker?interval=1d&convert=USD&per-page=6&page=1")
             .then((response) => {
                 setCoins(response.data);
             })

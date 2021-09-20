@@ -57,9 +57,9 @@ export default function index() {
                 <Grid item style={{ height: 400 }} xs={12}>
                     <CryptoLineChart />
                 </Grid>
-                <Grid item xs={12}>
+                {/*<Grid item xs={12}>
                     <CoinRate />
-                </Grid>
+                </Grid>*/}
                 {/*<Grid item xs={12}>
                     <StockChart />
                 </Grid>*/}

@@ -21,10 +21,10 @@ export const CryptoLoader = (props) => (
 );
 
 export default function CryptoContentLoader() {
-    const array10 = new Array(10).fill(0);
+    const array6 = new Array(6).fill(0);
     return (
         <Grid container spacing={2}>
-            {array10.map((_, index) => (
+            {array6.map((_, index) => (
                 <Grid item xs={2} key={index}>
                     <ViewCard>
                         <CryptoLoader />
