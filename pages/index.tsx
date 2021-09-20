@@ -1,14 +1,9 @@
 import Pagelayout from "@layouts/Pagelayout";
 import ViewCard from "@components/ViewCard";
 import { Grid, Typography } from "@material-ui/core";
-
-type cardContentType = {
-    btnVariant: "outlined" | "contained" | "text";
-    title: string;
-    info: string;
-    btnText: string;
-    icon: string;
-};
+import PieChartWithAngle from "../charts/PieChart";
+import { cardContentType } from "../types";
+import CoinRate from "../charts/CoinRate";
 
 export default function index() {
     const cardContent: cardContentType[] = [
@@ -54,6 +49,12 @@ export default function index() {
                         </ViewCard>
                     </Grid>
                 ))}
+                <Grid item xs={4}>
+                    <PieChartWithAngle />
+                </Grid>
+                <Grid item xs={4}>
+                    <CoinRate />
+                </Grid>
             </Grid>
         </Pagelayout>
     );

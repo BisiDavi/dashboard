@@ -11,10 +11,10 @@ import displayIcons from "utils/displayIcons";
 import { viewCardStyle } from "@styles/ViewCard.style";
 
 interface ViewCard {
-    content: {
-        btnVariant: "outlined" | "contained" | "text";
-        btnText: string;
-        icon: string;
+    content?: {
+        btnVariant?: "outlined" | "contained" | "text";
+        btnText?: string;
+        icon?: string;
     };
 }
 
@@ -30,11 +30,11 @@ export default function ViewCard({
             <CardActions>
                 <Button
                     className={classes.button}
-                    variant={content.btnVariant}
+                    variant={content?.btnVariant}
                     size="small"
                 >
-                    {content.btnText}
-                    {displayIcons(content.icon)}
+                    {content?.btnText}
+                    {displayIcons(content?.icon)}
                 </Button>
             </CardActions>
         </Card>

@@ -2,11 +2,15 @@
     {
         "category": "GENERAL",
         "menu": [
-            { "icon": "overview", "name": "Overview", "link": "/overview" },
-            { "icon": "account", "name": "Account", "link": "/account" },
+            {
+                "icon": "overview",
+                "name": "Cryptocurrency",
+                "link": "/overview"
+            },
+            { "icon": "account", "name": "Covid 19", "link": "/account" },
             {
                 "icon": "products",
-                "name": "Products",
+                "name": "News",
                 "link": "/products"
             }
         ]
