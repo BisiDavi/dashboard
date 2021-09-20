@@ -5,6 +5,7 @@ import PieChartWithAngle from "@components/charts/PieChart";
 import { cardContentType } from "../types";
 import CoinRate from "@components/charts/CoinRate";
 import CryptoLineChart from "../components/charts/LineChart";
+import { StockChart } from "react-financial-charts";
 
 export default function index() {
     const cardContent: cardContentType[] = [
@@ -59,6 +60,9 @@ export default function index() {
                 <Grid item xs={12}>
                     <CoinRate />
                 </Grid>
+                {/*<Grid item xs={12}>
+                    <StockChart />
+                </Grid>*/}
             </Grid>
         </Pagelayout>
     );

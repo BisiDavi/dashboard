@@ -2,24 +2,24 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import ViewCard from "@components/ViewCard";
 import { Grid, Typography } from "@material-ui/core";
-import crptoAxiosInstance from "@api/crypto/crptoAxiosInstance";
+import cryptoAxiosInstance from "@api/crypto/cryptoAxiosInstance";
 import { coinRateStyles } from "@styles/CoinRate.style";
+import CryptoContentLoader from "@api/crypto/cryptoContentLoader";
 
 export default function CoinRate() {
     const [coins, setCoins] = useState([]);
     const classes = coinRateStyles();
     useEffect(() => {
-        crptoAxiosInstance
+        cryptoAxiosInstance
             .get("/ticker?interval=1d&convert=USD&per-page=12&page=1")
             .then((response) => {
-                console.log("coin rate response", response.data);
                 setCoins(response.data);
             })
             .catch((error) => {
                 console.log("error", error);
             });
     }, []);
-    return (
+    return coins.length > 0 ? (
         <Grid container spacing={2}>
             {coins.map((coin) => (
                 <Grid key={coin.id} item xs={2}>
@@ -52,5 +52,7 @@ export default function CoinRate() {
                 </Grid>
             ))}
         </Grid>
+    ) : (
+        <CryptoContentLoader />
     );
 }

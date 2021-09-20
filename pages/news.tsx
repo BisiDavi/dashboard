@@ -1,9 +1,9 @@
 import Pagelayout from "@layouts/Pagelayout";
 
-export default function Invoices() {
+export default function News() {
     return (
         <Pagelayout>
-            <h1>Invoices page</h1>
+            <h1>News page</h1>
         </Pagelayout>
     );
 }

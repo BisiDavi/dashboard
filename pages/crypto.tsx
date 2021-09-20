@@ -1,9 +1,9 @@
 import Pagelayout from "@layouts/Pagelayout";
 
-export default function Account() {
+export default function Crypto() {
     return (
         <Pagelayout>
-            <h1>Account page</h1>
+            <h1>Crypto page</h1>
         </Pagelayout>
     );
 }

@@ -5,13 +5,13 @@
             {
                 "icon": "overview",
                 "name": "Cryptocurrency",
-                "link": "/overview"
+                "link": "/crypto"
             },
-            { "icon": "account", "name": "Covid 19", "link": "/account" },
+            { "icon": "account", "name": "Covid 19", "link": "/covid-19" },
             {
                 "icon": "products",
                 "name": "News",
-                "link": "/products"
+                "link": "/news"
             }
         ]
     },

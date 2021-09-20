@@ -1,9 +1,9 @@
 import Pagelayout from "@layouts/Pagelayout";
 
-export default function Overview() {
+export default function Covid19() {
     return (
         <Pagelayout>
-            <h1>Overview page</h1>
+            <h1>Covid19 page</h1>
         </Pagelayout>
     );
 }

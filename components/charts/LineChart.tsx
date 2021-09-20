@@ -1,3 +1,5 @@
+import cryptoAxiosInstance from "@api/crypto/cryptoAxiosInstance";
+import React, { useState, useEffect } from "react";
 import {
     AreaChart,
     Area,
@@ -23,25 +25,25 @@ const data = [
     },
     {
         name: "Page C",
-        uv: -1000,
+        uv: 2000,
         pv: 9800,
         amt: 2290,
     },
     {
         name: "Page D",
-        uv: 500,
+        uv: 2780,
         pv: 3908,
         amt: 2000,
     },
     {
         name: "Page E",
-        uv: -2000,
+        uv: 1890,
         pv: 4800,
         amt: 2181,
     },
     {
         name: "Page F",
-        uv: -250,
+        uv: 2390,
         pv: 3800,
         amt: 2500,
     },
@@ -53,23 +55,21 @@ const data = [
     },
 ];
 
-const gradientOffset = () => {
-    const dataMax = Math.max(...data.map((i) => i.uv));
-    const dataMin = Math.min(...data.map((i) => i.uv));
-
-    if (dataMax <= 0) {
-        return 0;
-    }
-    if (dataMin >= 0) {
-        return 1;
-    }
-
-    return dataMax / (dataMax - dataMin);
-};
-
-const off = gradientOffset();
-
-export default function LineChartVolume() {
+export default function CryptoAreaChart() {
+    const [chartData, setChartData] = useState([]);
+    useEffect(() => {
+        cryptoAxiosInstance
+            .get("/sparkline?ids=BTC,ETH,XRP&start=2021-08-14T00%3A00%3A00Z")
+            .then((response) => {
+                console.log("response", response.data);
+                setChartData(response.data);
+            })
+            .catch((error) => {
+                console.error("error", error.response.data);
+                setChartData(error.response.data);
+            });
+    }, []);
+		const data= []
     return (
         <ResponsiveContainer width="100%" height="100%">
             <AreaChart
@@ -87,17 +87,26 @@ export default function LineChartVolume() {
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />
-                <defs>
-                    <linearGradient id="splitColor" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset={off} stopColor="green" stopOpacity={1} />
-                        <stop offset={off} stopColor="red" stopOpacity={1} />
-                    </linearGradient>
-                </defs>
                 <Area
                     type="monotone"
                     dataKey="uv"
-                    stroke="#000"
-                    fill="url(#splitColor)"
+                    stackId="1"
+                    stroke="#8884d8"
+                    fill="#8884d8"
+                />
+                <Area
+                    type="monotone"
+                    dataKey="pv"
+                    stackId="1"
+                    stroke="#82ca9d"
+                    fill="#82ca9d"
+                />
+                <Area
+                    type="monotone"
+                    dataKey="amt"
+                    stackId="1"
+                    stroke="#ffc658"
+                    fill="#ffc658"
                 />
             </AreaChart>
         </ResponsiveContainer>
