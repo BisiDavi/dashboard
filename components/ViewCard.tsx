@@ -26,17 +26,19 @@ export default function ViewCard({
     return (
         <Card>
             <CardContent>{children}</CardContent>
-            <Divider />
-            <CardActions>
-                <Button
-                    className={classes.button}
-                    variant={content?.btnVariant}
-                    size="small"
-                >
-                    {content?.btnText}
-                    {displayIcons(content?.icon)}
-                </Button>
-            </CardActions>
+            {content?.btnVariant && <Divider />}
+            {content?.btnVariant && (
+                <CardActions>
+                    <Button
+                        className={classes.button}
+                        variant={content?.btnVariant}
+                        size="small"
+                    >
+                        {content?.btnText}
+                        {displayIcons(content?.icon)}
+                    </Button>
+                </CardActions>
+            )}
         </Card>
     );
 }
