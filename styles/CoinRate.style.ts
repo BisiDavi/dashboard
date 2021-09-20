@@ -16,5 +16,10 @@ export const coinRateStyles = makeStyles((theme) => ({
     title: {
         fontFamily: "Roboto",
         fontWeight: 800,
+        marginTop: 20,
+        marginBottom: 20,
+    },
+    divider: {
+        marginBottom: 20,
     },
 }));

@@ -29,6 +29,7 @@ export const pagelayoutStyle = makeStyles((theme: Theme) =>
         },
         main: {
             width: "100%",
+            padding: 15,
         },
         mainContainer: {
             position: "absolute",

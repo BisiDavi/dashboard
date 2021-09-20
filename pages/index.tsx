@@ -7,14 +7,10 @@ import CryptoLineChart from "../components/charts/LineChart";
 
 export default function index() {
     return (
-        <Pagelayout>
+        <Pagelayout title="Welcome">
             <Grid container spacing={4}>
-                <Grid item xs={12}>
-                    <CoinRate />
-                </Grid>
-                <Grid item style={{ height: 400 }} xs={12}>
-                    <CryptoLineChart />
-                </Grid>
+                <CoinRate />
+                <CryptoLineChart />
                 <Grid item xs={4}>
                     <PieChartWithAngle />
                 </Grid>

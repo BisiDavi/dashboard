@@ -2,7 +2,7 @@ import Pagelayout from "@layouts/Pagelayout";
 
 export default function Order() {
     return (
-        <Pagelayout>
+        <Pagelayout title="Orders">
             <h1>Order page</h1>
         </Pagelayout>
     );
