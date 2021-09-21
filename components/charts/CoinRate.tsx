@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
+import axios from "axios";
 import Image from "next/image";
 import ViewCard from "@components/ViewCard";
 import useError from "@hooks/useError";
@@ -15,9 +16,10 @@ export default function CoinRate() {
 
     useEffect(() => {
         if (coins.length === 0) {
-            cryptoAxiosInstance
-                .get("/ticker?interval=1d&convert=USD&per-page=6&page=1")
+            axios
+                .get("/api/get-coin-rate")
                 .then((response) => {
+                    console.log("response coin-rate", response.data.data);
                     setCoins(response.data);
                 })
                 .catch((error) => {

@@ -11,6 +11,7 @@ import {
     ResponsiveContainer,
 } from "recharts";
 import { Grid, Divider, Typography } from "@material-ui/core";
+import axios from "axios";
 import useError from "@hooks/useError";
 import ThreeDots from "@components/ThreeDotsLoader";
 import cryptoAxiosInstance from "@api/crypto/cryptoAxiosInstance";
@@ -25,12 +26,14 @@ export default function CryptoAreaChart() {
 
     useEffect(() => {
         if (chartData.length === 0) {
-            cryptoAxiosInstance
-                .get("/sparkline?ids=BTC,ETH&start=2021-08-21T00%3A00%3A00Z")
+            axios
+                .get("/api/compare-coin")
                 .then((response) => {
+                    console.log("response", response.data);
                     setChartData(response.data);
                 })
                 .catch((error) => {
+                    console.log("error", error);
                     onError(error);
                 });
         }
