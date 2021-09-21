@@ -5,10 +5,10 @@ export const chartStyles = makeStyles((theme) => ({
         fontFamily: "Roboto",
         fontWeight: 800,
         marginTop: 20,
-        marginBottom: 20,
+        marginBottom: 10,
     },
     divider: {
-        marginBottom: 20,
+        marginBottom: 10,
     },
     chart: {
         justifyContent: "center",

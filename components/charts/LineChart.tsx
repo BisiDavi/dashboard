@@ -93,7 +93,7 @@ export default function CryptoAreaChart() {
                 Bitcoin (BTC) and Etherum (ETH) Chart
             </Typography>
             <Divider className={classes.divider} />
-            <Grid item className={classes.chart} xs={12}>
+            <Grid container className={classes.chart}>
                 {chartData.length > 0 ? (
                     <ResponsiveContainer width="100%" height="100%">
                         <LineChart
@@ -110,7 +110,17 @@ export default function CryptoAreaChart() {
                             <CartesianGrid strokeDasharray="3 3" />
                             <XAxis dataKey="date" />
                             <YAxis />
-                            <Legend />
+                            <Legend
+                                width={100}
+                                wrapperStyle={{
+                                    top: 150,
+                                    right: 40,
+                                    backgroundColor: "#f5f5f5",
+                                    border: "1px solid #d5d5d5",
+                                    borderRadius: 3,
+                                    lineHeight: "40px",
+                                }}
+                            />
                             <Tooltip />
                             <Line
                                 type="monotone"
