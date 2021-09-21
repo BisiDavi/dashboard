@@ -28,7 +28,7 @@ export default function CryptoAreaChart() {
                     setChartData(response.data);
                 })
                 .catch((error) => {
-                    console.error("error", error.response);
+                    console.error("error", error);
                 });
         }
     }, [chartData]);
