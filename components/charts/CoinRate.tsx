@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import ViewCard from "@components/ViewCard";
@@ -20,11 +21,10 @@ export default function CoinRate() {
                     setCoins(response.data);
                 })
                 .catch((error) => {
-                    console.log("error", error);
                     onError(error);
                 });
         }
-    }, [coins, onError]);
+    }, [coins]);
 
     return (
         <Grid container className={classes.coinRate}>

@@ -23,6 +23,6 @@ export const coinRateStyles = makeStyles((theme) => ({
         marginBottom: 10,
     },
     divider: {
-        marginBottom: 10,
+        marginBottom: 20,
     },
 }));

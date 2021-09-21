@@ -31,11 +31,10 @@ export default function CryptoAreaChart() {
                     setChartData(response.data);
                 })
                 .catch((error) => {
-                    console.error("cryptoAxiosInstance error", error);
                     onError(error);
                 });
         }
-    }, [chartData, onError]);
+    }, [chartData]);
 
     const convertToDate = (itemDate) => new Date(itemDate).toLocaleDateString();
     let dummyArray = [];
