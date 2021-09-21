@@ -29,6 +29,7 @@ export default function Input({ input }: InputProps) {
         <TextField
             variant="outlined"
             type={input.type}
+            data-testId="text-input"
             fullWidth
             name={input.name}
             placeholder={input.placeholder}

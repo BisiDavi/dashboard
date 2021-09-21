@@ -8,21 +8,12 @@ import { authFormStyles } from "@styles/Authform.style";
 import authJson from "@json/auth.json";
 
 export default function Loginform() {
-    const recoveryContent = {
-        title: "Log in",
-        text: "Welcome, log in to access the dashboard",
-    };
-    const links = [
-        { name: "Create new Account", link: "/auth/register" },
-        { name: "Forgot password", link: "/auth/password-recovery" },
-    ];
-
     const classes = authFormStyles();
 
     return (
-        <AuthCard content={recoveryContent}>
+        <AuthCard content={authJson.login}>
             <form className={classes.form}>
-                {authJson.map((content) => (
+                {authJson.fields.map((content) => (
                     <Input key={content.name} input={content} />
                 ))}
                 <Button variant="contained">Log In</Button>
@@ -30,7 +21,7 @@ export default function Loginform() {
                     You can use <b>admin@dashboard</b> and <b>Password123!</b>
                 </Alert>
                 <Divider className={classes.divider} />
-                {links.map((item, index) => (
+                {authJson.login.links.map((item, index) => (
                     <Link href={item.link} key={index} passHref>
                         <Typography component="a">{item.name}</Typography>
                     </Link>

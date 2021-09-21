@@ -7,16 +7,12 @@ import { authFormStyles } from "@styles/Authform.style";
 import authJson from "@json/auth.json";
 
 export default function Registerform() {
-    const recoveryContent = {
-        title: "Register",
-        text: "Create an account by registering your details.",
-    };
     const classes = authFormStyles();
 
     return (
-        <AuthCard content={recoveryContent}>
+        <AuthCard content={authJson.register}>
             <form className={classes.form}>
-                {authJson.map((content) => (
+                {authJson.fields.map((content) => (
                     <Input key={content.name} input={content} />
                 ))}
                 <Button variant="contained">Register</Button>

@@ -21,7 +21,6 @@ const useStyles = makeStyles({
         },
         "& h1": {
             fontSize: "20px",
-            color: colors.white,
         },
     },
 });
