@@ -16,4 +16,7 @@ export const chartStyles = makeStyles((theme) => ({
         height: 400,
         display: "flex",
     },
+    lineChart: {
+        flexDirection: "column",
+    },
 }));

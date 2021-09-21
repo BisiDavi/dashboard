@@ -1,6 +1,9 @@
 import { makeStyles } from "@material-ui/core";
 
 export const coinRateStyles = makeStyles((theme) => ({
+    coinRate: {
+        flexDirection: "column",
+    },
     row: {
         display: "Flex",
         flexDirection: "row",

@@ -1,34 +1,40 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import ViewCard from "@components/ViewCard";
-import { Grid,Divider, Typography } from "@material-ui/core";
+import useError from "@hooks/useError";
+import { Grid, Divider, Typography } from "@material-ui/core";
 import cryptoAxiosInstance from "@api/crypto/cryptoAxiosInstance";
 import { coinRateStyles } from "@styles/CoinRate.style";
 import CryptoContentLoader from "@api/crypto/cryptoContentLoader";
 
 export default function CoinRate() {
     const [coins, setCoins] = useState([]);
+    const { error, onError, displayError } = useError();
     const classes = coinRateStyles();
+
     useEffect(() => {
-        cryptoAxiosInstance
-            .get("/ticker?interval=1d&convert=USD&per-page=6&page=1")
-            .then((response) => {
-                setCoins(response.data);
-            })
-            .catch((error) => {
-                console.log("error", error);
-            });
-    }, []);
+        if (coins.length === 0) {
+            cryptoAxiosInstance
+                .get("/ticker?interval=1d&convert=USD&per-page=6&page=1")
+                .then((response) => {
+                    setCoins(response.data);
+                })
+                .catch((error) => {
+                    console.log("error", error);
+                    onError(error);
+                });
+        }
+    }, [coins, onError]);
 
     return (
-        <>
+        <Grid container className={classes.coinRate}>
             <Typography className={classes.title} component="h3">
-                Top 6 CryptoCurrencies
+                Top 6 Cryptocurrencies
             </Typography>
             <Divider className={classes.divider} />
-            {coins.length > 0 ? (
-                <Grid container spacing={2}>
-                    {coins.map((coin) => (
+            <Grid container spacing={2}>
+                {coins.length > 0 ? (
+                    coins.map((coin) => (
                         <Grid key={coin.id} item xs={2}>
                             <ViewCard>
                                 <div className={classes.row}>
@@ -59,11 +65,12 @@ export default function CoinRate() {
                                 </div>
                             </ViewCard>
                         </Grid>
-                    ))}
-                </Grid>
-            ) : (
-                <CryptoContentLoader />
-            )}
-        </>
+                    ))
+                ) : (
+                    <CryptoContentLoader />
+                )}
+            </Grid>
+            <Grid>{error && coins.length === 0 && displayError()}</Grid>
+        </Grid>
     );
 }

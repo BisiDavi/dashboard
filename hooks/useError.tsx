@@ -14,11 +14,13 @@ function ErrorWrapper({ error }) {
 export default function useError() {
     const [error, setError] = useState(null);
 
+    console.log("error", error);
+
     function onError(siteError) {
-        setError(siteError);
+        return setError(siteError);
     }
     function displayError() {
-        return <ErrorWrapper error={error.response.error} />;
+        return <ErrorWrapper error={error} />;
     }
     return { onError, error, displayError };
 }
