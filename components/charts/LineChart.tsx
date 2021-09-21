@@ -34,7 +34,7 @@ export default function CryptoAreaChart() {
                 })
                 .catch((error) => {
                     console.log("error", error);
-                    onError(error);
+                    //onError(error);
                 });
         }
     }, [chartData]);
