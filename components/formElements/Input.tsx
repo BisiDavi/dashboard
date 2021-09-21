@@ -7,13 +7,23 @@ const useStyles = makeStyles((theme) => ({
         width: "100%",
     },
 }));
-export default function Input({ input }) {
+
+interface InputProps {
+    input: {
+        type: string;
+        name: string;
+        label: string;
+        placeholder: string;
+    };
+}
+
+export default function Input({ input }: InputProps) {
     const [showPassword, setShowPassword] = useState(false);
 
     function displayPassword() {
         setShowPassword(!showPassword);
     }
-		const isPasswordInput = input.type === "password"
+    const isPasswordInput = input.type === "password";
     const classes = useStyles();
     return (
         <TextField
@@ -21,6 +31,7 @@ export default function Input({ input }) {
             type={input.type}
             fullWidth
             name={input.name}
+            placeholder={input.placeholder}
             className={classes.input}
             label={input.label}
         />
