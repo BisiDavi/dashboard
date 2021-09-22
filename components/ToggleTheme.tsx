@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     button: {
         borderRadius: "50%",
         padding: 20,
-        backgroundColor: theme.palette.primary.dark,
+
     },
 }));
 export default function ToggleTheme() {

@@ -8,6 +8,7 @@ export const CryptoLoader = (props) => (
         width={476}
         height={124}
         viewBox="0 0 476 124"
+        alt="Loading coins details ..."
         backgroundColor="#dccbcb"
         foregroundColor="#524747"
         {...props}

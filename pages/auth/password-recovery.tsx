@@ -1,4 +1,4 @@
-import Passwordrecoveryform from "@components/Passwordrecoveryform";
+import Passwordrecoveryform from "@components/form/Passwordrecoveryform";
 import Authlayout from "@layouts/Authlayout";
 
 export default function Passwordrecovery() {

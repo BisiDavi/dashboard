@@ -19,8 +19,8 @@ export default function CoinRate() {
             axios
                 .get("/api/get-coin-rate")
                 .then((response) => {
-                    console.log("response coin-rate", response.data);
-                    setCoins(response.data);
+                    console.log("response coin-rate", response.data.data);
+                    setCoins(response.data.data);
                 })
                 .catch((error) => {
                     console.log("error", error);

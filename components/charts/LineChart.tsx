@@ -29,8 +29,8 @@ export default function CryptoAreaChart() {
             axios
                 .get("/api/compare-coin")
                 .then((response) => {
-                    console.log("response", response.data);
-                    setChartData(response.data);
+                    console.log("response", response.data.data);
+                    setChartData(response.data.data);
                 })
                 .catch((error) => {
                     console.log("error", error);

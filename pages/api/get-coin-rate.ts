@@ -5,21 +5,28 @@ export default async function CryptoRateApi(req, res) {
 
     switch (method) {
         case "GET": {
-            try {
-                const getCoins = await axiosInstance.get(
-                    "/ticker?interval=1d&convert=USD&per-page=6&page=1",
-                );
-								
-                return res.status(201).json({
-                    success: true,
-                    getCoins,
+            let data;
+            await axiosInstance
+                .get("/ticker?interval=1d&convert=USD&per-page=6&page=1")
+                .then((response) => {
+                    data = response.data;
+                })
+                .catch((error) => {
+                    data = error;
                 });
-            } catch (error) {
-                return res.status(400).json({
+            console.log("getCoins", data);
+            if (data.message) {
+                res.status(400).json({
                     success: false,
-                    error,
+                    data,
+                });
+            } else if (data.length > 0) {
+                res.status(201).json({
+                    success: true,
+                    data,
                 });
             }
+            break;
         }
         default:
             res.status(400).json({ success: false });
