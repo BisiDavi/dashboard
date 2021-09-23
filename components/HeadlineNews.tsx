@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import NewsCard from "@components/NewsCard";
 import { Grid } from "@material-ui/core";
-import newsAxiosInstance from "../api/news/newsAxiosInstance";
+import { contentType } from "@types/.";
 
 export default function HeadlineNews() {
-    const [headlineNews, setHeadlineNews] = useState([]);
+    const [headlineNews, setHeadlineNews] = useState<contentType[]>([]);
     useEffect(() => {
         if (headlineNews.length === 0) {
-            newsAxiosInstance
-                .get("/top-headlines?country=us&category=technology")
+            axios
+                .get("/api/news-api")
                 .then((response) => {
-                    console.log("response", response.data);
-                    const topSixHeadlines = response.data.articles.slice(0, 6);
+                    const { result } = response.data;
+                    const topSixHeadlines = result.articles.slice(0, 6);
                     return setHeadlineNews(topSixHeadlines);
                 })
                 .catch((error) => {
@@ -19,13 +20,17 @@ export default function HeadlineNews() {
                 });
         }
     }, [headlineNews]);
+    console.log("headlineNews", headlineNews);
     return (
         <Grid container spacing={2}>
-            {headlineNews.map((news) => (
-                <Grid xs={3} key={news.title} item>
-                    <NewsCard content={news} />
-                </Grid>
-            ))}
+            {headlineNews.map((content: contentType) => {
+                console.log("content", content);
+                return (
+                    <Grid xs={4} key={content.title} item>
+                        <NewsCard content={content} />
+                    </Grid>
+                );
+            })}
         </Grid>
     );
 }

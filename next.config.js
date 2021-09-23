@@ -4,6 +4,8 @@ module.exports = {
         domains: [
             "s3.us-east-2.amazonaws.com",
             "nomics-api.s3.us-east-2.amazonaws.com",
+            "cdn.vox-cdn.com",
+            "www.gamespot.com",
         ],
     },
 };

@@ -1,5 +1,4 @@
-import { useState } from "react";
-import Link from "next/link";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import {
     Card,
@@ -10,75 +9,93 @@ import {
     CardContent,
 } from "@material-ui/core";
 import formatDate from "@utils/formatDate";
-
-interface NewsCardProps {
-	content {
-    author?: string;
-    source: {
-        id?: string;
-        name?: string;
-    };
-    title: string;
-    description?: string;
-    url?: string;
-    urlToImage?: string;
-    publishedAt?: string;
-    content?: string;
-	}
-}
+import { newsCardStyle } from "@styles/NewsCard.style";
+import { NewsCardProps } from "@types/.";
 
 export default function NewsCard({ content }: NewsCardProps) {
     const [newsDetails, showNewsDetails] = useState(false);
+    const [articleImage, setArticleImage] = useState(null);
+
+    const cardHeight = articleImage ? "580px" : "230px";
+
+    useEffect(() => {
+        if (content.urlToImage) {
+            setArticleImage(true);
+        }
+    }, [content.urlToImage]);
 
     function showNewsDetailsHandler() {
         return showNewsDetails(!newsDetails);
     }
+    const classes = newsCardStyle();
     return (
         <div>
-            <Card onClick={showNewsDetailsHandler}>
+            <Card
+                style={{ height: cardHeight }}
+                elevation={2}
+                className={classes.card}
+                onClick={showNewsDetailsHandler}
+            >
                 <CardContent>
-                    <div>
+                    <div className={classes.row1}>
                         {content.author && (
-                            <Typography>{content.author}</Typography>
+                            <Typography
+                                className={classes.italic}
+                                component="h6"
+                            >
+                                {content.author}
+                            </Typography>
                         )}
                         {content.source.name && (
-                            <Typography>{content.source.name}</Typography>
+                            <Typography
+                                className={classes.italic}
+                                component="h6"
+                            >
+                                {content.source.name}
+                            </Typography>
                         )}
                     </div>
                     {content.urlToImage && (
-                        <Image
-                            alt={content.title}
-                            height={150}
-                            width={150}
-                            src={content.urlToImage}
-                        />
+                        <div className={classes.image}>
+                            <Image
+                                alt={content.title}
+                                height={200}
+                                width={300}
+                                src={content.urlToImage}
+                                layout="responsive"
+                            />
+                        </div>
                     )}
-                    <Typography component="h3">{content.title}</Typography>
+                    <Typography className={classes.title} component="h1">
+                        {content.title}
+                    </Typography>
                     {content.description && (
-                        <Typography component="h6">
+                        <Typography
+                            className={classes.description}
+                            component="h6"
+                        >
                             {content.description}
                         </Typography>
                     )}
                 </CardContent>
-                <CardActions>
+                <CardActions className={classes.cardAction}>
                     <div>
-                        <a rel="_blank" href={content.url}>
-                            <Button>View source</Button>
+                        <a target="_blank" rel="noreferrer" href={content.url}>
+                            <Button variant="outlined">View source</Button>
                         </a>
                     </div>
                     <div>
-                        <Typography component="h6">
+                        <Typography className={classes.italic} component="h6">
                             Published at {formatDate(content.publishedAt)}{" "}
                         </Typography>
                     </div>
                 </CardActions>
             </Card>
-            {newsDetails &&
-                content.content(
-                    <Paper>
-                        <Typography>{content.content}</Typography>
-                    </Paper>,
-                )}
+            {newsDetails && content.content && (
+                <Paper className={classes.paper}>
+                    <Typography component="p">{content.content}</Typography>
+                </Paper>
+            )}
         </div>
     );
 }

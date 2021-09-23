@@ -14,7 +14,6 @@ import { Grid, Divider, Typography } from "@material-ui/core";
 import axios from "axios";
 import useError from "@hooks/useError";
 import ThreeDots from "@components/ThreeDotsLoader";
-import cryptoAxiosInstance from "@api/crypto/cryptoAxiosInstance";
 import { chartStyles } from "@styles/Chart.style";
 
 export default function CryptoAreaChart() {
