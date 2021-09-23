@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import {
     Card,
     Button,
@@ -10,13 +10,13 @@ import {
 } from "@material-ui/core";
 import formatDate from "@utils/formatDate";
 import { newsCardStyle } from "@styles/NewsCard.style";
-import { NewsCardProps } from "@types/.";
+import { NewsCardProps } from "../types/.";
 
 export default function NewsCard({ content }: NewsCardProps) {
     const [newsDetails, showNewsDetails] = useState(false);
     const [articleImage, setArticleImage] = useState(null);
 
-    const cardHeight = articleImage ? "580px" : "230px";
+    const cardHeight = articleImage ? "500px" : "230px";
 
     useEffect(() => {
         if (content.urlToImage) {
@@ -57,13 +57,7 @@ export default function NewsCard({ content }: NewsCardProps) {
                     </div>
                     {content.urlToImage && (
                         <div className={classes.image}>
-                            <Image
-                                alt={content.title}
-                                height={200}
-                                width={300}
-                                src={content.urlToImage}
-                                layout="responsive"
-                            />
+                            <img alt={content.title} src={content.urlToImage} />
                         </div>
                     )}
                     <Typography className={classes.title} component="h1">

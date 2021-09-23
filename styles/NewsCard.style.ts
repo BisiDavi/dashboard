@@ -33,6 +33,10 @@ export const newsCardStyle = makeStyles((theme) => ({
     },
     image: {
         margin: "10px auto",
+        "& img": {
+            height: "100%",
+            width: "100%",
+        },
     },
     cardAction: {
         justifyContent: "space-between",

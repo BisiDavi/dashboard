@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import NewsCard from "@components/NewsCard";
+import { NewsCard, HeadlineLoader } from "@components/.";
 import { Grid, Typography, Divider } from "@material-ui/core";
-import { contentType } from "@types/.";
+import { contentType } from "../types/.";
 import { headlineNewsCardStyle } from "@styles/HeadlineNews.style";
 
 export default function HeadlineNews() {
@@ -32,11 +32,15 @@ export default function HeadlineNews() {
                 </Typography>
                 <Divider className={classes.divider} />
             </Grid>
-            {headlineNews.map((content: contentType) => (
-                <Grid xs={4} key={content.title} item>
-                    <NewsCard content={content} />
-                </Grid>
-            ))}
+            {headlineNews.length > 0 ? (
+                headlineNews.map((content: contentType) => (
+                    <Grid xs={4} key={content.title} item>
+                        <NewsCard content={content} />
+                    </Grid>
+                ))
+            ) : (
+                <HeadlineLoader />
+            )}
         </Grid>
     );
 }
