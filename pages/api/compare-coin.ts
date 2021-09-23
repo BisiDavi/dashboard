@@ -1,4 +1,4 @@
-import axiosInstance from "../../api/axiosInstance";
+import axiosInstance from "../../axiosInstances/axiosInstance";
 
 export default async function CompareCoinApi(req, res) {
     const { method } = req;
@@ -14,7 +14,7 @@ export default async function CompareCoinApi(req, res) {
                 .catch((error) => {
                     data = error;
                 });
-            console.log("CompareCoinApi data", data);
+            //console.log("CompareCoinApi data", data);
             if (data.message) {
                 res.status(400).json({
                     success: false,

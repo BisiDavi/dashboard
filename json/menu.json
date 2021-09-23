@@ -15,8 +15,8 @@
             },
             {
                 "icon": "orders",
-                "name": "Orders",
-                "link": "/orders"
+                "name": "Inventory",
+                "link": "/inventory"
             }
         ]
     }

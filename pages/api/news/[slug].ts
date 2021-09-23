@@ -1,13 +1,14 @@
-import newsAxiosInstance from "../../api/news/newsAxiosInstance";
+import newsAxiosInstance from "../../../axiosInstances/newsAxiosInstance";
 
 export default async function NewsHandler(req, res) {
     const { method } = req;
-
+    const { slug } = req.query;
     switch (method) {
         case "GET": {
+            console.log("req NewsHandler", req.query);
             let result;
             await newsAxiosInstance
-                .get("/top-headlines?country=us&category=technology")
+                .get(`/top-headlines?country=us&category=${slug}`)
                 .then((response) => {
                     result = response.data;
                 })

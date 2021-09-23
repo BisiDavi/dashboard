@@ -2,8 +2,12 @@ import { Grid, Card } from "@material-ui/core";
 import { newsCardStyle } from "@styles/NewsCard.style";
 import NewsLoader from "./NewsLoader";
 
-export default function HeadlineLoader() {
-    const preloadSix = new Array(6).fill(0);
+interface HeadlineLoaderProps {
+    count: number;
+}
+
+export default function HeadlineLoader({ count }: HeadlineLoaderProps) {
+    const preloadSix = new Array(count).fill(0);
     const classes = newsCardStyle();
 
     return (

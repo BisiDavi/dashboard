@@ -35,3 +35,20 @@ export type contentType = {
     publishedAt?: string;
     content?: string;
 };
+
+export type InventoryState = {
+    product: {
+        name: string;
+        image: string;
+        price: string;
+        quantity: string;
+        description: string;
+    };
+};
+
+export type newsCategoryType =
+    | "sports"
+    | "technology"
+    | "entertainment"
+    | "business"
+    | "health";

@@ -5,9 +5,9 @@ import Image from "next/image";
 import ViewCard from "@components/ViewCard";
 import useError from "@hooks/useError";
 import { Grid, Divider, Typography } from "@material-ui/core";
-import cryptoAxiosInstance from "@api/crypto/cryptoAxiosInstance";
+import cryptoAxiosInstance from "@api/cryptoAxiosInstance";
 import { coinRateStyles } from "@styles/CoinRate.style";
-import CryptoContentLoader from "@api/crypto/cryptoContentLoader";
+import CryptoContentLoader from "@components/cryptoContentLoader";
 
 export default function CoinRate() {
     const [coins, setCoins] = useState([]);
