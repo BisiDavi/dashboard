@@ -26,10 +26,12 @@ export default function HeadlineNews() {
 
     return (
         <Grid container spacing={2}>
-            <Typography className={classes.title} component="h3">
-                Top 6 Cryptocurrencies
-            </Typography>
-            <Divider className={classes.divider} />
+            <Grid item xs={12}>
+                <Typography className={classes.title} component="h3">
+                    Top 6 Tech Headlines
+                </Typography>
+                <Divider className={classes.divider} />
+            </Grid>
             {headlineNews.map((content: contentType) => (
                 <Grid xs={4} key={content.title} item>
                     <NewsCard content={content} />

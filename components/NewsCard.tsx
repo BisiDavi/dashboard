@@ -93,7 +93,17 @@ export default function NewsCard({ content }: NewsCardProps) {
             </Card>
             {newsDetails && content.content && (
                 <Paper className={classes.paper}>
-                    <Typography component="p">{content.content}</Typography>
+                    <Typography component="p">
+                        {content.content.replace(/ *\[[^)]*\] */g, "")}
+                    </Typography>
+                    <a
+                        className={classes.readMore}
+                        target="_blank"
+                        rel="noreferrer"
+                        href={content.url}
+                    >
+                        Read more
+                    </a>
                 </Paper>
             )}
         </div>

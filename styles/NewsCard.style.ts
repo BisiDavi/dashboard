@@ -44,5 +44,9 @@ export const newsCardStyle = makeStyles((theme) => ({
             fontSize: "13px",
         },
     },
+    readMore: {
+        color: "red",
+        fontSize: "11px",
+        fontWeight: "bold",
+    },
 }));
-

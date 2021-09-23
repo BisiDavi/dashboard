@@ -7,6 +7,6 @@ export const headlineNewsCardStyle = makeStyles((theme) => ({
         marginBottom: 10,
     },
     divider: {
-        marginBottom: 20,
+        marginBottom: 10,
     },
 }));
