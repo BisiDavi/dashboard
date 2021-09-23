@@ -8,7 +8,7 @@ export default async function NewsHandler(req, res) {
             console.log("req NewsHandler", req.query);
             let result;
             await newsAxiosInstance
-                .get(`/top-headlines?country=us&category=${slug}`)
+                .get(`/top-headlines?country=us&category=${slug}&pageSize=7`)
                 .then((response) => {
                     result = response.data;
                 })
