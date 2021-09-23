@@ -6,6 +6,9 @@ export const newsCardStyle = makeStyles((theme) => ({
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "space-between",
+        "&:hover": {
+            cursor: "pointer",
+        },
     },
     row1: {
         display: "flex",
@@ -42,3 +45,4 @@ export const newsCardStyle = makeStyles((theme) => ({
         },
     },
 }));
+

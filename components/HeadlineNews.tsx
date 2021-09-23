@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import NewsCard from "@components/NewsCard";
-import { Grid } from "@material-ui/core";
+import { Grid, Typography, Divider } from "@material-ui/core";
 import { contentType } from "@types/.";
+import { headlineNewsCardStyle } from "@styles/HeadlineNews.style";
 
 export default function HeadlineNews() {
     const [headlineNews, setHeadlineNews] = useState<contentType[]>([]);
@@ -20,17 +21,20 @@ export default function HeadlineNews() {
                 });
         }
     }, [headlineNews]);
-    console.log("headlineNews", headlineNews);
+
+    const classes = headlineNewsCardStyle();
+
     return (
         <Grid container spacing={2}>
-            {headlineNews.map((content: contentType) => {
-                console.log("content", content);
-                return (
-                    <Grid xs={4} key={content.title} item>
-                        <NewsCard content={content} />
-                    </Grid>
-                );
-            })}
+            <Typography className={classes.title} component="h3">
+                Top 6 Cryptocurrencies
+            </Typography>
+            <Divider className={classes.divider} />
+            {headlineNews.map((content: contentType) => (
+                <Grid xs={4} key={content.title} item>
+                    <NewsCard content={content} />
+                </Grid>
+            ))}
         </Grid>
     );
 }

@@ -5,7 +5,7 @@ export const coinRateStyles = makeStyles((theme) => ({
         flexDirection: "column",
     },
     row: {
-        display: "Flex",
+        display: "flex",
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
