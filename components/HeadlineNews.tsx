@@ -10,18 +10,22 @@ interface HeadlineNewsProps {
     newsCategory: newsCategoryType;
     count: number;
     query?: string;
+    title?: string;
 }
 
 export default function HeadlineNews({
     newsCategory,
     count,
     query,
+		title
 }: HeadlineNewsProps) {
     const [headlineNews, setHeadlineNews] = useState<contentType[]>([]);
+    const isQuery = query ? `/${query}` : "";
+
     useEffect(() => {
         if (headlineNews.length === 0) {
             axios
-                .get(`/api/news/${newsCategory}/${query}`)
+                .get(`/api/news/${newsCategory}${isQuery}`)
                 .then((response) => {
                     const { result } = response.data;
                     const filteredArticles = result.articles.filter(
@@ -38,17 +42,23 @@ export default function HeadlineNews({
                     console.log("error", error.response);
                 });
         }
-    }, [count, headlineNews, newsCategory, query]);
+    }, [count, headlineNews, newsCategory, isQuery]);
 
     const classes = headlineNewsCardStyle();
 
     return (
         <Grid container spacing={2}>
             <Grid item xs={12}>
-                <Typography className={classes.title} component="h3">
-                    Top <span>{count}</span>{" "}
-                    <span>{displayNewsTitle(newsCategory)} </span> Headlines
-                </Typography>
+                {title ? (
+                    <Typography className={classes.title} component="h3">
+                        {title}
+                    </Typography>
+                ) : (
+                    <Typography className={classes.title} component="h3">
+                        Top <span>{count}</span>{" "}
+                        <span>{displayNewsTitle(newsCategory)} </span> Headlines
+                    </Typography>
+                )}
                 <Divider className={classes.divider} />
             </Grid>
             {headlineNews.length > 0 ? (

@@ -14,7 +14,7 @@ export const newsCardStyle = makeStyles((theme) => ({
         display: "flex",
         alignItems: "center",
         justifyContent: "flex-start",
-				height:300
+        height: 300,
     },
     row1: {
         display: "flex",
@@ -39,9 +39,10 @@ export const newsCardStyle = makeStyles((theme) => ({
     },
     image: {
         margin: "10px auto",
+        height: "250px",
         "& img": {
-            height: "100%",
             width: "100%",
+            height: "100%",
         },
     },
     cardAction: {

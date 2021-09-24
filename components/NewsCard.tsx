@@ -9,14 +9,13 @@ import {
     CardContent,
 } from "@material-ui/core";
 import formatDate from "@utils/formatDate";
+import Image from "@components/Image";
 import { newsCardStyle } from "@styles/NewsCard.style";
 import { NewsCardProps } from "../types/.";
 
 export default function NewsCard({ content }: NewsCardProps) {
     const [newsDetails, showNewsDetails] = useState(false);
     const [articleImage, setArticleImage] = useState(null);
-
-    const cardHeight = articleImage ? "550px" : "230px";
 
     useEffect(() => {
         if (content.urlToImage) {
@@ -31,7 +30,6 @@ export default function NewsCard({ content }: NewsCardProps) {
     return (
         <>
             <Card
-                style={{ height: cardHeight }}
                 elevation={2}
                 className={classes.card}
                 onClick={showNewsDetailsHandler}
@@ -57,7 +55,10 @@ export default function NewsCard({ content }: NewsCardProps) {
                     </div>
                     {content.urlToImage && (
                         <div className={classes.image}>
-                            <img alt={content.title} src={content.urlToImage} />
+                            <Image
+                                alt={content.title}
+                                src={content.urlToImage}
+                            />
                         </div>
                     )}
                     <Typography className={classes.title} component="h1">

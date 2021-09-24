@@ -10,6 +10,7 @@ export default function Crypto() {
                     <HeadlineNews
                         newsCategory="business"
                         query="crypto"
+                        title="Top Crypto news"
                         count={6}
                     />
                 </Grid>
