@@ -1,8 +1,25 @@
-[
-    {
-        "name": "Shoes",
-        "price": 35000,
-        "quantity": 3,
-        "description": "Buy Nike Shoe"
-    }
-]
+{
+    "head": [
+        {
+            "id": "name",
+            "label": "Product Name"
+        },
+        { "id": "price", "label": "Price" },
+        {
+            "id": "quantity",
+            "label": "Quantity"
+        },
+        {
+            "id": "description",
+            "label": "Product's Description"
+        }
+    ],
+    "body": [
+        {
+            "name": "Shoes",
+            "price": 35000,
+            "quantity": 3,
+            "description": "Buy Nike Shoe"
+        }
+    ]
+}

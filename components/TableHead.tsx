@@ -4,23 +4,8 @@ import TableRow from "@material-ui/core/TableRow";
 import Checkbox from "@material-ui/core/Checkbox";
 import TableSortLabel from "@material-ui/core/TableSortLabel";
 import TableCell from "@material-ui/core/TableCell";
-import { Data, EnhancedTableProps, HeadCell } from "../types";
-
-const headCells: HeadCell[] = [
-    {
-        id: "name",
-        label: "Product Name",
-    },
-    { id: "price", label: "Price" },
-    {
-        id: "quantity",
-        label: "Quantity(g)",
-    },
-    {
-        id: "description",
-        label: "Produt's Description",
-    },
-];
+import { EnhancedTableProps } from "../types";
+import tableHeaddata from "@json/table.json";
 
 export default function EnhancedTableHead(props: EnhancedTableProps) {
     const {
@@ -32,10 +17,10 @@ export default function EnhancedTableHead(props: EnhancedTableProps) {
         rowCount,
         onRequestSort,
     } = props;
-    const createSortHandler =
-        (property: keyof Data) => (event: MouseEvent<unknown>) => {
-            onRequestSort(event, property);
-        };
+    const createSortHandler = (property) => (event: MouseEvent<unknown>) => {
+        onRequestSort(event, property);
+    };
+    const headCells = tableHeaddata.head;
 
     return (
         <TableHead>

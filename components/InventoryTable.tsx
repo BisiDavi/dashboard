@@ -9,7 +9,7 @@ import TableCell from "@material-ui/core/TableCell";
 import TableContainer from "@material-ui/core/TableContainer";
 import Paper from "@material-ui/core/Paper";
 import EnhancedTableHead from "@components/TableHead";
-import tableData from "@json/table.json";
+import tableBodydata from "@json/table.json";
 import { useStyles } from "@styles/table.styles";
 import { Data, Order } from "../types";
 import { stableSort, getComparator } from "@utils/tableFunctions";
@@ -21,6 +21,8 @@ export default function EnhancedTable() {
     const [selected, setSelected] = useState<string[]>([]);
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(5);
+
+    const tableData = tableBodydata.body;
 
     const handleRequestSort = (
         event: MouseEvent<unknown>,

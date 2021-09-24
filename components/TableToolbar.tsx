@@ -37,7 +37,7 @@ export default function EnhancedTableToolbar(props: EnhancedTableToolbarProps) {
                     id="tableTitle"
                     component="div"
                 >
-                    Nutrition
+                    Products Inventory Manager
                 </Typography>
             )}
             {numSelected > 0 ? (
