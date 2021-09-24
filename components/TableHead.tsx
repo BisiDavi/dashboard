@@ -49,8 +49,8 @@ export default function EnhancedTableHead(props: EnhancedTableProps) {
                             {orderBy === headCell.id ? (
                                 <span className={classes.visuallyHidden}>
                                     {order === "desc"
-                                        ? "sorted descending"
-                                        : "sorted ascending"}
+                                        ? " sorted descending"
+                                        : " sorted ascending"}
                                 </span>
                             ) : null}
                         </TableSortLabel>

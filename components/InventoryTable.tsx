@@ -1,18 +1,20 @@
 import { useState, ChangeEvent, MouseEvent } from "react";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableRow from "@material-ui/core/TableRow";
-import Checkbox from "@material-ui/core/Checkbox";
-import EnhancedTableToolbar from "./TableToolbar";
-import TablePagination from "@material-ui/core/TablePagination";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
+import {
+    Table,
+    TableBody,
+    TableRow,
+    TablePagination,
+    Checkbox,
+    TableCell,
+    TableContainer,
+} from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
 import EnhancedTableHead from "@components/TableHead";
 import tableBodydata from "@json/table.json";
+import { stableSort, getComparator } from "@utils/tableFunctions";
+import EnhancedTableToolbar from "./TableToolbar";
 import { useStyles } from "@styles/table.styles";
 import { Data, Order } from "../types";
-import { stableSort, getComparator } from "@utils/tableFunctions";
 
 export default function EnhancedTable() {
     const classes = useStyles();
@@ -84,9 +86,9 @@ export default function EnhancedTable() {
                 <TableContainer>
                     <Table
                         className={classes.table}
-                        aria-labelledby="tableTitle"
+                        aria-labelledby="inventoryManager"
                         size="medium"
-                        aria-label="enhanced table"
+                        aria-label="inventory manager"
                     >
                         <EnhancedTableHead
                             classes={classes}
@@ -139,13 +141,11 @@ export default function EnhancedTable() {
                                             >
                                                 {row.name}
                                             </TableCell>
-                                            <TableCell align="right">
-                                                {row.price}
-                                            </TableCell>
-                                            <TableCell align="right">
+                                            <TableCell>{row.price}</TableCell>
+                                            <TableCell>
                                                 {row.quantity}
                                             </TableCell>
-                                            <TableCell align="right">
+                                            <TableCell>
                                                 {row.description}
                                             </TableCell>
                                         </TableRow>

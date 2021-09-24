@@ -37,6 +37,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         },
         paper: {
             width: "100%",
+            marginTop: theme.spacing(2),
             marginBottom: theme.spacing(2),
         },
         table: {
