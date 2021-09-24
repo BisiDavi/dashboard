@@ -17,8 +17,8 @@ export default function Pagelayout({
 }: PropsWithChildren<PagelayoutProps>) {
     const classes = pagelayoutStyle();
     const { stateFromRedux } = useRedux("ui");
-    const { sidebarMenu }: stateFromReduxType = stateFromRedux;
-    console.log("stateFromRedux", stateFromRedux);
+    const { sidebarMenu }:any = stateFromRedux;
+    console.log("sidebarMenu", sidebarMenu);
 
     return (
         <>
