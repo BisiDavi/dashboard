@@ -5,6 +5,7 @@ import { pagelayoutStyle } from "@styles/Pagelayout.style";
 import Sidebar from "@components/Sidebar";
 import Header from "@components/Header";
 import useRedux from "@hooks/useRedux";
+import { stateFromReduxType } from "../types";
 
 interface PagelayoutProps {
     title: string;
@@ -16,7 +17,7 @@ export default function Pagelayout({
 }: PropsWithChildren<PagelayoutProps>) {
     const classes = pagelayoutStyle();
     const { stateFromRedux } = useRedux("ui");
-    const { sidebarMenu } = stateFromRedux;
+    const { sidebarMenu }: stateFromReduxType = stateFromRedux;
     console.log("stateFromRedux", stateFromRedux);
 
     return (

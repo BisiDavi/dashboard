@@ -62,3 +62,8 @@ export type UIType = "TOGGLE_SIDEBAR_MENU";
 export type UIActionType = {
     type: UIType;
 };
+
+export type stateFromReduxType =
+    | { sidebarMenu: boolean }
+    | { theme: string; toggleTheme: boolean }
+    | { product: any };
