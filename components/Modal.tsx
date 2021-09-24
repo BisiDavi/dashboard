@@ -1,5 +1,5 @@
 import Modal from "@material-ui/core/Modal";
-import { PropsWithChildren } from "react-transition-group/node_modules/@types/react";
+import { PropsWithChildren } from "react";
 
 interface AppModalInterface {
     open: boolean;

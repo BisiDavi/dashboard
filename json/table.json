@@ -4,7 +4,7 @@
             "id": "name",
             "label": "Product Name"
         },
-        { "id": "price", "label": "Price" },
+        { "id": "price", "label": "Price ($)" },
         {
             "id": "quantity",
             "label": "Quantity"
