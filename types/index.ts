@@ -1,3 +1,5 @@
+import { useStyles } from "@styles/table.styles";
+
 export type cardContentType = {
     btnVariant: "outlined" | "contained" | "text";
     title: string;
@@ -67,3 +69,30 @@ export type stateFromReduxType =
     | { theme: string; toggleTheme: boolean }
     | { sidebarMenu: boolean }
     | { product: any };
+
+export interface Data {
+    price: number;
+    description: string;
+    quantity: number;
+    name: string;
+}
+
+export type Order = "asc" | "desc";
+
+export interface EnhancedTableProps {
+    classes: ReturnType<typeof useStyles>;
+    numSelected: number;
+    onRequestSort: (
+        event: React.MouseEvent<unknown>,
+        property: keyof Data,
+    ) => void;
+    onSelectAllClick: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    order: Order;
+    orderBy: string;
+    rowCount: number;
+}
+
+export interface HeadCell {
+    id: keyof Data;
+    label: string;
+}

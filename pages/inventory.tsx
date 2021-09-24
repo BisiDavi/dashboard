@@ -1,5 +1,6 @@
 import Pagelayout from "@layouts/Pagelayout";
 import { Typography, Grid, Table } from "@material-ui/core";
+import InventoryTable from "@components/InventoryTable";
 
 export default function Order() {
     return (
@@ -10,7 +11,7 @@ export default function Order() {
             </Typography>
             <Grid container>
                 <Grid item xs={12}>
-                    <Table></Table>
+                    <InventoryTable />
                 </Grid>
             </Grid>
         </Pagelayout>
