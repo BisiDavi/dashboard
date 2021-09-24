@@ -23,7 +23,17 @@ export default function HeadlineNews({
                 .get(`/api/news/${newsCategory}`)
                 .then((response) => {
                     const { result } = response.data;
-                    const topHeadlines = result.articles.slice(0, count);
+                    const filteredArticles = result.articles.filter(
+                        (article) =>
+                            article.urlToImage &&
+                            article.content &&
+                            article.title &&
+                            article.description,
+                    );
+                    const topHeadlines = filteredArticles.slice(
+                        0,
+                        count,
+                    );
                     return setHeadlineNews(topHeadlines);
                 })
                 .catch((error) => {

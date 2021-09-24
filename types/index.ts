@@ -52,3 +52,13 @@ export type newsCategoryType =
     | "entertainment"
     | "business"
     | "health";
+
+export type UIStateType = {
+    toggleMenu: boolean;
+};
+
+export type UIType = "TOGGLE_MENU";
+
+export type UIActionType = {
+    type: UIType;
+};

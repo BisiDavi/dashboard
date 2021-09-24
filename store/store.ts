@@ -3,7 +3,7 @@ import thunk from "redux-thunk";
 import { persistStore, persistReducer } from "redux-persist";
 import { composeWithDevTools } from "redux-devtools-extension";
 import storage from "@utils/storage";
-import RootReducer from "./rootReducer";
+import RootReducer from "./reducers/rootReducer";
 
 const middleware = [thunk];
 

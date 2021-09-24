@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { Button, makeStyles } from "@material-ui/core";
 import { BsSun, BsMoon } from "react-icons/bs";
-import { toggleThemeAction } from "@store/themeAction";
+import { toggleThemeAction } from "@store/actions/themeAction";
 import useTheme from "@hooks/useTheme";
 
 const useStyles = makeStyles((theme) => ({

@@ -1,4 +1,4 @@
-import { TOGGLE_THEME } from "./constants";
+import { TOGGLE_THEME } from "../constants";
 
 export const toggleThemeAction = () => (dispatch) => {
   dispatch({

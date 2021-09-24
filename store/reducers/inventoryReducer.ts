@@ -1,7 +1,7 @@
-import { ADD_PRODUCT } from "./constants";
-import { InventoryState } from "../types/.";
+import { ADD_PRODUCT } from "../constants";
+import { InventoryState } from "../../types";
 
-export default function InventoryReducer(
+export default function inventoryReducer(
     state: InventoryState = {
         product: {
             name: "",

@@ -29,7 +29,7 @@ export default function NewsCard({ content }: NewsCardProps) {
     }
     const classes = newsCardStyle();
     return (
-        <div>
+        <>
             <Card
                 style={{ height: cardHeight }}
                 elevation={2}
@@ -100,6 +100,6 @@ export default function NewsCard({ content }: NewsCardProps) {
                     </a>
                 </Paper>
             )}
-        </div>
+        </>
     );
 }
