@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@store/reducers/rootReducer";
-import {  stateFromReduxType } from "../types";
+import { stateFromReduxType } from "../types/";
 
 type stateNameType = "theme" | "ui" | "inventory";
 

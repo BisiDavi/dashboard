@@ -14,7 +14,7 @@ export default function HeadlineLoader({ count }: HeadlineLoaderProps) {
         <>
             {preloadSix.map((_, index) => (
                 <Grid item xs={4} key={index}>
-                    <Card elevation={2} className={classes.card}>
+                    <Card elevation={2} className={classes.newsLoader}>
                         <NewsLoader />
                     </Card>
                 </Grid>

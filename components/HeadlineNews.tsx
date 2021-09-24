@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { NewsCard, HeadlineLoader } from "@components/.";
@@ -10,17 +9,19 @@ import displayNewsTitle from "@utils/displayNewsTitle";
 interface HeadlineNewsProps {
     newsCategory: newsCategoryType;
     count: number;
+    query?: string;
 }
 
 export default function HeadlineNews({
     newsCategory,
     count,
+    query,
 }: HeadlineNewsProps) {
     const [headlineNews, setHeadlineNews] = useState<contentType[]>([]);
     useEffect(() => {
         if (headlineNews.length === 0) {
             axios
-                .get(`/api/news/${newsCategory}`)
+                .get(`/api/news/${newsCategory}/${query}`)
                 .then((response) => {
                     const { result } = response.data;
                     const filteredArticles = result.articles.filter(
@@ -30,17 +31,14 @@ export default function HeadlineNews({
                             article.title &&
                             article.description,
                     );
-                    const topHeadlines = filteredArticles.slice(
-                        0,
-                        count,
-                    );
+                    const topHeadlines = filteredArticles.slice(0, count);
                     return setHeadlineNews(topHeadlines);
                 })
                 .catch((error) => {
                     console.log("error", error.response);
                 });
         }
-    }, [headlineNews]);
+    }, [count, headlineNews, newsCategory, query]);
 
     const classes = headlineNewsCardStyle();
 

@@ -64,6 +64,6 @@ export type UIActionType = {
 };
 
 export type stateFromReduxType =
-    | { sidebarMenu: boolean }
     | { theme: string; toggleTheme: boolean }
+    | { sidebarMenu: boolean }
     | { product: any };

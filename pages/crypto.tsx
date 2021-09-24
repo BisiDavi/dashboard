@@ -1,9 +1,19 @@
 import Pagelayout from "@layouts/Pagelayout";
+import { Grid } from "@material-ui/core";
+import HeadlineNews from "@components/HeadlineNews";
 
 export default function Crypto() {
     return (
         <Pagelayout title="Crypto">
-            <h1>Crypto page</h1>
+            <Grid container>
+                <Grid item xs={12}>
+                    <HeadlineNews
+                        newsCategory="business"
+                        query="crypto"
+                        count={6}
+                    />
+                </Grid>
+            </Grid>
         </Pagelayout>
     );
 }

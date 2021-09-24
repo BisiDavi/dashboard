@@ -2,7 +2,7 @@ import { UIStateType, UIActionType } from "../../types/";
 import { TOGGLE_SIDEBAR_MENU } from "../constants";
 
 export default function UIReducer(
-    state: UIStateType = {
+    state = {
         sidebarMenu: true,
     },
     actions: UIActionType,

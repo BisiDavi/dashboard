@@ -5,11 +5,22 @@ import { pagelayoutStyle } from "@styles/Pagelayout.style";
 import Sidebar from "@components/Sidebar";
 import Header from "@components/Header";
 import useRedux from "@hooks/useRedux";
-import { stateFromReduxType } from "../types";
-
+import { stateFromReduxType } from "../types/";
 interface PagelayoutProps {
     title: string;
 }
+
+type reduxType =
+    | {
+          sidebarMenu: boolean;
+      }
+    | {
+          product: any;
+      }
+    | {
+          theme: string;
+          toggleTheme: boolean;
+      };
 
 export default function Pagelayout({
     children,
@@ -17,8 +28,7 @@ export default function Pagelayout({
 }: PropsWithChildren<PagelayoutProps>) {
     const classes = pagelayoutStyle();
     const { stateFromRedux } = useRedux("ui");
-    const { sidebarMenu } = stateFromRedux;
-    console.log("sidebarMenu", sidebarMenu);
+    const { sidebarMenu }: any = stateFromRedux;
 
     return (
         <>

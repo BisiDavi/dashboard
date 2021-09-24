@@ -43,6 +43,7 @@ export default function CovidChart() {
                 <a
                     target="_blank"
                     rel="noreferrer"
+                    className={classes.link}
                     href="https://covid19api.com"
                 >
                     Credit: covid19api.com
@@ -50,7 +51,7 @@ export default function CovidChart() {
             </Typography>
             <Divider className={classes.divider} />
             <Grid container className={classes.chart}>
-                {chartData ? (
+                {chartData.length > 0 ? (
                     <ResponsiveContainer width="100%" height="100%">
                         <AreaChart
                             width={500}
@@ -125,9 +126,6 @@ export default function CovidChart() {
                     <ThreeDots />
                 )}
             </Grid>
-            {/*<Grid item>
-                {error && chartData.length === 0 && displayError()}
-            </Grid>*/}
         </Grid>
     );
 }

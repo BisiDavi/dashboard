@@ -13,4 +13,7 @@ export const headerStyles = makeStyles((theme) => ({
         alignItems: "center",
         justifyContent: "space-around",
     },
+		menu:{
+			
+		}
 }));

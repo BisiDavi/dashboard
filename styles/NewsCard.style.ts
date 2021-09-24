@@ -10,6 +10,12 @@ export const newsCardStyle = makeStyles((theme) => ({
             cursor: "pointer",
         },
     },
+    newsLoader: {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "flex-start",
+				height:300
+    },
     row1: {
         display: "flex",
         flexDirection: "row",
