@@ -54,10 +54,10 @@ export type newsCategoryType =
     | "health";
 
 export type UIStateType = {
-    toggleMenu: boolean;
+    sidebarMenu: boolean;
 };
 
-export type UIType = "TOGGLE_MENU";
+export type UIType = "TOGGLE_SIDEBAR_MENU";
 
 export type UIActionType = {
     type: UIType;

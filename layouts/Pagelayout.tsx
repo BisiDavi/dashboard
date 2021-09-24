@@ -4,6 +4,7 @@ import { Grid } from "@material-ui/core";
 import { pagelayoutStyle } from "@styles/Pagelayout.style";
 import Sidebar from "@components/Sidebar";
 import Header from "@components/Header";
+import useRedux from "@hooks/useRedux";
 
 interface PagelayoutProps {
     title: string;
@@ -14,6 +15,9 @@ export default function Pagelayout({
     title,
 }: PropsWithChildren<PagelayoutProps>) {
     const classes = pagelayoutStyle();
+    const { stateFromRedux } = useRedux("ui");
+    const { sidebarMenu } = stateFromRedux;
+    console.log("stateFromRedux", stateFromRedux);
 
     return (
         <>
@@ -25,9 +29,11 @@ export default function Pagelayout({
                     <Header />
                 </Grid>
                 <Grid className={classes.content} item xs={12}>
-                    <Grid item lg={2} className={classes.sidebarContainer}>
-                        <Sidebar />
-                    </Grid>
+                    {sidebarMenu && (
+                        <Grid item lg={2} className={classes.sidebarContainer}>
+                            <Sidebar />
+                        </Grid>
+                    )}
                     <Grid item lg={10} className={classes.mainContainer}>
                         <main className={classes.main}>{children}</main>
                     </Grid>

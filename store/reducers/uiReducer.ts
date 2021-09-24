@@ -1,18 +1,18 @@
 import { UIStateType, UIActionType } from "../../types/";
-import { TOGGLE_MENU } from "../constants";
+import { TOGGLE_SIDEBAR_MENU } from "../constants";
 
 export default function UIReducer(
     state: UIStateType = {
-        toggleMenu: false,
+        sidebarMenu: true,
     },
     actions: UIActionType,
 ) {
     const { type } = actions;
     switch (type) {
-        case TOGGLE_MENU: {
+        case TOGGLE_SIDEBAR_MENU: {
             return {
                 ...state,
-                showMenu: !state.toggleMenu,
+                sidebarMenu: !state.sidebarMenu,
             };
         }
         default:
