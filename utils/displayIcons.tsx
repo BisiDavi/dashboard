@@ -19,7 +19,6 @@ export default function displayIcons(iconName: string) {
         case "covid": {
             return <LocalHospitalIcon />;
         }
-
         default:
             return null;
     }

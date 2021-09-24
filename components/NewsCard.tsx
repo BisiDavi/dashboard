@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 /* eslint-disable @next/next/no-img-element */
 import { useState, useEffect } from "react";
 import {
@@ -9,19 +10,17 @@ import {
     CardContent,
 } from "@material-ui/core";
 import formatDate from "@utils/formatDate";
-import Image from "@components/Image";
+import Loader from "@components/Loader";
 import { newsCardStyle } from "@styles/NewsCard.style";
 import { NewsCardProps } from "../types/.";
+import dynamic from "next/dynamic";
+
+const Image = dynamic(() => import("../components/Image"), {
+    loading: () => <Loader />,
+});
 
 export default function NewsCard({ content }: NewsCardProps) {
     const [newsDetails, showNewsDetails] = useState(false);
-    const [articleImage, setArticleImage] = useState(null);
-
-    useEffect(() => {
-        if (content.urlToImage) {
-            setArticleImage(true);
-        }
-    }, [content.urlToImage]);
 
     function showNewsDetailsHandler() {
         return showNewsDetails(!newsDetails);

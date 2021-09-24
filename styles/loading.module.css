@@ -1,4 +1,4 @@
-@keyframes ldio-rpinwye8j0b {
+@keyframes loadingioEclipse {
     0% {
         transform: rotate(0deg);
     }
@@ -11,18 +11,18 @@
 }
 .icon div {
     position: absolute;
-    animation: ldio-rpinwye8j0b 1s linear infinite;
-    width: 100px;
-    height: 100px;
+    animation: loadingioEclipse 1s linear infinite;
+    width: 160px;
+    height: 160px;
     top: 20px;
     left: 20px;
     border-radius: 50%;
     box-shadow: 0 4px 0 0 #e15b64;
     transform-origin: 80px 82px;
 }
-.loadingio-eclipse {
-    width: 140px;
-    height: 140px;
+.loadingioEclipse {
+    width: 200px;
+    height: 200px;
     display: inline-block;
     overflow: hidden;
 }

@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { createTheme, useMediaQuery } from "@material-ui/core";
-import { RootState } from "@store/rootReducer";
+import { RootState } from "@store/reducers/rootReducer";
 
 export default function useTheme() {
     const { theme } = useSelector((state: RootState) => state.theme);
