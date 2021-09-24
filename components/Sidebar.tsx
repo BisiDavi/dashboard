@@ -10,7 +10,7 @@ import {
     Paper,
 } from "@material-ui/core";
 import menus from "@json/menu.json";
-import menuIcons from "./MenuIcons";
+import displayIcons from "@utils/displayIcons";
 import { sidebarStyle } from "@styles/Sidebar.style";
 
 export default function Sidebar() {
@@ -50,7 +50,7 @@ export default function Sidebar() {
                                 >
                                     <ListItem button>
                                         <ListItemIcon>
-                                            {menuIcons(item.icon)}
+                                            {displayIcons(item.icon)}
                                         </ListItemIcon>
                                         <ListItemText primary={item.name} />
                                     </ListItem>

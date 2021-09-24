@@ -3,18 +3,18 @@
         "category": "GENERAL",
         "menu": [
             {
-                "icon": "overview",
+                "icon": "crypto",
                 "name": "Cryptocurrency",
                 "link": "/crypto"
             },
-            { "icon": "account", "name": "Covid 19", "link": "/covid-19" },
+            { "icon": "covid", "name": "Covid 19", "link": "/covid-19" },
             {
-                "icon": "products",
+                "icon": "news",
                 "name": "News",
                 "link": "/news"
             },
             {
-                "icon": "orders",
+                "icon": "inventory",
                 "name": "Inventory",
                 "link": "/inventory"
             }
