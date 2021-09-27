@@ -38,7 +38,15 @@ export default function CoinRate() {
             <Grid container spacing={2}>
                 {coins.length > 0 ? (
                     coins.map((coin) => (
-                        <Grid key={coin.id} item xs={2}>
+                        <Grid
+                            key={coin.id}
+                            item
+                            xs={12}
+                            sm={6}
+                            xl={2}
+                            lg={2}
+                            md={4}
+                        >
                             <ViewCard>
                                 <div className={classes.row}>
                                     <Typography

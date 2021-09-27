@@ -13,8 +13,15 @@ export const newsCardStyle = makeStyles((theme) => ({
     newsLoader: {
         display: "flex",
         alignItems: "center",
-        justifyContent: "flex-start",
-        height: 300,
+        justifyContent: "center",
+        height: "100%",
+        padding: 10,
+    },
+    gridHeadline: {
+        width: "100%",
+    },
+    headlineLoader: {
+        flexDirection: "row",
     },
     row1: {
         display: "flex",

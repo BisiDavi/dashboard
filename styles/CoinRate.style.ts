@@ -11,6 +11,12 @@ export const coinRateStyles = makeStyles((theme) => ({
         justifyContent: "space-between",
         margin: 10,
     },
+    cryptoCard: {
+        height: "100%",
+        width: "100%",
+        justifyContent: "center",
+        alignItems: "center",
+    },
     rate: {
         textAlign: "center",
         fontFamily: "Roboto",

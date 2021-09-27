@@ -27,13 +27,7 @@ export const pagelayoutStyle = makeStyles((theme: Theme) =>
             left: "0",
             zIndex: 1,
         },
-        main: {
-            width: "100%",
-            padding: 15,
-        },
         mainContainer: {
-            position: "absolute",
-            right: "0",
             padding: "20px",
             width: "100%",
         },

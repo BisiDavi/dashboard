@@ -7,5 +7,9 @@ export const viewCardStyle = makeStyles((theme: Theme) =>
             justifyContent: "space-around",
             padding: 10,
         },
+				viewCard:{
+					height:"100%",
+					width:"100%"
+				}
     }),
 );

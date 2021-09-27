@@ -17,7 +17,7 @@ export default function HeadlineNews({
     newsCategory,
     count,
     query,
-		title
+    title,
 }: HeadlineNewsProps) {
     const [headlineNews, setHeadlineNews] = useState<contentType[]>([]);
     const isQuery = query ? `/${query}` : "";
@@ -47,8 +47,8 @@ export default function HeadlineNews({
     const classes = headlineNewsCardStyle();
 
     return (
-        <Grid container spacing={2}>
-            <Grid item xs={12}>
+        <Grid className={classes.headlineNews} container spacing={2}>
+            <Grid item xs={12} sm={6} md={4} lg={4} xl={2}>
                 {title ? (
                     <Typography className={classes.title} component="h3">
                         {title}
@@ -63,7 +63,7 @@ export default function HeadlineNews({
             </Grid>
             {headlineNews.length > 0 ? (
                 headlineNews.map((content: contentType) => (
-                    <Grid xs={4} key={content.title} item>
+                    <Grid sm={12} key={content.title} item>
                         <NewsCard content={content} />
                     </Grid>
                 ))

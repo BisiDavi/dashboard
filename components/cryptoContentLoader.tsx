@@ -1,11 +1,11 @@
-import { Grid } from "@material-ui/core";
+import { Grid, Card } from "@material-ui/core";
+import { coinRateStyles } from "@styles/CoinRate.style";
 import ContentLoader from "react-content-loader";
-import ViewCard from "@components/ViewCard";
 
 export const CryptoLoader = (props) => (
     <ContentLoader
         speed={2}
-        width={476}
+        width="100%"
         height={124}
         viewBox="0 0 476 124"
         alt="Loading coins details ..."
@@ -13,23 +13,25 @@ export const CryptoLoader = (props) => (
         foregroundColor="#524747"
         {...props}
     >
-        <rect x="0" y="115" rx="3" ry="3" width="45" height="8" />
-        <circle cx="180" cy="35" r="20" />
-        <rect x="2" y="35" rx="3" ry="3" width="70" height="8" />
-        <rect x="1" y="80" rx="3" ry="3" width="200" height="8" />
-        <rect x="155" y="115" rx="3" ry="3" width="45" height="8" />
+        <rect x="20" y="92%" rx="3" ry="3" width="25%" height="8" />
+        <circle cx="85%" cy="28%" r="10%" />
+        <rect x="5%" y="35%" rx="3" ry="3" width="70" height="8" />
+        <rect x="5%" y="70%" rx="3" ry="3" width="90%" height="8" />
+        <rect x="70%" y="92%" rx="3" ry="3" width="25%" height="8" />
     </ContentLoader>
 );
 
 export default function CryptoContentLoader() {
     const array6 = new Array(6).fill(0);
+    const classes = coinRateStyles();
+
     return (
-        <Grid container spacing={2}>
+        <Grid container spacing={3}>
             {array6.map((_, index) => (
-                <Grid item xs={2} key={index}>
-                    <ViewCard>
+                <Grid item xs={12} sm={6} xl={2} lg={2} md={4} key={index}>
+                    <Card className={classes.cryptoCard}>
                         <CryptoLoader />
-                    </ViewCard>
+                    </Card>
                 </Grid>
             ))}
         </Grid>

@@ -23,7 +23,7 @@ export default function ViewCard({
 }: PropsWithChildren<ViewCard>) {
     const classes = viewCardStyle();
     return (
-        <Card>
+        <Card className={classes.viewCard}>
             <CardContent>{children}</CardContent>
             {content?.btnVariant && <Divider />}
             {content?.btnVariant && (

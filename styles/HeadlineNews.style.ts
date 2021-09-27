@@ -9,4 +9,7 @@ export const headlineNewsCardStyle = makeStyles((theme) => ({
     divider: {
         marginBottom: 10,
     },
+    headlineNews: {
+        flexDirection: "column",
+    },
 }));

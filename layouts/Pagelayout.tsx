@@ -39,14 +39,19 @@ export default function Pagelayout({
                 <Grid item xs={12} className={classes.appBarContainer}>
                     <Header />
                 </Grid>
-                <Grid className={classes.content} item xs={12}>
+                <Grid className={classes.content} container>
                     {sidebarMenu && (
                         <Grid item lg={2} className={classes.sidebarContainer}>
                             <Sidebar />
                         </Grid>
                     )}
-                    <Grid item lg={10} className={classes.mainContainer}>
-                        <main className={classes.main}>{children}</main>
+                    <Grid
+                        item
+                        sm={12}
+                        component="main"
+                        className={classes.mainContainer}
+                    >
+                        {children}
                     </Grid>
                 </Grid>
             </Grid>
