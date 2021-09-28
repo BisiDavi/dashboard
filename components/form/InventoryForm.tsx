@@ -22,7 +22,6 @@ export default function InventoryForm() {
             }}
             validationSchema={modalFormSchema}
             onSubmit={(values) => {
-                console.log("values", values);
                 dispatch(InventoryAction(values));
             }}
         >

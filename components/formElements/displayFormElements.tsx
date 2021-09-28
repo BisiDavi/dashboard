@@ -3,23 +3,24 @@ import { FormikErrors, FormikTouched } from "formik";
 import Input from "./Input";
 import SelectField from "./SelectField";
 
-interface FormElementsProps {
+type FormElementsProps = {
     fields: {
-        type: string;
+        field: string;
         name: string;
+        type: string;
         label: string;
         placeholder: string;
-        option?: string;
+        options?: string[];
     }[];
     handleChange?: (e: string | ChangeEvent<any>) => void;
     handleBlur?: (e: string | ChangeEvent<any>) => void;
     values?: unknown;
     errors?: FormikErrors<unknown>;
     touched?: FormikTouched<unknown>;
-}
+};
 
 export default function displayFormElements(
-    fields,
+    fields: FormElementsProps["fields"],
     handleChange,
     handleBlur,
     values,

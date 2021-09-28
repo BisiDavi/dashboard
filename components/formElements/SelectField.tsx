@@ -15,7 +15,7 @@ interface fieldProps {
         name: string;
         label: string;
         placeholder: string;
-        option?: string;
+        options?: string[];
     };
     handleChange?: (e: string | ChangeEvent<any>) => void;
     handleBlur?: (e: string | ChangeEvent<any>) => void;
@@ -47,7 +47,13 @@ export default function SelectField({
                 label={field.label}
                 onChange={handleChange}
                 onBlur={handleBlur}
-            />
+            >
+                {field.options.map((option) => (
+                    <option key={option} value={option}>
+                        {option}
+                    </option>
+                ))}
+            </Select>
         </>
     );
 }

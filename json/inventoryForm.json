@@ -10,6 +10,14 @@
         "name": "category",
         "type": "select",
         "field": "select",
+        "options": [
+            "Shoes",
+            "Electronics",
+            "Clothes",
+            "Bags",
+            "Phones",
+            "Laptops"
+        ],
         "label": "Product Category",
         "placeholder": "categories like Shoes, Clothes, Electronics"
     },
