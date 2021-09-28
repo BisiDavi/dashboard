@@ -26,6 +26,7 @@ export default function displayFormElements(
     values,
     errors,
     touched,
+    formValues,
 ) {
     return fields.map((fieldItem) => {
         switch (fieldItem.field) {
@@ -38,6 +39,7 @@ export default function displayFormElements(
                         values={values}
                         errors={errors}
                         touched={touched}
+                        formValues={formValues}
                     />
                 );
 

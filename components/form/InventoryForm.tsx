@@ -5,10 +5,22 @@ import { Paper } from "@material-ui/core";
 import formFields from "@json/inventoryForm.json";
 import { modalFormSchema } from "./schemas";
 import { inventoryStyles } from "@styles/Inventory.style";
-import { addProductInventoryAction } from "@store/actions/inventoryAction";
+import {
+    addProductInventoryAction,
+    editProductInventoryAction,
+} from "@store/actions/inventoryAction";
 import displayFormElements from "@components/formElements/displayFormElements";
+import { formValues } from "../../types";
 
-export default function InventoryForm() {
+interface InventoryFormProps {
+    formValues?: { selectedField: formValues; selectedIndex: number };
+    formType?: "edit" | "add";
+}
+
+export default function InventoryForm({
+    formValues,
+    formType,
+}: InventoryFormProps) {
     const classes = inventoryStyles();
     const dispatch = useDispatch();
     return (
@@ -22,7 +34,13 @@ export default function InventoryForm() {
             }}
             validationSchema={modalFormSchema}
             onSubmit={(values) => {
-                dispatch(addProductInventoryAction(values));
+                const editValues = {
+                    product: values,
+                    index: formValues.selectedIndex,
+                };
+                formType === "edit"
+                    ? dispatch(editProductInventoryAction(editValues))
+                    : dispatch(addProductInventoryAction(values));
             }}
         >
             {({
@@ -43,6 +61,7 @@ export default function InventoryForm() {
                             values,
                             errors,
                             touched,
+                            formValues,
                         )}
                         <Button
                             disabled={!isValid}

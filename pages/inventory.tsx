@@ -3,11 +3,10 @@ import { Typography, Tooltip, Grid, IconButton } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
 import dynamic from "next/dynamic";
 import Pagelayout from "@layouts/Pagelayout";
-import InventoryForm from "@components/form/InventoryForm";
 import InventoryTable from "@components/InventoryTable";
 import { inventoryStyles } from "@styles/Inventory.style";
 
-const AppModal = dynamic(() => import("../components/Modal"));
+const InventoryModal = dynamic(() => import("../components/InventoryModal"));
 
 export default function InventoryManager() {
     const [modal, setModal] = useState(false);
@@ -23,9 +22,10 @@ export default function InventoryManager() {
                 Welcome to the Inventory manager page, add products, edit
                 products, and delete products
             </Typography>
-            <AppModal open={modal} handleClose={() => toggleModal(false)}>
-                <InventoryForm />
-            </AppModal>
+            <InventoryModal
+                modal={modal}
+                handleClose={() => toggleModal(false)}
+            />
             <Grid container className={classes.inventoryContainer}>
                 <Grid item xs={12}>
                     <InventoryTable />

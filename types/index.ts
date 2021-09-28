@@ -67,7 +67,7 @@ export type UIActionType = {
 export type stateFromReduxType =
     | { theme: string; toggleTheme: boolean }
     | { sidebarMenu: boolean }
-    | { product: any };
+    | { products: any[] };
 
 export interface Data {
     price: number;
@@ -95,3 +95,11 @@ export interface HeadCell {
     id: keyof Data;
     label: string;
 }
+
+export type formValues = {
+    name: string;
+    price: string;
+    description: string;
+    category: string;
+    quantity: string;
+};

@@ -2,6 +2,7 @@ import { useState, ChangeEvent } from "react";
 import { TextField, makeStyles, InputAdornment } from "@material-ui/core";
 import { FormikErrors, FormikTouched } from "formik";
 import { BsEyeSlash, BsFillEyeFill } from "react-icons/bs";
+import { formValues } from "../../types";
 
 const useStyles = makeStyles((theme) => ({
     input: {
@@ -27,6 +28,7 @@ interface InputProps {
     values?: unknown;
     errors?: FormikErrors<unknown>;
     touched?: FormikTouched<inputValueType> | any;
+    formValues?: { selectedField: formValues; selectedIndex: number };
 }
 
 export default function Input({
@@ -36,6 +38,7 @@ export default function Input({
     values,
     errors,
     touched,
+    formValues,
 }: InputProps) {
     const [showPassword, setShowPassword] = useState(false);
 
@@ -52,8 +55,15 @@ export default function Input({
                 data-testid="text-input"
                 fullWidth
                 name={input.name}
-                value={values[input.name]}
+                //value={
+                //    formValues
+                //        ? formValues.selectedField[input.name]
+                //        : values[input.name]
+                //}
                 placeholder={input.placeholder}
+                defaultValue={
+                    formValues && formValues.selectedField[input.name]
+                }
                 className={classes.input}
                 label={input.label}
                 onChange={handleChange}
@@ -69,4 +79,4 @@ export default function Input({
             )}
         </>
     );
-}
+}=

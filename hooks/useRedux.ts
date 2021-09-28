@@ -7,7 +7,7 @@ type stateNameType = "theme" | "ui" | "inventory";
 export default function useRedux(stateName?: stateNameType) {
     const dispatch = useDispatch();
 
-    const stateFromRedux: stateFromReduxType = useSelector(
+    const stateFromRedux: any = useSelector(
         (state: RootState) => state[stateName],
     );
 

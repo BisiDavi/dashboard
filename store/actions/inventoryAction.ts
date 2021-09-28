@@ -1,6 +1,6 @@
 import { ADD_PRODUCT, DELETE_PRODUCT, EDIT_PRODUCT } from "@store/constants";
 
-type inventoryAction = {
+type productType = {
     name: string;
     price: string;
     description: string;
@@ -8,13 +8,19 @@ type inventoryAction = {
     quantity: string;
 };
 
+type editProductType = {
+    product: productType;
+    index: number;
+};
+
+type deleteProductType = {
+    index: number;
+};
+
 export const addProductInventoryAction =
-    (payload: inventoryAction) =>
+    (payload: productType) =>
     (
-        dispatch: (arg0: {
-            type: "ADD_PRODUCT";
-            payload: inventoryAction;
-        }) => any,
+        dispatch: (arg0: { type: "ADD_PRODUCT"; payload: productType }) => any,
     ) => {
         return dispatch({
             type: ADD_PRODUCT,
@@ -23,11 +29,11 @@ export const addProductInventoryAction =
     };
 
 export const editProductInventoryAction =
-    (payload: inventoryAction) =>
+    (payload: editProductType) =>
     (
         dispatch: (arg0: {
             type: "EDIT_PRODUCT";
-            payload: inventoryAction;
+            payload: editProductType;
         }) => any,
     ) => {
         return dispatch({
@@ -37,11 +43,11 @@ export const editProductInventoryAction =
     };
 
 export const deleteProductInventoryAction =
-    (payload: inventoryAction) =>
+    (payload: deleteProductType) =>
     (
         dispatch: (arg0: {
             type: "DELETE_PRODUCT";
-            payload: inventoryAction;
+            payload: deleteProductType;
         }) => any,
     ) => {
         return dispatch({

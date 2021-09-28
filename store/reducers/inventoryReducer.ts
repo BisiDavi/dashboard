@@ -25,7 +25,7 @@ export default function inventoryReducer(
         }
         case DELETE_PRODUCT: {
             const productsCopy = state.products;
-            productsCopy.splice(0, payload);
+            productsCopy.splice(payload, 1);
             return {
                 ...state,
                 products: productsCopy,

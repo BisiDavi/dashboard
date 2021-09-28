@@ -9,31 +9,60 @@ import {
     Tooltip,
     IconButton,
     TableContainer,
+    Paper,
 } from "@material-ui/core";
-import Paper from "@material-ui/core/Paper";
-import { useSelector } from "react-redux";
+import dynamic from "next/dynamic";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
+import useRedux from "@hooks/useRedux";
 import EnhancedTableHead from "@components/TableHead";
 import { stableSort, getComparator } from "@utils/tableFunctions";
 import EnhancedTableToolbar from "./TableToolbar";
 import { useStyles } from "@styles/table.styles";
-import { Data, Order } from "../types";
-import { RootState } from "@store/reducers/rootReducer";
+import { Data, formValues, Order } from "../types";
+import { deleteProductInventoryAction } from "@store/actions/inventoryAction";
+
+const InventoryModal = dynamic(() => import("../components/InventoryModal"));
+
+type selectedFormValuesTypes = {
+    selectedField: formValues;
+    selectedIndex: number;
+};
 
 export default function EnhancedTable() {
     const classes = useStyles();
     const [order, setOrder] = useState<Order>("asc");
     const [orderBy, setOrderBy] = useState<keyof Data>("name");
     const [selected, setSelected] = useState<string[]>([]);
+    const [selectedFormValues, setSelectedFormValues] =
+        useState<selectedFormValuesTypes>({
+            selectedField: null,
+            selectedIndex: null,
+        });
     const [page, setPage] = useState(0);
+    const [modal, setModal] = useState(false);
     const [rowsPerPage, setRowsPerPage] = useState(5);
+    const { dispatch, stateFromRedux } = useRedux("inventory");
 
-    const { products } = useSelector((state: RootState) => state.inventory);
+    const tableData = stateFromRedux.products;
 
-    const tableData = products;
+    function toggleModal(open) {
+        return setModal(open);
+    }
+    function editProduct(index) {
+        toggleModal(true);
+        const selectedProduct = stateFromRedux.products[index];
+        setSelectedFormValues({
+            ...selectedFormValues,
+            selectedField: selectedProduct,
+            selectedIndex: index,
+        });
+    }
 
-    console.log("products", products);
+    function deleteProduct(index) {
+        console.log("selected index", index);
+        dispatch(deleteProductInventoryAction(index));
+    }
 
     const handleRequestSort = (
         event: MouseEvent<unknown>,
@@ -91,110 +120,133 @@ export default function EnhancedTable() {
         Math.min(rowsPerPage, tableData.length - page * rowsPerPage);
 
     return (
-        <div className={classes.root}>
-            <Paper className={classes.paper}>
-                <EnhancedTableToolbar numSelected={selected.length} />
-                <TableContainer>
-                    <Table
-                        className={classes.table}
-                        aria-labelledby="inventoryManager"
-                        size="medium"
-                        aria-label="inventory manager"
-                    >
-                        <EnhancedTableHead
-                            classes={classes}
-                            numSelected={selected.length}
-                            order={order}
-                            orderBy={orderBy}
-                            onSelectAllClick={handleSelectAllClick}
-                            onRequestSort={handleRequestSort}
-                            rowCount={tableData.length}
-                        />
-                        <TableBody>
-                            {stableSort(
-                                tableData,
-                                getComparator(order, orderBy),
-                            )
-                                .slice(
-                                    page * rowsPerPage,
-                                    page * rowsPerPage + rowsPerPage,
+        <>
+            <InventoryModal
+                modal={modal}
+                handleClose={() => toggleModal(false)}
+                formValues={selectedFormValues}
+            />
+            <div className={classes.root}>
+                <Paper className={classes.paper}>
+                    <EnhancedTableToolbar numSelected={selected.length} />
+                    <TableContainer>
+                        <Table
+                            className={classes.table}
+                            aria-labelledby="inventoryManager"
+                            size="medium"
+                            aria-label="inventory manager"
+                        >
+                            <EnhancedTableHead
+                                classes={classes}
+                                numSelected={selected.length}
+                                order={order}
+                                orderBy={orderBy}
+                                onSelectAllClick={handleSelectAllClick}
+                                onRequestSort={handleRequestSort}
+                                rowCount={tableData.length}
+                            />
+                            <TableBody>
+                                {stableSort(
+                                    tableData,
+                                    getComparator(order, orderBy),
                                 )
-                                .map((row, index) => {
-                                    const isItemSelected = isSelected(row.name);
-                                    const labelId = `enhanced-table-checkbox-${index}`;
+                                    .slice(
+                                        page * rowsPerPage,
+                                        page * rowsPerPage + rowsPerPage,
+                                    )
+                                    .map((row, index) => {
+                                        const isItemSelected = isSelected(
+                                            row.name,
+                                        );
+                                        const labelId = `enhanced-table-checkbox-${index}`;
 
-                                    return (
-                                        <TableRow
-                                            hover
-                                            tabIndex={-1}
-                                            key={row.name}
-                                        >
-                                            <TableCell padding="checkbox">
-                                                <Checkbox
-                                                    checked={isItemSelected}
-                                                    onClick={(event) =>
-                                                        handleClick(
-                                                            event,
-                                                            row.name,
-                                                        )
-                                                    }
-                                                    inputProps={{
-                                                        "aria-labelledby":
-                                                            labelId,
-                                                    }}
-                                                />
-                                            </TableCell>
-                                            <TableCell
-                                                component="th"
-                                                id={labelId}
-                                                scope="row"
-                                                padding="none"
+                                        return (
+                                            <TableRow
+                                                hover
+                                                tabIndex={-1}
+                                                key={row.name}
                                             >
-                                                {row.name}
-                                            </TableCell>
-                                            <TableCell>
-                                                {row.category}
-                                            </TableCell>
-                                            <TableCell>{row.price}</TableCell>
-                                            <TableCell>
-                                                {row.quantity}
-                                            </TableCell>
-                                            <TableCell>
-                                                {row.description}
-                                            </TableCell>
-                                            <TableCell>
-                                                <Tooltip title="Edit Product">
-                                                    <IconButton>
-                                                        <EditIcon />
-                                                    </IconButton>
-                                                </Tooltip>
-                                                <Tooltip title="Delete Product">
-                                                    <IconButton>
-                                                        <DeleteIcon />
-                                                    </IconButton>
-                                                </Tooltip>
-                                            </TableCell>
-                                        </TableRow>
-                                    );
-                                })}
-                            {emptyRows > 0 && (
-                                <TableRow>
-                                    <TableCell colSpan={6} />
-                                </TableRow>
-                            )}
-                        </TableBody>
-                    </Table>
-                </TableContainer>
-                <TablePagination
-                    rowsPerPageOptions={[5, 10, 25]}
-                    component="div"
-                    count={tableData.length}
-                    rowsPerPage={rowsPerPage}
-                    page={page}
-                    onPageChange={handleChangePage}
-                    onRowsPerPageChange={handleChangeRowsPerPage}
-                />
-            </Paper>
-        </div>
+                                                <TableCell padding="checkbox">
+                                                    <Checkbox
+                                                        checked={isItemSelected}
+                                                        onClick={(event) =>
+                                                            handleClick(
+                                                                event,
+                                                                row.name,
+                                                            )
+                                                        }
+                                                        inputProps={{
+                                                            "aria-labelledby":
+                                                                labelId,
+                                                        }}
+                                                    />
+                                                </TableCell>
+                                                <TableCell
+                                                    component="th"
+                                                    id={labelId}
+                                                    scope="row"
+                                                    padding="none"
+                                                >
+                                                    {row.name}
+                                                </TableCell>
+                                                <TableCell>
+                                                    {row.category}
+                                                </TableCell>
+                                                <TableCell>
+                                                    {row.price}
+                                                </TableCell>
+                                                <TableCell>
+                                                    {row.quantity}
+                                                </TableCell>
+                                                <TableCell>
+                                                    {row.description}
+                                                </TableCell>
+                                                <TableCell>
+                                                    <Tooltip title="Edit Product">
+                                                        <IconButton
+                                                            onClick={() =>
+                                                                editProduct(
+                                                                    index,
+                                                                )
+                                                            }
+                                                        >
+                                                            <EditIcon />
+                                                        </IconButton>
+                                                    </Tooltip>
+                                                    <Tooltip title="Delete Product">
+                                                        <IconButton
+                                                            onClick={() =>
+                                                                deleteProduct(
+                                                                    index,
+                                                                )
+                                                            }
+                                                        >
+                                                            <DeleteIcon />
+                                                        </IconButton>
+                                                    </Tooltip>
+                                                </TableCell>
+                                            </TableRow>
+                                        );
+                                    })}
+                                {emptyRows > 0 && (
+                                    <TableRow>
+                                        <TableCell colSpan={6} />
+                                    </TableRow>
+                                )}
+                            </TableBody>
+                        </Table>
+                    </TableContainer>
+                    <TablePagination
+                        rowsPerPageOptions={[5, 10, 25]}
+                        component="div"
+                        count={tableData.length}
+                        rowsPerPage={rowsPerPage}
+                        page={page}
+                        onPageChange={handleChangePage}
+                        onRowsPerPageChange={handleChangeRowsPerPage}
+                    />
+                </Paper>
+            </div>
+        </>
     );
 }
