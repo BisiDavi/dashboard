@@ -62,19 +62,21 @@ export default function HeadlineNews({
                 <Divider className={classes.divider} />
             </Grid>
             {headlineNews.length > 0 ? (
-                headlineNews.map((content: contentType) => (
-                    <Grid
-                        key={content.title}
-                        item
-                        xs={12}
-                        sm={6}
-                        md={4}
-                        lg={4}
-                        xl={2}
-                    >
-                        <NewsCard content={content} />
-                    </Grid>
-                ))
+                <Grid container spacing={2}>
+                    {headlineNews.map((content: contentType) => (
+                        <Grid
+                            key={content.title}
+                            item
+                            xs={12}
+                            sm={6}
+                            md={3}
+                            lg={4}
+                            xl={2}
+                        >
+                            <NewsCard content={content} />
+                        </Grid>
+                    ))}
+                </Grid>
             ) : (
                 <HeadlineLoader count={count} />
             )}
