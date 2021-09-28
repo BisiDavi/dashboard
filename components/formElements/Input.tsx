@@ -24,8 +24,8 @@ interface InputProps {
     };
     handleChange?: (e: string | ChangeEvent<any>) => void;
     handleBlur?: (e: string | ChangeEvent<any>) => void;
-    values?: inputValueType;
-    errors?: FormikErrors<inputValueType>;
+    values?: unknown;
+    errors?: FormikErrors<unknown>;
     touched?: FormikTouched<inputValueType> | any;
 }
 
@@ -64,7 +64,9 @@ export default function Input({
                     touched[values[input.name]]
                 }
             />
-            <InputAdornment position="end" variant="outlined" />
+            {isPasswordInput && (
+                <InputAdornment position="end" variant="outlined" />
+            )}
         </>
     );
 }

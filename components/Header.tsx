@@ -1,5 +1,6 @@
 import { Grid, AppBar, Button, Toolbar, IconButton } from "@material-ui/core";
 import Logo from "@components/Logo";
+import MenuOutlinedIcon from "@material-ui/icons/MenuOutlined";
 import { headerStyles } from "@styles/Header.style";
 import { UIActions } from "@store/actions/uiActions";
 import useRedux from "@hooks/useRedux";
@@ -25,11 +26,17 @@ export default function Header() {
                         </IconButton>
                     </Grid>
                     <Grid item lg={2} className={classes.gridItem}>
-                        <Button color="inherit">News</Button>
-                        <Button color="inherit">Logout</Button>
-                        <Button onClick={toggleMenu} color="inherit">
-                            Menu
-                        </Button>
+                        <div className={classes.menuGroup}>
+                            {/*<Button color="inherit">News</Button>*/}
+                            <Button color="inherit">Logout</Button>
+                        </div>
+                        <IconButton
+                            className={classes.menu}
+                            onClick={toggleMenu}
+                            color="inherit"
+                        >
+                            <MenuOutlinedIcon />
+                        </IconButton>
                     </Grid>
                 </Grid>
             </Toolbar>

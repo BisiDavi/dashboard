@@ -3,7 +3,7 @@ import Link from "next/link";
 import { makeStyles } from "@material-ui/core/styles";
 import { colors } from "@styles/colors.styles";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     logo: {
         display: "flex",
         alignItems: "center",
@@ -22,8 +22,13 @@ const useStyles = makeStyles({
         "& h1": {
             fontSize: "20px",
         },
+        [theme.breakpoints.down("xs")]: {
+            "& h1": {
+                fontSize: 18,
+            },
+        },
     },
-});
+}));
 export default function Logo() {
     const classes = useStyles();
     return (

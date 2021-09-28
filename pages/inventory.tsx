@@ -1,14 +1,18 @@
 import { useState } from "react";
-import Pagelayout from "@layouts/Pagelayout";
-import dynamic from "next/dynamic";
-import AddIcon from "@material-ui/icons/Add";
 import { Typography, Grid, IconButton } from "@material-ui/core";
+import AddIcon from "@material-ui/icons/Add";
+import dynamic from "next/dynamic";
+import Pagelayout from "@layouts/Pagelayout";
+import InventoryForm from "@components/form/InventoryForm";
 import InventoryTable from "@components/InventoryTable";
+import { inventoryStyles } from "@styles/Inventory.style";
 
 const AppModal = dynamic(() => import("../components/Modal"));
 
 export default function InventoryManager() {
     const [modal, setModal] = useState(false);
+
+    const classes = inventoryStyles();
 
     function toggleModal(open) {
         return setModal(open);
@@ -20,13 +24,16 @@ export default function InventoryManager() {
                 products, and delete products
             </Typography>
             <AppModal open={modal} handleClose={() => toggleModal(false)}>
-                <h1>Hello</h1>
+                <InventoryForm />
             </AppModal>
-            <Grid container>
+            <Grid container className={classes.inventoryContainer}>
                 <Grid item xs={12}>
                     <InventoryTable />
                 </Grid>
-                <IconButton onClick={() => toggleModal(true)}>
+                <IconButton
+                    className={classes.iconButton}
+                    onClick={() => toggleModal(true)}
+                >
                     <AddIcon />
                 </IconButton>
             </Grid>

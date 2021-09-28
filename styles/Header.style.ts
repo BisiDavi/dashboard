@@ -13,7 +13,19 @@ export const headerStyles = makeStyles((theme) => ({
         alignItems: "center",
         justifyContent: "space-around",
     },
-		menu:{
-			
-		}
+    [theme.breakpoints.up("md")]: {
+        menu: {
+            display: "none",
+        },
+    },
+    [theme.breakpoints.down("xs")]: {
+        menuGroup: {
+            display: "none",
+        },
+        gridItem: {
+            "& button": {
+                fontSize: 14,
+            },
+        },
+    },
 }));

@@ -22,10 +22,7 @@ export const pagelayoutStyle = makeStyles((theme: Theme) =>
         },
         sidebarContainer: {
             height: "100vh",
-            position: "fixed",
             width: "100%",
-            left: "0",
-            zIndex: 1,
         },
         mainContainer: {
             padding: "20px",

@@ -5,6 +5,7 @@ export const layoutStyle = makeStyles((theme) => ({
         position: "fixed",
         bottom: theme.spacing(6),
         right: theme.spacing(4),
+        zIndex: 100,
         "& button": {
             backgroundColor: theme.palette.primary.dark,
             color: "white",

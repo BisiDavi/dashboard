@@ -41,13 +41,15 @@ export default function Pagelayout({
                 </Grid>
                 <Grid className={classes.content} container>
                     {sidebarMenu && (
-                        <Grid item lg={2} className={classes.sidebarContainer}>
+                        <Grid item lg={2} md={3} xs={12} className={classes.sidebarContainer}>
                             <Sidebar />
                         </Grid>
                     )}
                     <Grid
                         item
                         sm={12}
+                        md={9}
+												lg={10}
                         component="main"
                         className={classes.mainContainer}
                     >

@@ -48,7 +48,7 @@ export default function HeadlineNews({
 
     return (
         <Grid className={classes.headlineNews} container spacing={2}>
-            <Grid item xs={12} sm={6} md={4} lg={4} xl={2}>
+            <Grid item xs={12}>
                 {title ? (
                     <Typography className={classes.title} component="h3">
                         {title}
@@ -63,7 +63,15 @@ export default function HeadlineNews({
             </Grid>
             {headlineNews.length > 0 ? (
                 headlineNews.map((content: contentType) => (
-                    <Grid sm={12} key={content.title} item>
+                    <Grid
+                        key={content.title}
+                        item
+                        xs={12}
+                        sm={6}
+                        md={4}
+                        lg={4}
+                        xl={2}
+                    >
                         <NewsCard content={content} />
                     </Grid>
                 ))

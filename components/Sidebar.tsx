@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Link from "next/link";
 import { useState } from "react";
 import {
@@ -17,21 +18,8 @@ export default function Sidebar() {
     const classes = sidebarStyle();
     const [showDrawer, setShowDrawer] = useState(true);
 
-    const toggleDrawer = (event: React.KeyboardEvent | React.MouseEvent) => {
-        if (
-            event &&
-            event.type === "keydown" &&
-            ((event as React.KeyboardEvent).key === "Tab" ||
-                (event as React.KeyboardEvent).key === "Shift")
-        ) {
-            return;
-        }
-
-        setShowDrawer(!showDrawer);
-    };
-
     return (
-        <Paper className={classes.sidebar}>
+        <Paper className={clsx(classes.sidebar, classes.sidebarWidth)}>
             <div className={classes.list}>
                 <List>
                     {menus.map(({ category, menu }) => (

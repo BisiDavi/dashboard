@@ -1,0 +1,26 @@
+[
+    {
+        "name": "productName",
+        "type": "text",
+        "label": "Product Name",
+        "placeholder": "Ashluxe Suit"
+    },
+    {
+        "name": "productPrice",
+        "type": "text",
+        "label": "Product Price",
+        "placeholder": "80,000"
+    },
+    {
+        "name": "productQuantity",
+        "type": "number",
+        "label": "Product Quantity",
+        "placeholder": "5"
+    },
+    {
+        "name": "productDescription",
+        "type": "text",
+        "label": "Product Description",
+        "placeholder": "Buy elegant, Ashluxe Designer Suit"
+    }
+]

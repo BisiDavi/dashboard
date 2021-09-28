@@ -4,11 +4,10 @@ import { BsSun, BsMoon } from "react-icons/bs";
 import { toggleThemeAction } from "@store/actions/themeAction";
 import useTheme from "@hooks/useTheme";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     button: {
         borderRadius: "50%",
         padding: 20,
-
     },
 }));
 export default function ToggleTheme() {
