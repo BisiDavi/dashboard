@@ -2,30 +2,35 @@
     {
         "name": "name",
         "type": "text",
+        "field": "input",
         "label": "Product Name",
         "placeholder": "Ashluxe Suit"
     },
     {
         "name": "category",
         "type": "select",
+        "field": "select",
         "label": "Product Category",
         "placeholder": "categories like Shoes, Clothes, Electronics"
     },
     {
         "name": "price",
         "type": "text",
+        "field": "input",
         "label": "Product Price",
         "placeholder": "80,000"
     },
     {
         "name": "quantity",
         "type": "number",
+        "field": "input",
         "label": "Product Quantity",
         "placeholder": "5"
     },
     {
         "name": "description",
         "type": "text",
+        "field": "input",
         "label": "Product Description",
         "placeholder": "Buy elegant, Ashluxe Designer Suit"
     }

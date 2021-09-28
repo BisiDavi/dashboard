@@ -1,7 +1,7 @@
 import { ChangeEvent } from "react";
+import { FormikErrors, FormikTouched } from "formik";
 import Input from "./Input";
 import SelectField from "./SelectField";
-import { FormikErrors, FormikTouched } from "formik";
 
 interface FormElementsProps {
     fields: {
@@ -18,20 +18,20 @@ interface FormElementsProps {
     touched?: FormikTouched<unknown>;
 }
 
-export default function FormElements({
+export default function displayFormElements(
     fields,
     handleChange,
     handleBlur,
-    errors,
     values,
+    errors,
     touched,
-}: FormElementsProps) {
-    return fields.map((field) => {
-        switch (field.type) {
+) {
+    return fields.map((fieldItem) => {
+        switch (fieldItem.field) {
             case "input":
                 return (
                     <Input
-                        input={field}
+                        input={fieldItem}
                         handleChange={handleChange}
                         handleBlur={handleBlur}
                         values={values}
@@ -43,7 +43,7 @@ export default function FormElements({
             case "select":
                 return (
                     <SelectField
-                        field={field}
+                        field={fieldItem}
                         handleChange={handleChange}
                         handleBlur={handleBlur}
                         values={values}
