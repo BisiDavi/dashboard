@@ -12,5 +12,9 @@
     {
         "id": "description",
         "label": "Product's Description"
+    },
+    {
+        "id": "edit",
+        "label": "Edit, Delete Product"
     }
 ]

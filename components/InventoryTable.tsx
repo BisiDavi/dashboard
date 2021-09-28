@@ -6,10 +6,14 @@ import {
     TablePagination,
     Checkbox,
     TableCell,
+    Tooltip,
+    IconButton,
     TableContainer,
 } from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
 import { useSelector } from "react-redux";
+import EditIcon from "@material-ui/icons/Edit";
+import DeleteIcon from "@material-ui/icons/Delete";
 import EnhancedTableHead from "@components/TableHead";
 import { stableSort, getComparator } from "@utils/tableFunctions";
 import EnhancedTableToolbar from "./TableToolbar";
@@ -29,6 +33,8 @@ export default function EnhancedTable() {
 
     const tableData = products;
 
+    console.log("products", products);
+
     const handleRequestSort = (
         event: MouseEvent<unknown>,
         property: keyof Data,
@@ -46,6 +52,8 @@ export default function EnhancedTable() {
         }
         setSelected([]);
     };
+
+    console.log("selected", selected);
 
     const handleClick = (event: MouseEvent<unknown>, name: any) => {
         const selectedIndex = selected.indexOf(name);
@@ -118,18 +126,18 @@ export default function EnhancedTable() {
                                     return (
                                         <TableRow
                                             hover
-                                            onClick={(event) =>
-                                                handleClick(event, row.name)
-                                            }
-                                            role="checkbox"
-                                            aria-checked={isItemSelected}
                                             tabIndex={-1}
                                             key={row.name}
-                                            selected={isItemSelected}
                                         >
                                             <TableCell padding="checkbox">
                                                 <Checkbox
                                                     checked={isItemSelected}
+                                                    onClick={(event) =>
+                                                        handleClick(
+                                                            event,
+                                                            row.name,
+                                                        )
+                                                    }
                                                     inputProps={{
                                                         "aria-labelledby":
                                                             labelId,
@@ -153,6 +161,18 @@ export default function EnhancedTable() {
                                             </TableCell>
                                             <TableCell>
                                                 {row.description}
+                                            </TableCell>
+                                            <TableCell>
+                                                <Tooltip title="Edit Product">
+                                                    <IconButton>
+                                                        <EditIcon />
+                                                    </IconButton>
+                                                </Tooltip>
+                                                <Tooltip title="Delete Product">
+                                                    <IconButton>
+                                                        <DeleteIcon />
+                                                    </IconButton>
+                                                </Tooltip>
                                             </TableCell>
                                         </TableRow>
                                     );
