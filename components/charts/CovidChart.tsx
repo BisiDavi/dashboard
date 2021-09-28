@@ -10,10 +10,8 @@ import {
     ResponsiveContainer,
 } from "recharts";
 import { Grid, Divider, Typography } from "@material-ui/core";
-import useError from "@hooks/useError";
 import ThreeDots from "@components/ThreeDotsLoader";
 import { chartStyles } from "@styles/Chart.style";
-//import covidData from "@json/covid19.json";
 import covid19AxiosInstance from "@api/covid19AxiosInstance";
 
 export default function CovidChart() {

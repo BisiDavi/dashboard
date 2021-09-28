@@ -77,7 +77,7 @@ export const newsCardStyle = makeStyles((theme) => ({
         fontSize: "11px",
         fontWeight: "bold",
     },
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
         cardAction: {
             "& button": {
                 fontSize: 11,
