@@ -1,15 +1,9 @@
-import { ADD_PRODUCT } from "../constants";
+import { ADD_PRODUCT, DELETE_PRODUCT, EDIT_PRODUCT } from "../constants";
 import { InventoryState } from "../../types";
 
 export default function inventoryReducer(
     state: InventoryState = {
-        product: {
-            name: "",
-            image: "",
-            price: "",
-            quantity: "",
-            description: "",
-        },
+        products: [],
     },
     actions,
 ) {
@@ -18,7 +12,23 @@ export default function inventoryReducer(
         case ADD_PRODUCT: {
             return {
                 ...state,
-                product: payload,
+                products: [...state.products, payload],
+            };
+        }
+        case EDIT_PRODUCT: {
+            const copyProducts = state.products;
+            copyProducts[payload.index] = payload.product;
+            return {
+                ...state,
+                products: copyProducts,
+            };
+        }
+        case DELETE_PRODUCT: {
+            const productsCopy = state.products;
+            productsCopy.splice(0, payload);
+            return {
+                ...state,
+                products: productsCopy,
             };
         }
         default:

@@ -39,13 +39,12 @@ export type contentType = {
 };
 
 export type InventoryState = {
-    product: {
+    products: {
         name: string;
-        image: string;
         price: string;
         quantity: string;
         description: string;
-    };
+    }[];
 };
 
 export type newsCategoryType =

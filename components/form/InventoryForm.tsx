@@ -6,6 +6,7 @@ import Input from "@components/formElements/Input";
 import formFields from "@json/inventoryForm.json";
 import { modalFormSchema } from "./schemas";
 import { inventoryStyles } from "@styles/Inventory.style";
+import { InventoryAction } from "@store/actions/inventoryAction";
 
 export default function InventoryForm() {
     const classes = inventoryStyles();
@@ -13,14 +14,15 @@ export default function InventoryForm() {
     return (
         <Formik
             initialValues={{
-                productName: "",
-                productPrice: "",
-                productDescription: "",
-                productQuantity: "",
+                name: "",
+                price: "",
+                description: "",
+                quantity: "",
             }}
             validationSchema={modalFormSchema}
             onSubmit={(values) => {
                 console.log("values", values);
+                dispatch(InventoryAction(values));
             }}
         >
             {({

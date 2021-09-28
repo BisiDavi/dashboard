@@ -9,12 +9,14 @@ import {
     TableContainer,
 } from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
+import { useSelector } from "react-redux";
 import EnhancedTableHead from "@components/TableHead";
 import tableBodydata from "@json/table.json";
 import { stableSort, getComparator } from "@utils/tableFunctions";
 import EnhancedTableToolbar from "./TableToolbar";
 import { useStyles } from "@styles/table.styles";
 import { Data, Order } from "../types";
+import { RootState } from "@store/reducers/rootReducer";
 
 export default function EnhancedTable() {
     const classes = useStyles();
@@ -24,7 +26,11 @@ export default function EnhancedTable() {
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(5);
 
-    const tableData = tableBodydata.body;
+    const { products } = useSelector((state: RootState) => state.inventory);
+
+    console.log("products", products);
+
+    const tableData = products;
 
     const handleRequestSort = (
         event: MouseEvent<unknown>,

@@ -1,13 +1,13 @@
 import * as yup from "yup";
 
 export const modalFormSchema = yup.object().shape({
-    productName: yup.string().required("product name is  required"),
-    productPrice: yup
+    name: yup.string().required("product name is  required"),
+    price: yup
         .number()
         .positive()
         .required("product price is  required"),
-    productDescription: yup
+    description: yup
         .string()
         .required("product description is  required"),
-    productQuantity: yup.string().required("product quantity is  required"),
+    quantity: yup.string().required("product quantity is  required"),
 });
