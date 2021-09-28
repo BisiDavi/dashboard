@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Typography, Grid, IconButton } from "@material-ui/core";
+import { Typography, Tooltip, Grid, IconButton } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
 import dynamic from "next/dynamic";
 import Pagelayout from "@layouts/Pagelayout";
@@ -30,12 +30,14 @@ export default function InventoryManager() {
                 <Grid item xs={12}>
                     <InventoryTable />
                 </Grid>
-                <IconButton
-                    className={classes.iconButton}
-                    onClick={() => toggleModal(true)}
-                >
-                    <AddIcon />
-                </IconButton>
+                <Tooltip title="add to inventory">
+                    <IconButton
+                        className={classes.iconButton}
+                        onClick={() => toggleModal(true)}
+                    >
+                        <AddIcon />
+                    </IconButton>
+                </Tooltip>
             </Grid>
         </Pagelayout>
     );

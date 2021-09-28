@@ -11,7 +11,6 @@ import {
 import Paper from "@material-ui/core/Paper";
 import { useSelector } from "react-redux";
 import EnhancedTableHead from "@components/TableHead";
-import tableBodydata from "@json/table.json";
 import { stableSort, getComparator } from "@utils/tableFunctions";
 import EnhancedTableToolbar from "./TableToolbar";
 import { useStyles } from "@styles/table.styles";
@@ -27,8 +26,6 @@ export default function EnhancedTable() {
     const [rowsPerPage, setRowsPerPage] = useState(5);
 
     const { products } = useSelector((state: RootState) => state.inventory);
-
-    console.log("products", products);
 
     const tableData = products;
 
@@ -146,6 +143,9 @@ export default function EnhancedTable() {
                                                 padding="none"
                                             >
                                                 {row.name}
+                                            </TableCell>
+                                            <TableCell>
+                                                {row.category}
                                             </TableCell>
                                             <TableCell>{row.price}</TableCell>
                                             <TableCell>

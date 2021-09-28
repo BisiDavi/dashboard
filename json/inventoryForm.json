@@ -6,6 +6,12 @@
         "placeholder": "Ashluxe Suit"
     },
     {
+        "name": "category",
+        "type": "select",
+        "label": "Product Category",
+        "placeholder": "categories like Shoes, Clothes, Electronics"
+    },
+    {
         "name": "price",
         "type": "text",
         "label": "Product Price",

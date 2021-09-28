@@ -5,7 +5,7 @@ import Checkbox from "@material-ui/core/Checkbox";
 import TableSortLabel from "@material-ui/core/TableSortLabel";
 import TableCell from "@material-ui/core/TableCell";
 import { EnhancedTableProps } from "../types";
-import tableHeaddata from "@json/table.json";
+import tableHeadData from "@json/table.json";
 
 export default function EnhancedTableHead(props: EnhancedTableProps) {
     const {
@@ -20,7 +20,7 @@ export default function EnhancedTableHead(props: EnhancedTableProps) {
     const createSortHandler = (property) => (event: MouseEvent<unknown>) => {
         onRequestSort(event, property);
     };
-    const headCells = tableHeaddata.head;
+    const headCells = tableHeadData;
 
     return (
         <TableHead>

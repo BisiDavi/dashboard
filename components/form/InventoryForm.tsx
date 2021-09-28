@@ -17,6 +17,7 @@ export default function InventoryForm() {
                 name: "",
                 price: "",
                 description: "",
+                category: "",
                 quantity: "",
             }}
             validationSchema={modalFormSchema}

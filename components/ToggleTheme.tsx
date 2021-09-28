@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { Button, makeStyles } from "@material-ui/core";
+import { IconButton, Tooltip, makeStyles } from "@material-ui/core";
 import { BsSun, BsMoon } from "react-icons/bs";
 import { toggleThemeAction } from "@store/actions/themeAction";
 import useTheme from "@hooks/useTheme";
@@ -21,12 +21,14 @@ export default function ToggleTheme() {
     }
 
     return (
-        <Button className={classes.button} onClick={themeHandler}>
-            {theme === "light" ? (
-                <BsSun fontSize={25} />
-            ) : (
-                <BsMoon fontSize={25} />
-            )}
-        </Button>
+        <Tooltip title="change theme">
+            <IconButton className={classes.button} onClick={themeHandler}>
+                {theme === "light" ? (
+                    <BsSun fontSize={25} />
+                ) : (
+                    <BsMoon fontSize={25} />
+                )}
+            </IconButton>
+        </Tooltip>
     );
 }
