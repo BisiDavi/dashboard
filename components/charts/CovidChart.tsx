@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
 import {
     AreaChart,
@@ -13,26 +14,29 @@ import { Grid, Divider, Typography } from "@material-ui/core";
 import ThreeDots from "@components/ThreeDotsLoader";
 import { chartStyles } from "@styles/Chart.style";
 import covid19AxiosInstance from "@api/covid19AxiosInstance";
+import { SignalCellularNull } from "@material-ui/icons";
 
 export default function CovidChart() {
-    const [chartData, setChartData] = useState<any>([]);
+    const [chartData, setChartData] = useState<any>(null);
 
     const classes = chartStyles();
 
     useEffect(() => {
-        if (chartData.length === 0) {
+        if (chartData === null) {
             covid19AxiosInstance
                 .get("/summary")
                 .then((response) => {
                     console.log("response", response.data);
-                    setChartData(response.data);
+                    setChartData(response.data.Countries);
                 })
                 .catch((error) => {
                     console.log("error", error);
                     //onError(error);
                 });
         }
-    }, [chartData]);
+    }, []);
+
+    console.log("chartData", chartData);
 
     return (
         <Grid container className={classes.lineChart}>
@@ -49,7 +53,7 @@ export default function CovidChart() {
             </Typography>
             <Divider className={classes.divider} />
             <Grid container className={classes.chart}>
-                {chartData.length > 0 ? (
+                {chartData ? (
                     <ResponsiveContainer width="100%" height="100%">
                         <AreaChart
                             width={500}
@@ -68,12 +72,16 @@ export default function CovidChart() {
                             <Legend
                                 width={100}
                                 wrapperStyle={{
-                                    top: 150,
-                                    right: 40,
+                                    position: "unset",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    margin: "10px auto",
+                                    height: "auto",
                                     backgroundColor: "#f5f5f5",
                                     border: "1px solid #d5d5d5",
                                     borderRadius: 3,
                                     lineHeight: "40px",
+                                    width: "50%",
                                 }}
                             />
                             <Tooltip />
