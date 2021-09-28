@@ -38,10 +38,9 @@ export default function Input({
     values,
     errors,
     touched,
-    formValues,
 }: InputProps) {
     const [showPassword, setShowPassword] = useState(false);
-    console.log("formValues", formValues);
+
     function displayPassword() {
         setShowPassword(!showPassword);
     }

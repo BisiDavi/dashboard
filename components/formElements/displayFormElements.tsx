@@ -26,26 +26,26 @@ export default function displayFormElements(
     values,
     errors,
     touched,
-    formValues,
 ) {
     return fields.map((fieldItem) => {
         switch (fieldItem.field) {
             case "input":
                 return (
                     <Input
+                        key={fieldItem.name}
                         input={fieldItem}
                         handleChange={handleChange}
                         handleBlur={handleBlur}
                         values={values}
                         errors={errors}
                         touched={touched}
-                        formValues={formValues}
                     />
                 );
 
             case "select":
                 return (
                     <SelectField
+                        key={fieldItem.name}
                         field={fieldItem}
                         handleChange={handleChange}
                         handleBlur={handleBlur}

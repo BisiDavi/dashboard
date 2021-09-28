@@ -2,6 +2,7 @@ import { Formik } from "formik";
 import Button from "@material-ui/core/Button";
 import { useDispatch } from "react-redux";
 import { Paper } from "@material-ui/core";
+import { toast } from "react-toastify";
 import formFields from "@json/inventoryForm.json";
 import { modalFormSchema } from "./schemas";
 import { inventoryStyles } from "@styles/Inventory.style";
@@ -33,6 +34,15 @@ export default function InventoryForm({
     const formInitialValues = formValues
         ? formValues.selectedField
         : initialValues;
+
+    function editProduct(editValues) {
+        dispatch(editProductInventoryAction(editValues));
+        toast.success("Product edited successfully");
+    }
+    function addProduct(values) {
+        dispatch(addProductInventoryAction(values));
+        toast.success("Product added successfully");
+    }
     return (
         <Formik
             initialValues={formInitialValues}
@@ -40,11 +50,11 @@ export default function InventoryForm({
             onSubmit={(values) => {
                 const editValues = {
                     product: values,
-                    index: formValues.selectedIndex,
+                    index: formValues?.selectedIndex,
                 };
                 formType === "edit"
-                    ? dispatch(editProductInventoryAction(editValues))
-                    : dispatch(addProductInventoryAction(values));
+                    ? editProduct(editValues)
+                    : addProduct(values);
             }}
         >
             {({
@@ -65,7 +75,6 @@ export default function InventoryForm({
                             values,
                             errors,
                             touched,
-                            formValues,
                         )}
                         <Button
                             disabled={!isValid}

@@ -25,6 +25,8 @@ export default function InventoryManager() {
             <InventoryModal
                 modal={modal}
                 handleClose={() => toggleModal(false)}
+                formType="add"
+                formValues={null}
             />
             <Grid container className={classes.inventoryContainer}>
                 <Grid item xs={12}>

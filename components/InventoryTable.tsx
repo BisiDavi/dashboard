@@ -13,6 +13,7 @@ import {
 } from "@material-ui/core";
 import dynamic from "next/dynamic";
 import EditIcon from "@material-ui/icons/Edit";
+import { toast } from "react-toastify";
 import DeleteIcon from "@material-ui/icons/Delete";
 import useRedux from "@hooks/useRedux";
 import EnhancedTableHead from "@components/TableHead";
@@ -45,12 +46,14 @@ export default function EnhancedTable() {
     const { dispatch, stateFromRedux } = useRedux("inventory");
 
     const tableData = stateFromRedux.products;
+    console.log("tableData", tableData);
 
     function toggleModal(open) {
         return setModal(open);
     }
     function editProduct(index) {
         toggleModal(true);
+        console.log("editProduct index", index);
         const selectedProduct = stateFromRedux.products[index];
         setSelectedFormValues({
             ...selectedFormValues,
@@ -62,6 +65,7 @@ export default function EnhancedTable() {
     function deleteProduct(index) {
         console.log("selected index", index);
         dispatch(deleteProductInventoryAction(index));
+        toast.error("Product deleted");
     }
 
     const handleRequestSort = (
@@ -81,8 +85,6 @@ export default function EnhancedTable() {
         }
         setSelected([]);
     };
-
-    console.log("selected", selected);
 
     const handleClick = (event: MouseEvent<unknown>, name: any) => {
         const selectedIndex = selected.indexOf(name);
