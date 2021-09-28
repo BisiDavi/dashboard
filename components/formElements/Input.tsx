@@ -41,7 +41,7 @@ export default function Input({
     formValues,
 }: InputProps) {
     const [showPassword, setShowPassword] = useState(false);
-
+    console.log("formValues", formValues);
     function displayPassword() {
         setShowPassword(!showPassword);
     }
@@ -55,15 +55,8 @@ export default function Input({
                 data-testid="text-input"
                 fullWidth
                 name={input.name}
-                //value={
-                //    formValues
-                //        ? formValues.selectedField[input.name]
-                //        : values[input.name]
-                //}
                 placeholder={input.placeholder}
-                defaultValue={
-                    formValues && formValues.selectedField[input.name]
-                }
+                value={values[input.name]}
                 className={classes.input}
                 label={input.label}
                 onChange={handleChange}

@@ -7,16 +7,18 @@ interface InventoryModalProps {
     modal: boolean;
     handleClose: () => void;
     formValues?: { selectedField: formValues; selectedIndex: number };
+    formType?: "edit" | "add";
 }
 
 export default function InventoryModal({
     modal,
     handleClose,
     formValues,
+    formType,
 }: InventoryModalProps) {
     return (
         <AppModal open={modal} handleClose={handleClose}>
-            <InventoryForm formValues={formValues} />
+            <InventoryForm formValues={formValues} formType={formType} />
         </AppModal>
     );
 }

@@ -23,15 +23,19 @@ export default function InventoryForm({
 }: InventoryFormProps) {
     const classes = inventoryStyles();
     const dispatch = useDispatch();
+    const initialValues = {
+        name: "",
+        price: "",
+        description: "",
+        category: "",
+        quantity: "",
+    };
+    const formInitialValues = formValues
+        ? formValues.selectedField
+        : initialValues;
     return (
         <Formik
-            initialValues={{
-                name: "",
-                price: "",
-                description: "",
-                category: "",
-                quantity: "",
-            }}
+            initialValues={formInitialValues}
             validationSchema={modalFormSchema}
             onSubmit={(values) => {
                 const editValues = {

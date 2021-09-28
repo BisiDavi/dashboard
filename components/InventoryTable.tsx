@@ -125,6 +125,7 @@ export default function EnhancedTable() {
                 modal={modal}
                 handleClose={() => toggleModal(false)}
                 formValues={selectedFormValues}
+                formType="edit"
             />
             <div className={classes.root}>
                 <Paper className={classes.paper}>

@@ -74,6 +74,7 @@ export interface Data {
     description: string;
     quantity: number;
     name: string;
+    category: string;
 }
 
 export type Order = "asc" | "desc";
