@@ -36,8 +36,6 @@ export default function CovidChart() {
         }
     }, []);
 
-    console.log("chartData", chartData);
-
     return (
         <Grid container className={classes.lineChart}>
             <Typography className={classes.title} component="h3">

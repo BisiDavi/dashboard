@@ -57,6 +57,7 @@ export const newsCardStyle = makeStyles((theme) => ({
     image: {
         margin: "10px auto",
         width: "100%",
+        height: "250px",
         "& img": {
             width: "100%",
             height: "100%",
@@ -88,6 +89,9 @@ export const newsCardStyle = makeStyles((theme) => ({
         },
         italic: {
             fontSize: 11,
+        },
+        image: {
+            height: "200px",
         },
     },
 }));
