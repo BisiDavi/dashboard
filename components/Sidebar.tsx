@@ -1,8 +1,7 @@
 import clsx from "clsx";
 import Link from "next/link";
-import { useState } from "react";
+import useRedux from "@hooks/useRedux";
 import {
-    makeStyles,
     List,
     ListItem,
     ListItemText,
@@ -12,11 +11,16 @@ import {
 } from "@material-ui/core";
 import menus from "@json/menu.json";
 import displayIcons from "@utils/displayIcons";
+import { UIActions } from "@store/actions/uiActions";
 import { sidebarStyle } from "@styles/Sidebar.style";
 
 export default function Sidebar() {
     const classes = sidebarStyle();
-    const [showDrawer, setShowDrawer] = useState(true);
+    const { dispatch } = useRedux();
+
+    function toggleMenu() {
+        dispatch(UIActions());
+    }
 
     return (
         <Paper className={clsx(classes.sidebar, classes.sidebarWidth)}>
@@ -36,7 +40,7 @@ export default function Sidebar() {
                                     key={`${item}-${index}`}
                                     passHref
                                 >
-                                    <ListItem button>
+                                    <ListItem onClick={toggleMenu} button>
                                         <ListItemIcon>
                                             {displayIcons(item.icon)}
                                         </ListItemIcon>

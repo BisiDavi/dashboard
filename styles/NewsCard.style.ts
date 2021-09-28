@@ -56,7 +56,6 @@ export const newsCardStyle = makeStyles((theme) => ({
     },
     image: {
         margin: "10px auto",
-        height: "250px",
         width: "100%",
         "& img": {
             width: "100%",
@@ -77,5 +76,18 @@ export const newsCardStyle = makeStyles((theme) => ({
         color: "red",
         fontSize: "11px",
         fontWeight: "bold",
+    },
+    [theme.breakpoints.down("xs")]: {
+        cardAction: {
+            "& button": {
+                fontSize: 11,
+            },
+            "& h6": {
+                fontSize: 11,
+            },
+        },
+        italic: {
+            fontSize: 11,
+        },
     },
 }));

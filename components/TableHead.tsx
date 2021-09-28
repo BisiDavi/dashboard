@@ -42,6 +42,7 @@ export default function EnhancedTableHead(props: EnhancedTableProps) {
                     >
                         <TableSortLabel
                             active={orderBy === headCell.id}
+                            className={classes.title}
                             direction={orderBy === headCell.id ? order : "asc"}
                             onClick={createSortHandler(headCell.id)}
                         >

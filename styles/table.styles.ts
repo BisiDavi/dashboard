@@ -27,6 +27,11 @@ export const useToolbarStyles = makeStyles((theme: Theme) =>
         title: {
             flex: "1 1 100%",
         },
+        [theme.breakpoints.down("xs")]: {
+            title: {
+                fontSize: 15,
+            },
+        },
     }),
 );
 
@@ -53,6 +58,11 @@ export const useStyles = makeStyles((theme: Theme) =>
             position: "absolute",
             top: 20,
             width: 1,
+        },
+        [theme.breakpoints.down("xs")]: {
+            title: {
+                fontSize: 12,
+            },
         },
     }),
 );

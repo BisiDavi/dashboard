@@ -1,9 +1,9 @@
 import { Grid, AppBar, Button, Toolbar, IconButton } from "@material-ui/core";
 import Logo from "@components/Logo";
 import MenuOutlinedIcon from "@material-ui/icons/MenuOutlined";
+import useRedux from "@hooks/useRedux";
 import { headerStyles } from "@styles/Header.style";
 import { UIActions } from "@store/actions/uiActions";
-import useRedux from "@hooks/useRedux";
 
 export default function Header() {
     const { dispatch } = useRedux();

@@ -80,7 +80,7 @@ export default function NewsCard({ content }: NewsCardProps) {
                     </div>
                     <div>
                         <Typography className={classes.italic} component="h6">
-                            Published at {formatDate(content.publishedAt)}{" "}
+                            Published on {formatDate(content.publishedAt)}{" "}
                         </Typography>
                     </div>
                 </CardActions>

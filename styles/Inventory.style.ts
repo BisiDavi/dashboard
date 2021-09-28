@@ -5,8 +5,8 @@ export const inventoryStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.primary.dark,
         color: "white",
         position: "absolute",
-        right: "20px",
-        bottom: "-60px",
+        right: "15px",
+        top: "0px",
         padding: 10,
         "& svg": {
             fontSize: "2em",
