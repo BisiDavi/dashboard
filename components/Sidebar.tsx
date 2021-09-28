@@ -8,6 +8,7 @@ import {
     ListItemIcon,
     Typography,
     Paper,
+    useMediaQuery,
 } from "@material-ui/core";
 import menus from "@json/menu.json";
 import displayIcons from "@utils/displayIcons";
@@ -17,9 +18,10 @@ import { sidebarStyle } from "@styles/Sidebar.style";
 export default function Sidebar() {
     const classes = sidebarStyle();
     const { dispatch } = useRedux();
+    const matches = useMediaQuery("(max-width:768px)");
 
     function toggleMenu() {
-        dispatch(UIActions());
+        matches && dispatch(UIActions());
     }
 
     return (
