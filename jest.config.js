@@ -3,6 +3,12 @@ module.exports = {
         "**/*.{js,jsx,ts,tsx}",
         "!**/*.d.ts",
         "!**/node_modules/**",
+        "!**/public/**",
+        "!**/json/**",
+        "!**/coverage/**",
+        "!**/.next/**",
+        "!**/.styles/**",
+				"!**/types/**"
     ],
     moduleNameMapper: {
         // Handle CSS imports (with CSS modules)
@@ -37,5 +43,9 @@ module.exports = {
     transformIgnorePatterns: [
         "/node_modules/",
         "^.+\\.module\\.(css|sass|scss)$",
+        "/.next/",
+        "/coverage/",
+        "/json/",
+        "/public/",
     ],
 };
