@@ -11,7 +11,6 @@ export default async function NewsHandler(req, res) {
         : `/top-headlines?country=us&category=${category}&pageSize=20`;
     switch (method) {
         case "GET": {
-            console.log("req NewsHandler", req.query);
             let result;
             await newsAxiosInstance
                 .get(endpoint)
@@ -21,7 +20,6 @@ export default async function NewsHandler(req, res) {
                 .catch((error) => {
                     result = error;
                 });
-            console.log("result newsAxiosInstance", result);
             if (result.articles) {
                 return res.status(200).json({
                     success: true,

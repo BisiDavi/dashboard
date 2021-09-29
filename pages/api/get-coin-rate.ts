@@ -14,7 +14,6 @@ export default async function CryptoRateApi(req, res) {
                 .catch((error) => {
                     data = error;
                 });
-            //console.log("getCoins", data);
             if (data.message) {
                 res.status(400).json({
                     success: false,

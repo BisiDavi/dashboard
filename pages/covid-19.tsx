@@ -1,5 +1,7 @@
 import Pagelayout from "@layouts/Pagelayout";
-import CovidChart from "@components/charts/CovidChart";
+import dynamic from "next/dynamic";
+
+const CovidChart = dynamic(() => import("../components/charts/CovidChart"));
 
 export default function Covid19() {
     return (
