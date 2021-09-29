@@ -2,8 +2,8 @@
  * @jest-environment jsdom
  */
 
-import { render, screen } from "@testing-library/react";
-import displayIcons from "../utils/displayIcons";
+import { render } from "@testing-library/react";
+import displayIcons from "@utils/displayIcons";
 
 describe("displayIcons is meant to render an icon ", () => {
     it("to render available icon like  add icon", () => {
