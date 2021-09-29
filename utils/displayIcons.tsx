@@ -7,7 +7,7 @@ import TimelineIcon from "@material-ui/icons/Timeline";
 export default function displayIcons(iconName: string) {
     switch (iconName) {
         case "add":
-            return <AddIcon />;
+            return <AddIcon data-testid="add" />;
         case "news":
             return <TimelineIcon />;
         case "crypto": {
