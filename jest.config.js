@@ -7,7 +7,7 @@ module.exports = {
         "!**/json/**",
         "!**/coverage/**",
         "!**/.next/**",
-        "!**/.styles/**",
+        "!**/styles/**",
 				"!**/types/**"
     ],
     moduleNameMapper: {

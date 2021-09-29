@@ -1,0 +1,1476 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the CryptoContentLoader Component CryptoContentLoader Snapshot testing 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+        >
+          <div
+            class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+          >
+            <svg
+              alt="Loading coins details ..."
+              aria-labelledby="7metghn-aria"
+              height="124"
+              role="img"
+              viewBox="0 0 476 124"
+              width="100%"
+            >
+              <title
+                id="7metghn-aria"
+              >
+                Loading...
+              </title>
+              <rect
+                clip-path="url(#7metghn-diff)"
+                height="100%"
+                role="presentation"
+                style="fill: url(#7metghn-animated-diff);"
+                width="100%"
+                x="0"
+                y="0"
+              />
+              <defs>
+                <clippath
+                  id="7metghn-diff"
+                >
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="20"
+                    y="92%"
+                  />
+                  <circle
+                    cx="85%"
+                    cy="28%"
+                    r="10%"
+                  />
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="70"
+                    x="5%"
+                    y="35%"
+                  />
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="90%"
+                    x="5%"
+                    y="70%"
+                  />
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="70%"
+                    y="92%"
+                  />
+                </clippath>
+                <lineargradient
+                  id="7metghn-animated-diff"
+                >
+                  <stop
+                    offset="0%"
+                    stop-color="#dccbcb"
+                    stop-opacity="1"
+                  >
+                    <animate
+                      attributeName="offset"
+                      dur="2s"
+                      keyTimes="0; 0.25; 1"
+                      repeatCount="indefinite"
+                      values="-2; -2; 1"
+                    />
+                  </stop>
+                  <stop
+                    offset="50%"
+                    stop-color="#524747"
+                    stop-opacity="1"
+                  >
+                    <animate
+                      attributeName="offset"
+                      dur="2s"
+                      keyTimes="0; 0.25; 1"
+                      repeatCount="indefinite"
+                      values="-1; -1; 2"
+                    />
+                  </stop>
+                  <stop
+                    offset="100%"
+                    stop-color="#dccbcb"
+                    stop-opacity="1"
+                  >
+                    <animate
+                      attributeName="offset"
+                      dur="2s"
+                      keyTimes="0; 0.25; 1"
+                      repeatCount="indefinite"
+                      values="0; 0; 3"
+                    />
+                  </stop>
+                </lineargradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+        >
+          <div
+            class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+          >
+            <svg
+              alt="Loading coins details ..."
+              aria-labelledby="sjvebad-aria"
+              height="124"
+              role="img"
+              viewBox="0 0 476 124"
+              width="100%"
+            >
+              <title
+                id="sjvebad-aria"
+              >
+                Loading...
+              </title>
+              <rect
+                clip-path="url(#sjvebad-diff)"
+                height="100%"
+                role="presentation"
+                style="fill: url(#sjvebad-animated-diff);"
+                width="100%"
+                x="0"
+                y="0"
+              />
+              <defs>
+                <clippath
+                  id="sjvebad-diff"
+                >
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="20"
+                    y="92%"
+                  />
+                  <circle
+                    cx="85%"
+                    cy="28%"
+                    r="10%"
+                  />
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="70"
+                    x="5%"
+                    y="35%"
+                  />
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="90%"
+                    x="5%"
+                    y="70%"
+                  />
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="70%"
+                    y="92%"
+                  />
+                </clippath>
+                <lineargradient
+                  id="sjvebad-animated-diff"
+                >
+                  <stop
+                    offset="0%"
+                    stop-color="#dccbcb"
+                    stop-opacity="1"
+                  >
+                    <animate
+                      attributeName="offset"
+                      dur="2s"
+                      keyTimes="0; 0.25; 1"
+                      repeatCount="indefinite"
+                      values="-2; -2; 1"
+                    />
+                  </stop>
+                  <stop
+                    offset="50%"
+                    stop-color="#524747"
+                    stop-opacity="1"
+                  >
+                    <animate
+                      attributeName="offset"
+                      dur="2s"
+                      keyTimes="0; 0.25; 1"
+                      repeatCount="indefinite"
+                      values="-1; -1; 2"
+                    />
+                  </stop>
+                  <stop
+                    offset="100%"
+                    stop-color="#dccbcb"
+                    stop-opacity="1"
+                  >
+                    <animate
+                      attributeName="offset"
+                      dur="2s"
+                      keyTimes="0; 0.25; 1"
+                      repeatCount="indefinite"
+                      values="0; 0; 3"
+                    />
+                  </stop>
+                </lineargradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+        >
+          <div
+            class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+          >
+            <svg
+              alt="Loading coins details ..."
+              aria-labelledby="e9d6zim-aria"
+              height="124"
+              role="img"
+              viewBox="0 0 476 124"
+              width="100%"
+            >
+              <title
+                id="e9d6zim-aria"
+              >
+                Loading...
+              </title>
+              <rect
+                clip-path="url(#e9d6zim-diff)"
+                height="100%"
+                role="presentation"
+                style="fill: url(#e9d6zim-animated-diff);"
+                width="100%"
+                x="0"
+                y="0"
+              />
+              <defs>
+                <clippath
+                  id="e9d6zim-diff"
+                >
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="20"
+                    y="92%"
+                  />
+                  <circle
+                    cx="85%"
+                    cy="28%"
+                    r="10%"
+                  />
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="70"
+                    x="5%"
+                    y="35%"
+                  />
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="90%"
+                    x="5%"
+                    y="70%"
+                  />
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="70%"
+                    y="92%"
+                  />
+                </clippath>
+                <lineargradient
+                  id="e9d6zim-animated-diff"
+                >
+                  <stop
+                    offset="0%"
+                    stop-color="#dccbcb"
+                    stop-opacity="1"
+                  >
+                    <animate
+                      attributeName="offset"
+                      dur="2s"
+                      keyTimes="0; 0.25; 1"
+                      repeatCount="indefinite"
+                      values="-2; -2; 1"
+                    />
+                  </stop>
+                  <stop
+                    offset="50%"
+                    stop-color="#524747"
+                    stop-opacity="1"
+                  >
+                    <animate
+                      attributeName="offset"
+                      dur="2s"
+                      keyTimes="0; 0.25; 1"
+                      repeatCount="indefinite"
+                      values="-1; -1; 2"
+                    />
+                  </stop>
+                  <stop
+                    offset="100%"
+                    stop-color="#dccbcb"
+                    stop-opacity="1"
+                  >
+                    <animate
+                      attributeName="offset"
+                      dur="2s"
+                      keyTimes="0; 0.25; 1"
+                      repeatCount="indefinite"
+                      values="0; 0; 3"
+                    />
+                  </stop>
+                </lineargradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+        >
+          <div
+            class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+          >
+            <svg
+              alt="Loading coins details ..."
+              aria-labelledby="5btg79b-aria"
+              height="124"
+              role="img"
+              viewBox="0 0 476 124"
+              width="100%"
+            >
+              <title
+                id="5btg79b-aria"
+              >
+                Loading...
+              </title>
+              <rect
+                clip-path="url(#5btg79b-diff)"
+                height="100%"
+                role="presentation"
+                style="fill: url(#5btg79b-animated-diff);"
+                width="100%"
+                x="0"
+                y="0"
+              />
+              <defs>
+                <clippath
+                  id="5btg79b-diff"
+                >
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="20"
+                    y="92%"
+                  />
+                  <circle
+                    cx="85%"
+                    cy="28%"
+                    r="10%"
+                  />
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="70"
+                    x="5%"
+                    y="35%"
+                  />
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="90%"
+                    x="5%"
+                    y="70%"
+                  />
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="70%"
+                    y="92%"
+                  />
+                </clippath>
+                <lineargradient
+                  id="5btg79b-animated-diff"
+                >
+                  <stop
+                    offset="0%"
+                    stop-color="#dccbcb"
+                    stop-opacity="1"
+                  >
+                    <animate
+                      attributeName="offset"
+                      dur="2s"
+                      keyTimes="0; 0.25; 1"
+                      repeatCount="indefinite"
+                      values="-2; -2; 1"
+                    />
+                  </stop>
+                  <stop
+                    offset="50%"
+                    stop-color="#524747"
+                    stop-opacity="1"
+                  >
+                    <animate
+                      attributeName="offset"
+                      dur="2s"
+                      keyTimes="0; 0.25; 1"
+                      repeatCount="indefinite"
+                      values="-1; -1; 2"
+                    />
+                  </stop>
+                  <stop
+                    offset="100%"
+                    stop-color="#dccbcb"
+                    stop-opacity="1"
+                  >
+                    <animate
+                      attributeName="offset"
+                      dur="2s"
+                      keyTimes="0; 0.25; 1"
+                      repeatCount="indefinite"
+                      values="0; 0; 3"
+                    />
+                  </stop>
+                </lineargradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+        >
+          <div
+            class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+          >
+            <svg
+              alt="Loading coins details ..."
+              aria-labelledby="zgrw1xg-aria"
+              height="124"
+              role="img"
+              viewBox="0 0 476 124"
+              width="100%"
+            >
+              <title
+                id="zgrw1xg-aria"
+              >
+                Loading...
+              </title>
+              <rect
+                clip-path="url(#zgrw1xg-diff)"
+                height="100%"
+                role="presentation"
+                style="fill: url(#zgrw1xg-animated-diff);"
+                width="100%"
+                x="0"
+                y="0"
+              />
+              <defs>
+                <clippath
+                  id="zgrw1xg-diff"
+                >
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="20"
+                    y="92%"
+                  />
+                  <circle
+                    cx="85%"
+                    cy="28%"
+                    r="10%"
+                  />
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="70"
+                    x="5%"
+                    y="35%"
+                  />
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="90%"
+                    x="5%"
+                    y="70%"
+                  />
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="70%"
+                    y="92%"
+                  />
+                </clippath>
+                <lineargradient
+                  id="zgrw1xg-animated-diff"
+                >
+                  <stop
+                    offset="0%"
+                    stop-color="#dccbcb"
+                    stop-opacity="1"
+                  >
+                    <animate
+                      attributeName="offset"
+                      dur="2s"
+                      keyTimes="0; 0.25; 1"
+                      repeatCount="indefinite"
+                      values="-2; -2; 1"
+                    />
+                  </stop>
+                  <stop
+                    offset="50%"
+                    stop-color="#524747"
+                    stop-opacity="1"
+                  >
+                    <animate
+                      attributeName="offset"
+                      dur="2s"
+                      keyTimes="0; 0.25; 1"
+                      repeatCount="indefinite"
+                      values="-1; -1; 2"
+                    />
+                  </stop>
+                  <stop
+                    offset="100%"
+                    stop-color="#dccbcb"
+                    stop-opacity="1"
+                  >
+                    <animate
+                      attributeName="offset"
+                      dur="2s"
+                      keyTimes="0; 0.25; 1"
+                      repeatCount="indefinite"
+                      values="0; 0; 3"
+                    />
+                  </stop>
+                </lineargradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+        >
+          <div
+            class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+          >
+            <svg
+              alt="Loading coins details ..."
+              aria-labelledby="yn395v-aria"
+              height="124"
+              role="img"
+              viewBox="0 0 476 124"
+              width="100%"
+            >
+              <title
+                id="yn395v-aria"
+              >
+                Loading...
+              </title>
+              <rect
+                clip-path="url(#yn395v-diff)"
+                height="100%"
+                role="presentation"
+                style="fill: url(#yn395v-animated-diff);"
+                width="100%"
+                x="0"
+                y="0"
+              />
+              <defs>
+                <clippath
+                  id="yn395v-diff"
+                >
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="20"
+                    y="92%"
+                  />
+                  <circle
+                    cx="85%"
+                    cy="28%"
+                    r="10%"
+                  />
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="70"
+                    x="5%"
+                    y="35%"
+                  />
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="90%"
+                    x="5%"
+                    y="70%"
+                  />
+                  <rect
+                    height="8"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="70%"
+                    y="92%"
+                  />
+                </clippath>
+                <lineargradient
+                  id="yn395v-animated-diff"
+                >
+                  <stop
+                    offset="0%"
+                    stop-color="#dccbcb"
+                    stop-opacity="1"
+                  >
+                    <animate
+                      attributeName="offset"
+                      dur="2s"
+                      keyTimes="0; 0.25; 1"
+                      repeatCount="indefinite"
+                      values="-2; -2; 1"
+                    />
+                  </stop>
+                  <stop
+                    offset="50%"
+                    stop-color="#524747"
+                    stop-opacity="1"
+                  >
+                    <animate
+                      attributeName="offset"
+                      dur="2s"
+                      keyTimes="0; 0.25; 1"
+                      repeatCount="indefinite"
+                      values="-1; -1; 2"
+                    />
+                  </stop>
+                  <stop
+                    offset="100%"
+                    stop-color="#dccbcb"
+                    stop-opacity="1"
+                  >
+                    <animate
+                      attributeName="offset"
+                      dur="2s"
+                      keyTimes="0; 0.25; 1"
+                      repeatCount="indefinite"
+                      values="0; 0; 3"
+                    />
+                  </stop>
+                </lineargradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+      >
+        <div
+          class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+        >
+          <svg
+            alt="Loading coins details ..."
+            aria-labelledby="7metghn-aria"
+            height="124"
+            role="img"
+            viewBox="0 0 476 124"
+            width="100%"
+          >
+            <title
+              id="7metghn-aria"
+            >
+              Loading...
+            </title>
+            <rect
+              clip-path="url(#7metghn-diff)"
+              height="100%"
+              role="presentation"
+              style="fill: url(#7metghn-animated-diff);"
+              width="100%"
+              x="0"
+              y="0"
+            />
+            <defs>
+              <clippath
+                id="7metghn-diff"
+              >
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="20"
+                  y="92%"
+                />
+                <circle
+                  cx="85%"
+                  cy="28%"
+                  r="10%"
+                />
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="70"
+                  x="5%"
+                  y="35%"
+                />
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="90%"
+                  x="5%"
+                  y="70%"
+                />
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="70%"
+                  y="92%"
+                />
+              </clippath>
+              <lineargradient
+                id="7metghn-animated-diff"
+              >
+                <stop
+                  offset="0%"
+                  stop-color="#dccbcb"
+                  stop-opacity="1"
+                >
+                  <animate
+                    attributeName="offset"
+                    dur="2s"
+                    keyTimes="0; 0.25; 1"
+                    repeatCount="indefinite"
+                    values="-2; -2; 1"
+                  />
+                </stop>
+                <stop
+                  offset="50%"
+                  stop-color="#524747"
+                  stop-opacity="1"
+                >
+                  <animate
+                    attributeName="offset"
+                    dur="2s"
+                    keyTimes="0; 0.25; 1"
+                    repeatCount="indefinite"
+                    values="-1; -1; 2"
+                  />
+                </stop>
+                <stop
+                  offset="100%"
+                  stop-color="#dccbcb"
+                  stop-opacity="1"
+                >
+                  <animate
+                    attributeName="offset"
+                    dur="2s"
+                    keyTimes="0; 0.25; 1"
+                    repeatCount="indefinite"
+                    values="0; 0; 3"
+                  />
+                </stop>
+              </lineargradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+      >
+        <div
+          class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+        >
+          <svg
+            alt="Loading coins details ..."
+            aria-labelledby="sjvebad-aria"
+            height="124"
+            role="img"
+            viewBox="0 0 476 124"
+            width="100%"
+          >
+            <title
+              id="sjvebad-aria"
+            >
+              Loading...
+            </title>
+            <rect
+              clip-path="url(#sjvebad-diff)"
+              height="100%"
+              role="presentation"
+              style="fill: url(#sjvebad-animated-diff);"
+              width="100%"
+              x="0"
+              y="0"
+            />
+            <defs>
+              <clippath
+                id="sjvebad-diff"
+              >
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="20"
+                  y="92%"
+                />
+                <circle
+                  cx="85%"
+                  cy="28%"
+                  r="10%"
+                />
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="70"
+                  x="5%"
+                  y="35%"
+                />
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="90%"
+                  x="5%"
+                  y="70%"
+                />
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="70%"
+                  y="92%"
+                />
+              </clippath>
+              <lineargradient
+                id="sjvebad-animated-diff"
+              >
+                <stop
+                  offset="0%"
+                  stop-color="#dccbcb"
+                  stop-opacity="1"
+                >
+                  <animate
+                    attributeName="offset"
+                    dur="2s"
+                    keyTimes="0; 0.25; 1"
+                    repeatCount="indefinite"
+                    values="-2; -2; 1"
+                  />
+                </stop>
+                <stop
+                  offset="50%"
+                  stop-color="#524747"
+                  stop-opacity="1"
+                >
+                  <animate
+                    attributeName="offset"
+                    dur="2s"
+                    keyTimes="0; 0.25; 1"
+                    repeatCount="indefinite"
+                    values="-1; -1; 2"
+                  />
+                </stop>
+                <stop
+                  offset="100%"
+                  stop-color="#dccbcb"
+                  stop-opacity="1"
+                >
+                  <animate
+                    attributeName="offset"
+                    dur="2s"
+                    keyTimes="0; 0.25; 1"
+                    repeatCount="indefinite"
+                    values="0; 0; 3"
+                  />
+                </stop>
+              </lineargradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+      >
+        <div
+          class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+        >
+          <svg
+            alt="Loading coins details ..."
+            aria-labelledby="e9d6zim-aria"
+            height="124"
+            role="img"
+            viewBox="0 0 476 124"
+            width="100%"
+          >
+            <title
+              id="e9d6zim-aria"
+            >
+              Loading...
+            </title>
+            <rect
+              clip-path="url(#e9d6zim-diff)"
+              height="100%"
+              role="presentation"
+              style="fill: url(#e9d6zim-animated-diff);"
+              width="100%"
+              x="0"
+              y="0"
+            />
+            <defs>
+              <clippath
+                id="e9d6zim-diff"
+              >
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="20"
+                  y="92%"
+                />
+                <circle
+                  cx="85%"
+                  cy="28%"
+                  r="10%"
+                />
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="70"
+                  x="5%"
+                  y="35%"
+                />
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="90%"
+                  x="5%"
+                  y="70%"
+                />
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="70%"
+                  y="92%"
+                />
+              </clippath>
+              <lineargradient
+                id="e9d6zim-animated-diff"
+              >
+                <stop
+                  offset="0%"
+                  stop-color="#dccbcb"
+                  stop-opacity="1"
+                >
+                  <animate
+                    attributeName="offset"
+                    dur="2s"
+                    keyTimes="0; 0.25; 1"
+                    repeatCount="indefinite"
+                    values="-2; -2; 1"
+                  />
+                </stop>
+                <stop
+                  offset="50%"
+                  stop-color="#524747"
+                  stop-opacity="1"
+                >
+                  <animate
+                    attributeName="offset"
+                    dur="2s"
+                    keyTimes="0; 0.25; 1"
+                    repeatCount="indefinite"
+                    values="-1; -1; 2"
+                  />
+                </stop>
+                <stop
+                  offset="100%"
+                  stop-color="#dccbcb"
+                  stop-opacity="1"
+                >
+                  <animate
+                    attributeName="offset"
+                    dur="2s"
+                    keyTimes="0; 0.25; 1"
+                    repeatCount="indefinite"
+                    values="0; 0; 3"
+                  />
+                </stop>
+              </lineargradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+      >
+        <div
+          class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+        >
+          <svg
+            alt="Loading coins details ..."
+            aria-labelledby="5btg79b-aria"
+            height="124"
+            role="img"
+            viewBox="0 0 476 124"
+            width="100%"
+          >
+            <title
+              id="5btg79b-aria"
+            >
+              Loading...
+            </title>
+            <rect
+              clip-path="url(#5btg79b-diff)"
+              height="100%"
+              role="presentation"
+              style="fill: url(#5btg79b-animated-diff);"
+              width="100%"
+              x="0"
+              y="0"
+            />
+            <defs>
+              <clippath
+                id="5btg79b-diff"
+              >
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="20"
+                  y="92%"
+                />
+                <circle
+                  cx="85%"
+                  cy="28%"
+                  r="10%"
+                />
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="70"
+                  x="5%"
+                  y="35%"
+                />
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="90%"
+                  x="5%"
+                  y="70%"
+                />
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="70%"
+                  y="92%"
+                />
+              </clippath>
+              <lineargradient
+                id="5btg79b-animated-diff"
+              >
+                <stop
+                  offset="0%"
+                  stop-color="#dccbcb"
+                  stop-opacity="1"
+                >
+                  <animate
+                    attributeName="offset"
+                    dur="2s"
+                    keyTimes="0; 0.25; 1"
+                    repeatCount="indefinite"
+                    values="-2; -2; 1"
+                  />
+                </stop>
+                <stop
+                  offset="50%"
+                  stop-color="#524747"
+                  stop-opacity="1"
+                >
+                  <animate
+                    attributeName="offset"
+                    dur="2s"
+                    keyTimes="0; 0.25; 1"
+                    repeatCount="indefinite"
+                    values="-1; -1; 2"
+                  />
+                </stop>
+                <stop
+                  offset="100%"
+                  stop-color="#dccbcb"
+                  stop-opacity="1"
+                >
+                  <animate
+                    attributeName="offset"
+                    dur="2s"
+                    keyTimes="0; 0.25; 1"
+                    repeatCount="indefinite"
+                    values="0; 0; 3"
+                  />
+                </stop>
+              </lineargradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+      >
+        <div
+          class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+        >
+          <svg
+            alt="Loading coins details ..."
+            aria-labelledby="zgrw1xg-aria"
+            height="124"
+            role="img"
+            viewBox="0 0 476 124"
+            width="100%"
+          >
+            <title
+              id="zgrw1xg-aria"
+            >
+              Loading...
+            </title>
+            <rect
+              clip-path="url(#zgrw1xg-diff)"
+              height="100%"
+              role="presentation"
+              style="fill: url(#zgrw1xg-animated-diff);"
+              width="100%"
+              x="0"
+              y="0"
+            />
+            <defs>
+              <clippath
+                id="zgrw1xg-diff"
+              >
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="20"
+                  y="92%"
+                />
+                <circle
+                  cx="85%"
+                  cy="28%"
+                  r="10%"
+                />
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="70"
+                  x="5%"
+                  y="35%"
+                />
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="90%"
+                  x="5%"
+                  y="70%"
+                />
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="70%"
+                  y="92%"
+                />
+              </clippath>
+              <lineargradient
+                id="zgrw1xg-animated-diff"
+              >
+                <stop
+                  offset="0%"
+                  stop-color="#dccbcb"
+                  stop-opacity="1"
+                >
+                  <animate
+                    attributeName="offset"
+                    dur="2s"
+                    keyTimes="0; 0.25; 1"
+                    repeatCount="indefinite"
+                    values="-2; -2; 1"
+                  />
+                </stop>
+                <stop
+                  offset="50%"
+                  stop-color="#524747"
+                  stop-opacity="1"
+                >
+                  <animate
+                    attributeName="offset"
+                    dur="2s"
+                    keyTimes="0; 0.25; 1"
+                    repeatCount="indefinite"
+                    values="-1; -1; 2"
+                  />
+                </stop>
+                <stop
+                  offset="100%"
+                  stop-color="#dccbcb"
+                  stop-opacity="1"
+                >
+                  <animate
+                    attributeName="offset"
+                    dur="2s"
+                    keyTimes="0; 0.25; 1"
+                    repeatCount="indefinite"
+                    values="0; 0; 3"
+                  />
+                </stop>
+              </lineargradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+      >
+        <div
+          class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+        >
+          <svg
+            alt="Loading coins details ..."
+            aria-labelledby="yn395v-aria"
+            height="124"
+            role="img"
+            viewBox="0 0 476 124"
+            width="100%"
+          >
+            <title
+              id="yn395v-aria"
+            >
+              Loading...
+            </title>
+            <rect
+              clip-path="url(#yn395v-diff)"
+              height="100%"
+              role="presentation"
+              style="fill: url(#yn395v-animated-diff);"
+              width="100%"
+              x="0"
+              y="0"
+            />
+            <defs>
+              <clippath
+                id="yn395v-diff"
+              >
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="20"
+                  y="92%"
+                />
+                <circle
+                  cx="85%"
+                  cy="28%"
+                  r="10%"
+                />
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="70"
+                  x="5%"
+                  y="35%"
+                />
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="90%"
+                  x="5%"
+                  y="70%"
+                />
+                <rect
+                  height="8"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="70%"
+                  y="92%"
+                />
+              </clippath>
+              <lineargradient
+                id="yn395v-animated-diff"
+              >
+                <stop
+                  offset="0%"
+                  stop-color="#dccbcb"
+                  stop-opacity="1"
+                >
+                  <animate
+                    attributeName="offset"
+                    dur="2s"
+                    keyTimes="0; 0.25; 1"
+                    repeatCount="indefinite"
+                    values="-2; -2; 1"
+                  />
+                </stop>
+                <stop
+                  offset="50%"
+                  stop-color="#524747"
+                  stop-opacity="1"
+                >
+                  <animate
+                    attributeName="offset"
+                    dur="2s"
+                    keyTimes="0; 0.25; 1"
+                    repeatCount="indefinite"
+                    values="-1; -1; 2"
+                  />
+                </stop>
+                <stop
+                  offset="100%"
+                  stop-color="#dccbcb"
+                  stop-opacity="1"
+                >
+                  <animate
+                    attributeName="offset"
+                    dur="2s"
+                    keyTimes="0; 0.25; 1"
+                    repeatCount="indefinite"
+                    values="0; 0; 3"
+                  />
+                </stop>
+              </lineargradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
