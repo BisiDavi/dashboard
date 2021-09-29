@@ -1,7 +1,6 @@
 import { useState, ChangeEvent } from "react";
-import { TextField, makeStyles, InputAdornment } from "@material-ui/core";
+import { TextField, makeStyles } from "@material-ui/core";
 import { FormikErrors, FormikTouched } from "formik";
-import { BsEyeSlash, BsFillEyeFill } from "react-icons/bs";
 import { formValues } from "../../types";
 
 const useStyles = makeStyles((theme) => ({
@@ -39,15 +38,8 @@ export default function Input({
     errors,
     touched,
 }: InputProps) {
-    const [showPassword, setShowPassword] = useState(false);
-
-    function displayPassword() {
-        setShowPassword(!showPassword);
-    }
-    const isPasswordInput = input.type === "password";
     const classes = useStyles();
     return (
-        <>
             <TextField
                 variant="outlined"
                 type={input.type}
@@ -66,9 +58,5 @@ export default function Input({
                     touched[values[input.name]]
                 }
             />
-            {isPasswordInput && (
-                <InputAdornment position="end" variant="outlined" />
-            )}
-        </>
     );
 }

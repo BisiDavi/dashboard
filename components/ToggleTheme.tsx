@@ -1,5 +1,5 @@
-import { useDispatch } from "react-redux";
 import { IconButton, Tooltip, makeStyles } from "@material-ui/core";
+import { useDispatch } from "react-redux";
 import { BsSun, BsMoon } from "react-icons/bs";
 import { toggleThemeAction } from "@store/actions/themeAction";
 import useTheme from "@hooks/useTheme";
