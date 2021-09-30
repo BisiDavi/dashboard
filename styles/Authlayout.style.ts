@@ -15,7 +15,7 @@ export const AuthStyles = makeStyles((theme) => ({
         textAlign: "center",
     },
     content: {
-        margin: theme.spacing(4, 0),
+        margin: theme.spacing(1, 0),
         width: "100%",
     },
     authGrid: {
