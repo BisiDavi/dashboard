@@ -1,19 +1,28 @@
-import Pagelayout from "@layouts/Pagelayout";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
 import dynamic from "next/dynamic";
+
 import CoinRate from "@components/charts/CoinRate";
+import Pagelayout from "@layouts/Pagelayout";
 
 const HeadlineNews = dynamic(() => import("../components/HeadlineNews"));
 const CryptoLineChart = dynamic(() => import("../components/charts/LineChart"));
 
 export default function Index() {
-    //const [session, loading] = useSession();
-    //const router = useRouter();
+    const router = useRouter();
+    const { status } = useSession({
+        required: true,
+        onUnauthenticated() {
+            return router.push("/auth");
+        },
+    });
 
-    //console.log("session", session);
+    console.log("status", status);
 
-    //!session && router.push("/auth");
+    if (status === "loading") {
+        return "Loading";
+    }
+
     return (
         <Pagelayout title="Welcome">
             <CoinRate />
@@ -22,3 +31,5 @@ export default function Index() {
         </Pagelayout>
     );
 }
+
+Index.auth = true;

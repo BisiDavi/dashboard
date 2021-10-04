@@ -7,7 +7,8 @@ import {
     Tooltip,
 } from "@material-ui/core";
 import { useDispatch } from "react-redux";
-import { useRouter } from "next/router";
+ import { useSession, signOut } from "next-auth/react";
+
 import Logo from "@components/Logo";
 import MenuOutlinedIcon from "@material-ui/icons/MenuOutlined";
 import { headerStyles } from "@styles/Header.style";
@@ -15,18 +16,18 @@ import { UIActions } from "@store/actions/uiActions";
 
 export default function Header() {
     const dispatch = useDispatch();
+    const { data: session, status } = useSession();
 
     const classes = headerStyles();
-    const router = useRouter();
 
     function toggleMenu() {
         dispatch(UIActions());
     }
 
+    console.log("data", session, "status", status);
+
     function logoutHandler() {
-        return router.push("/auth").then((response) => {
-            console.log("response", response);
-        });
+        return signOut();
     }
     return (
         <AppBar className={classes.appBar} position="static">
