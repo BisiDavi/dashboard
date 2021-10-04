@@ -6,29 +6,29 @@ Object {
   "baseElement": <body>
     <div>
       <svg
-        aria-labelledby="l31rlc-aria"
+        aria-labelledby="qfexvbr-aria"
         height="100%"
         role="img"
         viewBox="0 0 500 300"
         width="100%"
       >
         <title
-          id="l31rlc-aria"
+          id="qfexvbr-aria"
         >
           Loading news...
         </title>
         <rect
-          clip-path="url(#l31rlc-diff)"
+          clip-path="url(#qfexvbr-diff)"
           height="100%"
           role="presentation"
-          style="fill: url(#l31rlc-animated-diff);"
+          style="fill: url(#qfexvbr-animated-diff);"
           width="100%"
           x="0"
           y="0"
         />
         <defs>
           <clippath
-            id="l31rlc-diff"
+            id="qfexvbr-diff"
           >
             <rect
               height="10"
@@ -80,7 +80,7 @@ Object {
             />
           </clippath>
           <lineargradient
-            id="l31rlc-animated-diff"
+            id="qfexvbr-animated-diff"
           >
             <stop
               offset="0%"
@@ -128,29 +128,29 @@ Object {
   </body>,
   "container": <div>
     <svg
-      aria-labelledby="l31rlc-aria"
+      aria-labelledby="qfexvbr-aria"
       height="100%"
       role="img"
       viewBox="0 0 500 300"
       width="100%"
     >
       <title
-        id="l31rlc-aria"
+        id="qfexvbr-aria"
       >
         Loading news...
       </title>
       <rect
-        clip-path="url(#l31rlc-diff)"
+        clip-path="url(#qfexvbr-diff)"
         height="100%"
         role="presentation"
-        style="fill: url(#l31rlc-animated-diff);"
+        style="fill: url(#qfexvbr-animated-diff);"
         width="100%"
         x="0"
         y="0"
       />
       <defs>
         <clippath
-          id="l31rlc-diff"
+          id="qfexvbr-diff"
         >
           <rect
             height="10"
@@ -202,7 +202,7 @@ Object {
           />
         </clippath>
         <lineargradient
-          id="l31rlc-animated-diff"
+          id="qfexvbr-animated-diff"
         >
           <stop
             offset="0%"
