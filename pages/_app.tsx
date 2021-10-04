@@ -1,6 +1,7 @@
 import { PersistGate } from "redux-persist/integration/react";
 import { useEffect, useState } from "react";
 import Router from "next/router";
+import { SessionProvider } from "next-auth/react";
 import NProgress from "nprogress";
 import { Provider } from "react-redux";
 import store, { persistor } from "@store/store";
@@ -13,7 +14,7 @@ Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
@@ -35,9 +36,11 @@ function MyApp({ Component, pageProps }) {
     return (
         <Provider store={store}>
             <PersistGate persistor={persistor}>
-                <Layout>
-                    <Component {...pageProps} />
-                </Layout>
+                <SessionProvider session={session}>
+                    <Layout>
+                        <Component {...pageProps} />
+                    </Layout>
+                </SessionProvider>
             </PersistGate>
         </Provider>
     );
