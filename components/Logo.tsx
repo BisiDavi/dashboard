@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { makeStyles } from "@material-ui/core/styles";
-import { colors } from "@styles/colors.styles";
 
 const useStyles = makeStyles((theme) => ({
     logo: {
@@ -36,7 +35,7 @@ export default function Logo() {
             <a>
                 <div className={classes.logo}>
                     <div className="triangle"></div>
-                    <h1>Office Dashboard</h1>
+                    <h1 data-testid="logo-text">Office Dashboard</h1>
                 </div>
             </a>
         </Link>

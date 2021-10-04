@@ -6,7 +6,7 @@ import {
     CardContent,
 } from "@material-ui/core";
 import { PropsWithChildren } from "react-transition-group/node_modules/@types/react";
-import displayIcons from "utils/displayIcons";
+import displayIcons from "@utils/displayIcons";
 import { viewCardStyle } from "@styles/ViewCard.style";
 
 interface ViewCard {

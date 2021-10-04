@@ -1,0 +1,302 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the NewsLoader Component NewsLoader Snapshot testing 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <svg
+        aria-labelledby="l31rlc-aria"
+        height="100%"
+        role="img"
+        viewBox="0 0 500 300"
+        width="100%"
+      >
+        <title
+          id="l31rlc-aria"
+        >
+          Loading news...
+        </title>
+        <rect
+          clip-path="url(#l31rlc-diff)"
+          height="100%"
+          role="presentation"
+          style="fill: url(#l31rlc-animated-diff);"
+          width="100%"
+          x="0"
+          y="0"
+        />
+        <defs>
+          <clippath
+            id="l31rlc-diff"
+          >
+            <rect
+              height="10"
+              rx="3"
+              ry="3"
+              width="25%"
+              x="0%"
+              y="3%"
+            />
+            <rect
+              height="10"
+              rx="3"
+              ry="3"
+              width="25%"
+              x="75%"
+              y="3%"
+            />
+            <rect
+              height="60%"
+              rx="0"
+              ry="0"
+              width="85%"
+              x="8%"
+              y="12%"
+            />
+            <rect
+              height="10%"
+              rx="3"
+              ry="3"
+              width="85%"
+              x="8%"
+              y="78%"
+            />
+            <rect
+              height="10"
+              rx="3"
+              ry="3"
+              width="25%"
+              x="0%"
+              y="93%"
+            />
+            <rect
+              height="10"
+              rx="3"
+              ry="3"
+              width="25%"
+              x="75%"
+              y="93%"
+            />
+          </clippath>
+          <lineargradient
+            id="l31rlc-animated-diff"
+          >
+            <stop
+              offset="0%"
+              stop-color="#dccbcb"
+              stop-opacity="1"
+            >
+              <animate
+                attributeName="offset"
+                dur="2s"
+                keyTimes="0; 0.25; 1"
+                repeatCount="indefinite"
+                values="-2; -2; 1"
+              />
+            </stop>
+            <stop
+              offset="50%"
+              stop-color="#524747"
+              stop-opacity="1"
+            >
+              <animate
+                attributeName="offset"
+                dur="2s"
+                keyTimes="0; 0.25; 1"
+                repeatCount="indefinite"
+                values="-1; -1; 2"
+              />
+            </stop>
+            <stop
+              offset="100%"
+              stop-color="#dccbcb"
+              stop-opacity="1"
+            >
+              <animate
+                attributeName="offset"
+                dur="2s"
+                keyTimes="0; 0.25; 1"
+                repeatCount="indefinite"
+                values="0; 0; 3"
+              />
+            </stop>
+          </lineargradient>
+        </defs>
+      </svg>
+    </div>
+  </body>,
+  "container": <div>
+    <svg
+      aria-labelledby="l31rlc-aria"
+      height="100%"
+      role="img"
+      viewBox="0 0 500 300"
+      width="100%"
+    >
+      <title
+        id="l31rlc-aria"
+      >
+        Loading news...
+      </title>
+      <rect
+        clip-path="url(#l31rlc-diff)"
+        height="100%"
+        role="presentation"
+        style="fill: url(#l31rlc-animated-diff);"
+        width="100%"
+        x="0"
+        y="0"
+      />
+      <defs>
+        <clippath
+          id="l31rlc-diff"
+        >
+          <rect
+            height="10"
+            rx="3"
+            ry="3"
+            width="25%"
+            x="0%"
+            y="3%"
+          />
+          <rect
+            height="10"
+            rx="3"
+            ry="3"
+            width="25%"
+            x="75%"
+            y="3%"
+          />
+          <rect
+            height="60%"
+            rx="0"
+            ry="0"
+            width="85%"
+            x="8%"
+            y="12%"
+          />
+          <rect
+            height="10%"
+            rx="3"
+            ry="3"
+            width="85%"
+            x="8%"
+            y="78%"
+          />
+          <rect
+            height="10"
+            rx="3"
+            ry="3"
+            width="25%"
+            x="0%"
+            y="93%"
+          />
+          <rect
+            height="10"
+            rx="3"
+            ry="3"
+            width="25%"
+            x="75%"
+            y="93%"
+          />
+        </clippath>
+        <lineargradient
+          id="l31rlc-animated-diff"
+        >
+          <stop
+            offset="0%"
+            stop-color="#dccbcb"
+            stop-opacity="1"
+          >
+            <animate
+              attributeName="offset"
+              dur="2s"
+              keyTimes="0; 0.25; 1"
+              repeatCount="indefinite"
+              values="-2; -2; 1"
+            />
+          </stop>
+          <stop
+            offset="50%"
+            stop-color="#524747"
+            stop-opacity="1"
+          >
+            <animate
+              attributeName="offset"
+              dur="2s"
+              keyTimes="0; 0.25; 1"
+              repeatCount="indefinite"
+              values="-1; -1; 2"
+            />
+          </stop>
+          <stop
+            offset="100%"
+            stop-color="#dccbcb"
+            stop-opacity="1"
+          >
+            <animate
+              attributeName="offset"
+              dur="2s"
+              keyTimes="0; 0.25; 1"
+              repeatCount="indefinite"
+              values="0; 0; 3"
+            />
+          </stop>
+        </lineargradient>
+      </defs>
+    </svg>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

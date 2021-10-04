@@ -9,6 +9,9 @@ module.exports = {
         "!**/.next/**",
         "!**/styles/**",
         "!**/types/**",
+        "!jest.config.js",
+        "!next.config.js",
+        "!wobb-landingpage/**",
     ],
     moduleNameMapper: {
         // Handle CSS imports (with CSS modules)

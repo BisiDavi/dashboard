@@ -8,12 +8,12 @@ const HeadlineNews = dynamic(() => import("../components/HeadlineNews"));
 const CryptoLineChart = dynamic(() => import("../components/charts/LineChart"));
 
 export default function Index() {
-    const [session, loading] = useSession();
-    const router = useRouter();
+    //const [session, loading] = useSession();
+    //const router = useRouter();
 
-    console.log("session", session);
+    //console.log("session", session);
 
-    !session && router.push("/auth");
+    //!session && router.push("/auth");
     return (
         <Pagelayout title="Welcome">
             <CoinRate />
