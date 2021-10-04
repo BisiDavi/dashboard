@@ -48,7 +48,7 @@ const options = {
             console.log("message session", message);
         },
         async error(message) {
-            /* error in authentication flow *console.log('message signIn', message) */
+            /* error in authentication flow */
             console.log("message error", message);
         },
     },
