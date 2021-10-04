@@ -9,6 +9,7 @@ export const AuthStyles = makeStyles((theme) => ({
         flexDirection: "column",
         alignItems: "center",
         position: "relative",
+        padding: 0,
         justifyContent: "center",
     },
     "& h1": {
@@ -44,5 +45,10 @@ export const AuthStyles = makeStyles((theme) => ({
         width: "100% !important",
         position: "relative",
         height: "unset !important",
+    },
+    [theme.breakpoints.down("sm")]: {
+        gridImage: {
+            display: "none",
+        },
     },
 }));

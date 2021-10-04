@@ -35,10 +35,16 @@ export default function Authlayout({
                             {children}
                         </Grid>
                     </Grid>
-                    <Grid  className={classes.gridImage} item xs={12} lg={6} md={6}>
+                    <Grid
+                        className={classes.gridImage}
+                        item
+                        xs={12}
+                        lg={6}
+                        md={6}
+                    >
                         <span className={styles.imageContainer}>
                             <Image
-                                src="https://source.unsplash.com/800x600/?nature"
+                                src="https://source.unsplash.com/800x900/?nature"
                                 alt="nature"
                                 className={styles.image}
                                 layout="fill"
