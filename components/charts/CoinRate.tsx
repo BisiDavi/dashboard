@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import axios from "axios";
-import Image from "next/image";
-import ViewCard from "@components/ViewCard";
-import useError from "@hooks/useError";
 import { Grid, Divider, Typography } from "@material-ui/core";
+
+import Image from "@components/Image";
+import ViewCard from "@components/ViewCard";
 import cryptoAxiosInstance from "@api/cryptoAxiosInstance";
+import useError from "@hooks/useError";
 import { coinRateStyles } from "@styles/CoinRate.style";
 import CryptoContentLoader from "@components/cryptoContentLoader";
 
@@ -16,7 +16,7 @@ export default function CoinRate() {
 
     useEffect(() => {
         if (coins.length === 0) {
-            axios
+            cryptoAxiosInstance
                 .get("/api/get-coin-rate")
                 .then((response) => {
                     console.log("response coin-rate", response.data.data);
