@@ -6,60 +6,76 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="MuiPaper-root MuiCard-root makeStyles-card-1 MuiPaper-elevation1 MuiPaper-rounded"
+        class="MuiGrid-root MuiGrid-container"
       >
         <div
-          class="MuiCardContent-root"
+          class="MuiGrid-root makeStyles-cardGrid-4 MuiGrid-item MuiGrid-grid-md-6 MuiGrid-grid-lg-6"
         >
           <div
-            class="makeStyles-header-2"
+            class="MuiPaper-root MuiCard-root makeStyles-card-1 MuiPaper-elevation1 MuiPaper-rounded"
           >
-            <div>
-              <h1
-                class="MuiTypography-root MuiTypography-body1"
+            <div
+              class="MuiCardContent-root"
+            >
+              <div
+                class="makeStyles-header-2"
               >
-                Log in
-              </h1>
-              <p
-                class="MuiTypography-root MuiTypography-body1"
-              >
-                Welcome, log in to access the dashboard
-              </p>
+                <div>
+                  <h1
+                    class="MuiTypography-root MuiTypography-body1"
+                  >
+                    Sign in
+                  </h1>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1"
+                  >
+                    Welcome, sign in with either github or google to access the dashboard
+                  </p>
+                </div>
+              </div>
+              <div
+                class="makeStyles-authform-3"
+              />
             </div>
           </div>
-          <div
-            class="makeStyles-authform-3"
-          />
         </div>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="MuiPaper-root MuiCard-root makeStyles-card-1 MuiPaper-elevation1 MuiPaper-rounded"
+      class="MuiGrid-root MuiGrid-container"
     >
       <div
-        class="MuiCardContent-root"
+        class="MuiGrid-root makeStyles-cardGrid-4 MuiGrid-item MuiGrid-grid-md-6 MuiGrid-grid-lg-6"
       >
         <div
-          class="makeStyles-header-2"
+          class="MuiPaper-root MuiCard-root makeStyles-card-1 MuiPaper-elevation1 MuiPaper-rounded"
         >
-          <div>
-            <h1
-              class="MuiTypography-root MuiTypography-body1"
+          <div
+            class="MuiCardContent-root"
+          >
+            <div
+              class="makeStyles-header-2"
             >
-              Log in
-            </h1>
-            <p
-              class="MuiTypography-root MuiTypography-body1"
-            >
-              Welcome, log in to access the dashboard
-            </p>
+              <div>
+                <h1
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  Sign in
+                </h1>
+                <p
+                  class="MuiTypography-root MuiTypography-body1"
+                >
+                  Welcome, sign in with either github or google to access the dashboard
+                </p>
+              </div>
+            </div>
+            <div
+              class="makeStyles-authform-3"
+            />
           </div>
         </div>
-        <div
-          class="makeStyles-authform-3"
-        />
       </div>
     </div>
   </div>,

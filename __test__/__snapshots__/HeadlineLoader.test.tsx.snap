@@ -1,85 +1,95 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Testing the CryptoContentLoader Component CryptoContentLoader Snapshot testing 1`] = `
+exports[`Testing the HeadlineLoader Component HeadlineLoader Snapshot testing 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
+        class="MuiGrid-root makeStyles-headlineLoader-4 MuiGrid-container MuiGrid-spacing-xs-3"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+          class="MuiGrid-root makeStyles-gridHeadline-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-4 MuiGrid-grid-xl-2"
         >
           <div
-            class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+            class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
           >
             <svg
-              alt="Loading coins details ..."
-              aria-labelledby="zeq8n1k-aria"
-              height="124"
+              aria-labelledby="ov1jvzo-aria"
+              height="100%"
               role="img"
-              viewBox="0 0 476 124"
+              viewBox="0 0 500 300"
               width="100%"
             >
               <title
-                id="zeq8n1k-aria"
+                id="ov1jvzo-aria"
               >
-                Loading...
+                Loading news...
               </title>
               <rect
-                clip-path="url(#zeq8n1k-diff)"
+                clip-path="url(#ov1jvzo-diff)"
                 height="100%"
                 role="presentation"
-                style="fill: url(#zeq8n1k-animated-diff);"
+                style="fill: url(#ov1jvzo-animated-diff);"
                 width="100%"
                 x="0"
                 y="0"
               />
               <defs>
                 <clippath
-                  id="zeq8n1k-diff"
+                  id="ov1jvzo-diff"
                 >
                   <rect
-                    height="8"
+                    height="10"
                     rx="3"
                     ry="3"
                     width="25%"
-                    x="20"
-                    y="92%"
-                  />
-                  <circle
-                    cx="85%"
-                    cy="28%"
-                    r="10%"
+                    x="0%"
+                    y="3%"
                   />
                   <rect
-                    height="8"
-                    rx="3"
-                    ry="3"
-                    width="70"
-                    x="5%"
-                    y="35%"
-                  />
-                  <rect
-                    height="8"
-                    rx="3"
-                    ry="3"
-                    width="90%"
-                    x="5%"
-                    y="70%"
-                  />
-                  <rect
-                    height="8"
+                    height="10"
                     rx="3"
                     ry="3"
                     width="25%"
-                    x="70%"
-                    y="92%"
+                    x="75%"
+                    y="3%"
+                  />
+                  <rect
+                    height="60%"
+                    rx="0"
+                    ry="0"
+                    width="85%"
+                    x="8%"
+                    y="12%"
+                  />
+                  <rect
+                    height="10%"
+                    rx="3"
+                    ry="3"
+                    width="85%"
+                    x="8%"
+                    y="78%"
+                  />
+                  <rect
+                    height="10"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="0%"
+                    y="93%"
+                  />
+                  <rect
+                    height="10"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="75%"
+                    y="93%"
                   />
                 </clippath>
                 <lineargradient
-                  id="zeq8n1k-animated-diff"
+                  id="ov1jvzo-animated-diff"
                 >
                   <stop
                     offset="0%"
@@ -126,77 +136,87 @@ Object {
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+          class="MuiGrid-root makeStyles-gridHeadline-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-4 MuiGrid-grid-xl-2"
         >
           <div
-            class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+            class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
           >
             <svg
-              alt="Loading coins details ..."
-              aria-labelledby="afz48x-aria"
-              height="124"
+              aria-labelledby="1aato3b-aria"
+              height="100%"
               role="img"
-              viewBox="0 0 476 124"
+              viewBox="0 0 500 300"
               width="100%"
             >
               <title
-                id="afz48x-aria"
+                id="1aato3b-aria"
               >
-                Loading...
+                Loading news...
               </title>
               <rect
-                clip-path="url(#afz48x-diff)"
+                clip-path="url(#1aato3b-diff)"
                 height="100%"
                 role="presentation"
-                style="fill: url(#afz48x-animated-diff);"
+                style="fill: url(#1aato3b-animated-diff);"
                 width="100%"
                 x="0"
                 y="0"
               />
               <defs>
                 <clippath
-                  id="afz48x-diff"
+                  id="1aato3b-diff"
                 >
                   <rect
-                    height="8"
+                    height="10"
                     rx="3"
                     ry="3"
                     width="25%"
-                    x="20"
-                    y="92%"
-                  />
-                  <circle
-                    cx="85%"
-                    cy="28%"
-                    r="10%"
+                    x="0%"
+                    y="3%"
                   />
                   <rect
-                    height="8"
-                    rx="3"
-                    ry="3"
-                    width="70"
-                    x="5%"
-                    y="35%"
-                  />
-                  <rect
-                    height="8"
-                    rx="3"
-                    ry="3"
-                    width="90%"
-                    x="5%"
-                    y="70%"
-                  />
-                  <rect
-                    height="8"
+                    height="10"
                     rx="3"
                     ry="3"
                     width="25%"
-                    x="70%"
-                    y="92%"
+                    x="75%"
+                    y="3%"
+                  />
+                  <rect
+                    height="60%"
+                    rx="0"
+                    ry="0"
+                    width="85%"
+                    x="8%"
+                    y="12%"
+                  />
+                  <rect
+                    height="10%"
+                    rx="3"
+                    ry="3"
+                    width="85%"
+                    x="8%"
+                    y="78%"
+                  />
+                  <rect
+                    height="10"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="0%"
+                    y="93%"
+                  />
+                  <rect
+                    height="10"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="75%"
+                    y="93%"
                   />
                 </clippath>
                 <lineargradient
-                  id="afz48x-animated-diff"
+                  id="1aato3b-animated-diff"
                 >
                   <stop
                     offset="0%"
@@ -243,77 +263,87 @@ Object {
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+          class="MuiGrid-root makeStyles-gridHeadline-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-4 MuiGrid-grid-xl-2"
         >
           <div
-            class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+            class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
           >
             <svg
-              alt="Loading coins details ..."
-              aria-labelledby="axuv6d-aria"
-              height="124"
+              aria-labelledby="gzfm545-aria"
+              height="100%"
               role="img"
-              viewBox="0 0 476 124"
+              viewBox="0 0 500 300"
               width="100%"
             >
               <title
-                id="axuv6d-aria"
+                id="gzfm545-aria"
               >
-                Loading...
+                Loading news...
               </title>
               <rect
-                clip-path="url(#axuv6d-diff)"
+                clip-path="url(#gzfm545-diff)"
                 height="100%"
                 role="presentation"
-                style="fill: url(#axuv6d-animated-diff);"
+                style="fill: url(#gzfm545-animated-diff);"
                 width="100%"
                 x="0"
                 y="0"
               />
               <defs>
                 <clippath
-                  id="axuv6d-diff"
+                  id="gzfm545-diff"
                 >
                   <rect
-                    height="8"
+                    height="10"
                     rx="3"
                     ry="3"
                     width="25%"
-                    x="20"
-                    y="92%"
-                  />
-                  <circle
-                    cx="85%"
-                    cy="28%"
-                    r="10%"
+                    x="0%"
+                    y="3%"
                   />
                   <rect
-                    height="8"
-                    rx="3"
-                    ry="3"
-                    width="70"
-                    x="5%"
-                    y="35%"
-                  />
-                  <rect
-                    height="8"
-                    rx="3"
-                    ry="3"
-                    width="90%"
-                    x="5%"
-                    y="70%"
-                  />
-                  <rect
-                    height="8"
+                    height="10"
                     rx="3"
                     ry="3"
                     width="25%"
-                    x="70%"
-                    y="92%"
+                    x="75%"
+                    y="3%"
+                  />
+                  <rect
+                    height="60%"
+                    rx="0"
+                    ry="0"
+                    width="85%"
+                    x="8%"
+                    y="12%"
+                  />
+                  <rect
+                    height="10%"
+                    rx="3"
+                    ry="3"
+                    width="85%"
+                    x="8%"
+                    y="78%"
+                  />
+                  <rect
+                    height="10"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="0%"
+                    y="93%"
+                  />
+                  <rect
+                    height="10"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="75%"
+                    y="93%"
                   />
                 </clippath>
                 <lineargradient
-                  id="axuv6d-animated-diff"
+                  id="gzfm545-animated-diff"
                 >
                   <stop
                     offset="0%"
@@ -360,77 +390,87 @@ Object {
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+          class="MuiGrid-root makeStyles-gridHeadline-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-4 MuiGrid-grid-xl-2"
         >
           <div
-            class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+            class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
           >
             <svg
-              alt="Loading coins details ..."
-              aria-labelledby="atzh2pb-aria"
-              height="124"
+              aria-labelledby="9j7orak-aria"
+              height="100%"
               role="img"
-              viewBox="0 0 476 124"
+              viewBox="0 0 500 300"
               width="100%"
             >
               <title
-                id="atzh2pb-aria"
+                id="9j7orak-aria"
               >
-                Loading...
+                Loading news...
               </title>
               <rect
-                clip-path="url(#atzh2pb-diff)"
+                clip-path="url(#9j7orak-diff)"
                 height="100%"
                 role="presentation"
-                style="fill: url(#atzh2pb-animated-diff);"
+                style="fill: url(#9j7orak-animated-diff);"
                 width="100%"
                 x="0"
                 y="0"
               />
               <defs>
                 <clippath
-                  id="atzh2pb-diff"
+                  id="9j7orak-diff"
                 >
                   <rect
-                    height="8"
+                    height="10"
                     rx="3"
                     ry="3"
                     width="25%"
-                    x="20"
-                    y="92%"
-                  />
-                  <circle
-                    cx="85%"
-                    cy="28%"
-                    r="10%"
+                    x="0%"
+                    y="3%"
                   />
                   <rect
-                    height="8"
-                    rx="3"
-                    ry="3"
-                    width="70"
-                    x="5%"
-                    y="35%"
-                  />
-                  <rect
-                    height="8"
-                    rx="3"
-                    ry="3"
-                    width="90%"
-                    x="5%"
-                    y="70%"
-                  />
-                  <rect
-                    height="8"
+                    height="10"
                     rx="3"
                     ry="3"
                     width="25%"
-                    x="70%"
-                    y="92%"
+                    x="75%"
+                    y="3%"
+                  />
+                  <rect
+                    height="60%"
+                    rx="0"
+                    ry="0"
+                    width="85%"
+                    x="8%"
+                    y="12%"
+                  />
+                  <rect
+                    height="10%"
+                    rx="3"
+                    ry="3"
+                    width="85%"
+                    x="8%"
+                    y="78%"
+                  />
+                  <rect
+                    height="10"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="0%"
+                    y="93%"
+                  />
+                  <rect
+                    height="10"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="75%"
+                    y="93%"
                   />
                 </clippath>
                 <lineargradient
-                  id="atzh2pb-animated-diff"
+                  id="9j7orak-animated-diff"
                 >
                   <stop
                     offset="0%"
@@ -477,77 +517,87 @@ Object {
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+          class="MuiGrid-root makeStyles-gridHeadline-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-4 MuiGrid-grid-xl-2"
         >
           <div
-            class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+            class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
           >
             <svg
-              alt="Loading coins details ..."
-              aria-labelledby="jp9jpj9-aria"
-              height="124"
+              aria-labelledby="2sk3s7c-aria"
+              height="100%"
               role="img"
-              viewBox="0 0 476 124"
+              viewBox="0 0 500 300"
               width="100%"
             >
               <title
-                id="jp9jpj9-aria"
+                id="2sk3s7c-aria"
               >
-                Loading...
+                Loading news...
               </title>
               <rect
-                clip-path="url(#jp9jpj9-diff)"
+                clip-path="url(#2sk3s7c-diff)"
                 height="100%"
                 role="presentation"
-                style="fill: url(#jp9jpj9-animated-diff);"
+                style="fill: url(#2sk3s7c-animated-diff);"
                 width="100%"
                 x="0"
                 y="0"
               />
               <defs>
                 <clippath
-                  id="jp9jpj9-diff"
+                  id="2sk3s7c-diff"
                 >
                   <rect
-                    height="8"
+                    height="10"
                     rx="3"
                     ry="3"
                     width="25%"
-                    x="20"
-                    y="92%"
-                  />
-                  <circle
-                    cx="85%"
-                    cy="28%"
-                    r="10%"
+                    x="0%"
+                    y="3%"
                   />
                   <rect
-                    height="8"
-                    rx="3"
-                    ry="3"
-                    width="70"
-                    x="5%"
-                    y="35%"
-                  />
-                  <rect
-                    height="8"
-                    rx="3"
-                    ry="3"
-                    width="90%"
-                    x="5%"
-                    y="70%"
-                  />
-                  <rect
-                    height="8"
+                    height="10"
                     rx="3"
                     ry="3"
                     width="25%"
-                    x="70%"
-                    y="92%"
+                    x="75%"
+                    y="3%"
+                  />
+                  <rect
+                    height="60%"
+                    rx="0"
+                    ry="0"
+                    width="85%"
+                    x="8%"
+                    y="12%"
+                  />
+                  <rect
+                    height="10%"
+                    rx="3"
+                    ry="3"
+                    width="85%"
+                    x="8%"
+                    y="78%"
+                  />
+                  <rect
+                    height="10"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="0%"
+                    y="93%"
+                  />
+                  <rect
+                    height="10"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="75%"
+                    y="93%"
                   />
                 </clippath>
                 <lineargradient
-                  id="jp9jpj9-animated-diff"
+                  id="2sk3s7c-animated-diff"
                 >
                   <stop
                     offset="0%"
@@ -594,77 +644,87 @@ Object {
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+          class="MuiGrid-root makeStyles-gridHeadline-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-4 MuiGrid-grid-xl-2"
         >
           <div
-            class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+            class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
           >
             <svg
-              alt="Loading coins details ..."
-              aria-labelledby="8w1v6s-aria"
-              height="124"
+              aria-labelledby="63h473-aria"
+              height="100%"
               role="img"
-              viewBox="0 0 476 124"
+              viewBox="0 0 500 300"
               width="100%"
             >
               <title
-                id="8w1v6s-aria"
+                id="63h473-aria"
               >
-                Loading...
+                Loading news...
               </title>
               <rect
-                clip-path="url(#8w1v6s-diff)"
+                clip-path="url(#63h473-diff)"
                 height="100%"
                 role="presentation"
-                style="fill: url(#8w1v6s-animated-diff);"
+                style="fill: url(#63h473-animated-diff);"
                 width="100%"
                 x="0"
                 y="0"
               />
               <defs>
                 <clippath
-                  id="8w1v6s-diff"
+                  id="63h473-diff"
                 >
                   <rect
-                    height="8"
+                    height="10"
                     rx="3"
                     ry="3"
                     width="25%"
-                    x="20"
-                    y="92%"
-                  />
-                  <circle
-                    cx="85%"
-                    cy="28%"
-                    r="10%"
+                    x="0%"
+                    y="3%"
                   />
                   <rect
-                    height="8"
-                    rx="3"
-                    ry="3"
-                    width="70"
-                    x="5%"
-                    y="35%"
-                  />
-                  <rect
-                    height="8"
-                    rx="3"
-                    ry="3"
-                    width="90%"
-                    x="5%"
-                    y="70%"
-                  />
-                  <rect
-                    height="8"
+                    height="10"
                     rx="3"
                     ry="3"
                     width="25%"
-                    x="70%"
-                    y="92%"
+                    x="75%"
+                    y="3%"
+                  />
+                  <rect
+                    height="60%"
+                    rx="0"
+                    ry="0"
+                    width="85%"
+                    x="8%"
+                    y="12%"
+                  />
+                  <rect
+                    height="10%"
+                    rx="3"
+                    ry="3"
+                    width="85%"
+                    x="8%"
+                    y="78%"
+                  />
+                  <rect
+                    height="10"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="0%"
+                    y="93%"
+                  />
+                  <rect
+                    height="10"
+                    rx="3"
+                    ry="3"
+                    width="25%"
+                    x="75%"
+                    y="93%"
                   />
                 </clippath>
                 <lineargradient
-                  id="8w1v6s-animated-diff"
+                  id="63h473-animated-diff"
                 >
                   <stop
                     offset="0%"
@@ -715,80 +775,90 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
+      class="MuiGrid-root makeStyles-headlineLoader-4 MuiGrid-container MuiGrid-spacing-xs-3"
     >
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+        class="MuiGrid-root makeStyles-gridHeadline-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-4 MuiGrid-grid-xl-2"
       >
         <div
-          class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+          class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
         >
           <svg
-            alt="Loading coins details ..."
-            aria-labelledby="zeq8n1k-aria"
-            height="124"
+            aria-labelledby="ov1jvzo-aria"
+            height="100%"
             role="img"
-            viewBox="0 0 476 124"
+            viewBox="0 0 500 300"
             width="100%"
           >
             <title
-              id="zeq8n1k-aria"
+              id="ov1jvzo-aria"
             >
-              Loading...
+              Loading news...
             </title>
             <rect
-              clip-path="url(#zeq8n1k-diff)"
+              clip-path="url(#ov1jvzo-diff)"
               height="100%"
               role="presentation"
-              style="fill: url(#zeq8n1k-animated-diff);"
+              style="fill: url(#ov1jvzo-animated-diff);"
               width="100%"
               x="0"
               y="0"
             />
             <defs>
               <clippath
-                id="zeq8n1k-diff"
+                id="ov1jvzo-diff"
               >
                 <rect
-                  height="8"
+                  height="10"
                   rx="3"
                   ry="3"
                   width="25%"
-                  x="20"
-                  y="92%"
-                />
-                <circle
-                  cx="85%"
-                  cy="28%"
-                  r="10%"
+                  x="0%"
+                  y="3%"
                 />
                 <rect
-                  height="8"
-                  rx="3"
-                  ry="3"
-                  width="70"
-                  x="5%"
-                  y="35%"
-                />
-                <rect
-                  height="8"
-                  rx="3"
-                  ry="3"
-                  width="90%"
-                  x="5%"
-                  y="70%"
-                />
-                <rect
-                  height="8"
+                  height="10"
                   rx="3"
                   ry="3"
                   width="25%"
-                  x="70%"
-                  y="92%"
+                  x="75%"
+                  y="3%"
+                />
+                <rect
+                  height="60%"
+                  rx="0"
+                  ry="0"
+                  width="85%"
+                  x="8%"
+                  y="12%"
+                />
+                <rect
+                  height="10%"
+                  rx="3"
+                  ry="3"
+                  width="85%"
+                  x="8%"
+                  y="78%"
+                />
+                <rect
+                  height="10"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="0%"
+                  y="93%"
+                />
+                <rect
+                  height="10"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="75%"
+                  y="93%"
                 />
               </clippath>
               <lineargradient
-                id="zeq8n1k-animated-diff"
+                id="ov1jvzo-animated-diff"
               >
                 <stop
                   offset="0%"
@@ -835,77 +905,87 @@ Object {
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+        class="MuiGrid-root makeStyles-gridHeadline-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-4 MuiGrid-grid-xl-2"
       >
         <div
-          class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+          class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
         >
           <svg
-            alt="Loading coins details ..."
-            aria-labelledby="afz48x-aria"
-            height="124"
+            aria-labelledby="1aato3b-aria"
+            height="100%"
             role="img"
-            viewBox="0 0 476 124"
+            viewBox="0 0 500 300"
             width="100%"
           >
             <title
-              id="afz48x-aria"
+              id="1aato3b-aria"
             >
-              Loading...
+              Loading news...
             </title>
             <rect
-              clip-path="url(#afz48x-diff)"
+              clip-path="url(#1aato3b-diff)"
               height="100%"
               role="presentation"
-              style="fill: url(#afz48x-animated-diff);"
+              style="fill: url(#1aato3b-animated-diff);"
               width="100%"
               x="0"
               y="0"
             />
             <defs>
               <clippath
-                id="afz48x-diff"
+                id="1aato3b-diff"
               >
                 <rect
-                  height="8"
+                  height="10"
                   rx="3"
                   ry="3"
                   width="25%"
-                  x="20"
-                  y="92%"
-                />
-                <circle
-                  cx="85%"
-                  cy="28%"
-                  r="10%"
+                  x="0%"
+                  y="3%"
                 />
                 <rect
-                  height="8"
-                  rx="3"
-                  ry="3"
-                  width="70"
-                  x="5%"
-                  y="35%"
-                />
-                <rect
-                  height="8"
-                  rx="3"
-                  ry="3"
-                  width="90%"
-                  x="5%"
-                  y="70%"
-                />
-                <rect
-                  height="8"
+                  height="10"
                   rx="3"
                   ry="3"
                   width="25%"
-                  x="70%"
-                  y="92%"
+                  x="75%"
+                  y="3%"
+                />
+                <rect
+                  height="60%"
+                  rx="0"
+                  ry="0"
+                  width="85%"
+                  x="8%"
+                  y="12%"
+                />
+                <rect
+                  height="10%"
+                  rx="3"
+                  ry="3"
+                  width="85%"
+                  x="8%"
+                  y="78%"
+                />
+                <rect
+                  height="10"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="0%"
+                  y="93%"
+                />
+                <rect
+                  height="10"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="75%"
+                  y="93%"
                 />
               </clippath>
               <lineargradient
-                id="afz48x-animated-diff"
+                id="1aato3b-animated-diff"
               >
                 <stop
                   offset="0%"
@@ -952,77 +1032,87 @@ Object {
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+        class="MuiGrid-root makeStyles-gridHeadline-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-4 MuiGrid-grid-xl-2"
       >
         <div
-          class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+          class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
         >
           <svg
-            alt="Loading coins details ..."
-            aria-labelledby="axuv6d-aria"
-            height="124"
+            aria-labelledby="gzfm545-aria"
+            height="100%"
             role="img"
-            viewBox="0 0 476 124"
+            viewBox="0 0 500 300"
             width="100%"
           >
             <title
-              id="axuv6d-aria"
+              id="gzfm545-aria"
             >
-              Loading...
+              Loading news...
             </title>
             <rect
-              clip-path="url(#axuv6d-diff)"
+              clip-path="url(#gzfm545-diff)"
               height="100%"
               role="presentation"
-              style="fill: url(#axuv6d-animated-diff);"
+              style="fill: url(#gzfm545-animated-diff);"
               width="100%"
               x="0"
               y="0"
             />
             <defs>
               <clippath
-                id="axuv6d-diff"
+                id="gzfm545-diff"
               >
                 <rect
-                  height="8"
+                  height="10"
                   rx="3"
                   ry="3"
                   width="25%"
-                  x="20"
-                  y="92%"
-                />
-                <circle
-                  cx="85%"
-                  cy="28%"
-                  r="10%"
+                  x="0%"
+                  y="3%"
                 />
                 <rect
-                  height="8"
-                  rx="3"
-                  ry="3"
-                  width="70"
-                  x="5%"
-                  y="35%"
-                />
-                <rect
-                  height="8"
-                  rx="3"
-                  ry="3"
-                  width="90%"
-                  x="5%"
-                  y="70%"
-                />
-                <rect
-                  height="8"
+                  height="10"
                   rx="3"
                   ry="3"
                   width="25%"
-                  x="70%"
-                  y="92%"
+                  x="75%"
+                  y="3%"
+                />
+                <rect
+                  height="60%"
+                  rx="0"
+                  ry="0"
+                  width="85%"
+                  x="8%"
+                  y="12%"
+                />
+                <rect
+                  height="10%"
+                  rx="3"
+                  ry="3"
+                  width="85%"
+                  x="8%"
+                  y="78%"
+                />
+                <rect
+                  height="10"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="0%"
+                  y="93%"
+                />
+                <rect
+                  height="10"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="75%"
+                  y="93%"
                 />
               </clippath>
               <lineargradient
-                id="axuv6d-animated-diff"
+                id="gzfm545-animated-diff"
               >
                 <stop
                   offset="0%"
@@ -1069,77 +1159,87 @@ Object {
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+        class="MuiGrid-root makeStyles-gridHeadline-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-4 MuiGrid-grid-xl-2"
       >
         <div
-          class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+          class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
         >
           <svg
-            alt="Loading coins details ..."
-            aria-labelledby="atzh2pb-aria"
-            height="124"
+            aria-labelledby="9j7orak-aria"
+            height="100%"
             role="img"
-            viewBox="0 0 476 124"
+            viewBox="0 0 500 300"
             width="100%"
           >
             <title
-              id="atzh2pb-aria"
+              id="9j7orak-aria"
             >
-              Loading...
+              Loading news...
             </title>
             <rect
-              clip-path="url(#atzh2pb-diff)"
+              clip-path="url(#9j7orak-diff)"
               height="100%"
               role="presentation"
-              style="fill: url(#atzh2pb-animated-diff);"
+              style="fill: url(#9j7orak-animated-diff);"
               width="100%"
               x="0"
               y="0"
             />
             <defs>
               <clippath
-                id="atzh2pb-diff"
+                id="9j7orak-diff"
               >
                 <rect
-                  height="8"
+                  height="10"
                   rx="3"
                   ry="3"
                   width="25%"
-                  x="20"
-                  y="92%"
-                />
-                <circle
-                  cx="85%"
-                  cy="28%"
-                  r="10%"
+                  x="0%"
+                  y="3%"
                 />
                 <rect
-                  height="8"
-                  rx="3"
-                  ry="3"
-                  width="70"
-                  x="5%"
-                  y="35%"
-                />
-                <rect
-                  height="8"
-                  rx="3"
-                  ry="3"
-                  width="90%"
-                  x="5%"
-                  y="70%"
-                />
-                <rect
-                  height="8"
+                  height="10"
                   rx="3"
                   ry="3"
                   width="25%"
-                  x="70%"
-                  y="92%"
+                  x="75%"
+                  y="3%"
+                />
+                <rect
+                  height="60%"
+                  rx="0"
+                  ry="0"
+                  width="85%"
+                  x="8%"
+                  y="12%"
+                />
+                <rect
+                  height="10%"
+                  rx="3"
+                  ry="3"
+                  width="85%"
+                  x="8%"
+                  y="78%"
+                />
+                <rect
+                  height="10"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="0%"
+                  y="93%"
+                />
+                <rect
+                  height="10"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="75%"
+                  y="93%"
                 />
               </clippath>
               <lineargradient
-                id="atzh2pb-animated-diff"
+                id="9j7orak-animated-diff"
               >
                 <stop
                   offset="0%"
@@ -1186,77 +1286,87 @@ Object {
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+        class="MuiGrid-root makeStyles-gridHeadline-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-4 MuiGrid-grid-xl-2"
       >
         <div
-          class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+          class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
         >
           <svg
-            alt="Loading coins details ..."
-            aria-labelledby="jp9jpj9-aria"
-            height="124"
+            aria-labelledby="2sk3s7c-aria"
+            height="100%"
             role="img"
-            viewBox="0 0 476 124"
+            viewBox="0 0 500 300"
             width="100%"
           >
             <title
-              id="jp9jpj9-aria"
+              id="2sk3s7c-aria"
             >
-              Loading...
+              Loading news...
             </title>
             <rect
-              clip-path="url(#jp9jpj9-diff)"
+              clip-path="url(#2sk3s7c-diff)"
               height="100%"
               role="presentation"
-              style="fill: url(#jp9jpj9-animated-diff);"
+              style="fill: url(#2sk3s7c-animated-diff);"
               width="100%"
               x="0"
               y="0"
             />
             <defs>
               <clippath
-                id="jp9jpj9-diff"
+                id="2sk3s7c-diff"
               >
                 <rect
-                  height="8"
+                  height="10"
                   rx="3"
                   ry="3"
                   width="25%"
-                  x="20"
-                  y="92%"
-                />
-                <circle
-                  cx="85%"
-                  cy="28%"
-                  r="10%"
+                  x="0%"
+                  y="3%"
                 />
                 <rect
-                  height="8"
-                  rx="3"
-                  ry="3"
-                  width="70"
-                  x="5%"
-                  y="35%"
-                />
-                <rect
-                  height="8"
-                  rx="3"
-                  ry="3"
-                  width="90%"
-                  x="5%"
-                  y="70%"
-                />
-                <rect
-                  height="8"
+                  height="10"
                   rx="3"
                   ry="3"
                   width="25%"
-                  x="70%"
-                  y="92%"
+                  x="75%"
+                  y="3%"
+                />
+                <rect
+                  height="60%"
+                  rx="0"
+                  ry="0"
+                  width="85%"
+                  x="8%"
+                  y="12%"
+                />
+                <rect
+                  height="10%"
+                  rx="3"
+                  ry="3"
+                  width="85%"
+                  x="8%"
+                  y="78%"
+                />
+                <rect
+                  height="10"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="0%"
+                  y="93%"
+                />
+                <rect
+                  height="10"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="75%"
+                  y="93%"
                 />
               </clippath>
               <lineargradient
-                id="jp9jpj9-animated-diff"
+                id="2sk3s7c-animated-diff"
               >
                 <stop
                   offset="0%"
@@ -1303,77 +1413,87 @@ Object {
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-2 MuiGrid-grid-xl-2"
+        class="MuiGrid-root makeStyles-gridHeadline-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-4 MuiGrid-grid-xl-2"
       >
         <div
-          class="MuiPaper-root MuiCard-root makeStyles-cryptoCard-3 MuiPaper-elevation1 MuiPaper-rounded"
+          class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
         >
           <svg
-            alt="Loading coins details ..."
-            aria-labelledby="8w1v6s-aria"
-            height="124"
+            aria-labelledby="63h473-aria"
+            height="100%"
             role="img"
-            viewBox="0 0 476 124"
+            viewBox="0 0 500 300"
             width="100%"
           >
             <title
-              id="8w1v6s-aria"
+              id="63h473-aria"
             >
-              Loading...
+              Loading news...
             </title>
             <rect
-              clip-path="url(#8w1v6s-diff)"
+              clip-path="url(#63h473-diff)"
               height="100%"
               role="presentation"
-              style="fill: url(#8w1v6s-animated-diff);"
+              style="fill: url(#63h473-animated-diff);"
               width="100%"
               x="0"
               y="0"
             />
             <defs>
               <clippath
-                id="8w1v6s-diff"
+                id="63h473-diff"
               >
                 <rect
-                  height="8"
+                  height="10"
                   rx="3"
                   ry="3"
                   width="25%"
-                  x="20"
-                  y="92%"
-                />
-                <circle
-                  cx="85%"
-                  cy="28%"
-                  r="10%"
+                  x="0%"
+                  y="3%"
                 />
                 <rect
-                  height="8"
-                  rx="3"
-                  ry="3"
-                  width="70"
-                  x="5%"
-                  y="35%"
-                />
-                <rect
-                  height="8"
-                  rx="3"
-                  ry="3"
-                  width="90%"
-                  x="5%"
-                  y="70%"
-                />
-                <rect
-                  height="8"
+                  height="10"
                   rx="3"
                   ry="3"
                   width="25%"
-                  x="70%"
-                  y="92%"
+                  x="75%"
+                  y="3%"
+                />
+                <rect
+                  height="60%"
+                  rx="0"
+                  ry="0"
+                  width="85%"
+                  x="8%"
+                  y="12%"
+                />
+                <rect
+                  height="10%"
+                  rx="3"
+                  ry="3"
+                  width="85%"
+                  x="8%"
+                  y="78%"
+                />
+                <rect
+                  height="10"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="0%"
+                  y="93%"
+                />
+                <rect
+                  height="10"
+                  rx="3"
+                  ry="3"
+                  width="25%"
+                  x="75%"
+                  y="93%"
                 />
               </clippath>
               <lineargradient
-                id="8w1v6s-animated-diff"
+                id="63h473-animated-diff"
               >
                 <stop
                   offset="0%"

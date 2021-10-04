@@ -38,4 +38,9 @@ export const authCardStyles = makeStyles((theme) => ({
             },
         },
     },
+    [theme.breakpoints.down("sm")]: {
+        gridImage: {
+            display: "none",
+        },
+    },
 }));

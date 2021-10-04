@@ -10,7 +10,7 @@ export default function AuthCard({
     const classes = authCardStyles();
     return (
         <Grid container>
-            <Grid className={classes.cardGrid} item lg={12} md={6}>
+            <Grid className={classes.cardGrid} item lg={6} md={6}>
                 <Card className={classes.card}>
                     <CardContent>
                         <div className={classes.header}>

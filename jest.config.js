@@ -8,7 +8,7 @@ module.exports = {
         "!**/coverage/**",
         "!**/.next/**",
         "!**/styles/**",
-				"!**/types/**"
+        "!**/types/**",
     ],
     moduleNameMapper: {
         // Handle CSS imports (with CSS modules)
@@ -48,4 +48,5 @@ module.exports = {
         "/json/",
         "/public/",
     ],
+    testEnvironment: "jsdom",
 };

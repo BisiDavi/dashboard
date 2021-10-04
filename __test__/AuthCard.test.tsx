@@ -1,7 +1,3 @@
-/**
- * @jest-environment jsdom
- */
-
 import { render } from "@testing-library/react";
 import AuthCard from "@components/AuthCard";
 import authJson from "@json/auth.json";

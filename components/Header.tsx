@@ -6,16 +6,15 @@ import {
     IconButton,
     Tooltip,
 } from "@material-ui/core";
-import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
 import { useRouter } from "next/router";
 import Logo from "@components/Logo";
 import MenuOutlinedIcon from "@material-ui/icons/MenuOutlined";
-import useRedux from "@hooks/useRedux";
 import { headerStyles } from "@styles/Header.style";
 import { UIActions } from "@store/actions/uiActions";
 
 export default function Header() {
-    const { dispatch } = useRedux();
+    const dispatch = useDispatch();
 
     const classes = headerStyles();
     const router = useRouter();
