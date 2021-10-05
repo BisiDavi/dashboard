@@ -13,9 +13,14 @@ export const headerStyles = makeStyles((theme) => ({
         alignItems: "center",
         justifyContent: "space-around",
     },
-		logout:{
-			color:'red'
-		},
+    logo: {
+        alignItems: "center",
+        justifyContent: "center",
+        display: "flex",
+    },
+    logout: {
+        color: "red",
+    },
     menuGroup: {
         "& img": {
             borderRadius: "50%",

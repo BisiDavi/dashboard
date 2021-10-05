@@ -35,7 +35,7 @@ export default function Header() {
         <AppBar className={classes.appBar} position="static">
             <Toolbar>
                 <Grid container className={classes.gridContainer}>
-                    <Grid item lg={3}>
+                    <Grid className={classes.logo} item lg={3}>
                         <Tooltip title="Office dashboard">
                             <Logo />
                         </Tooltip>

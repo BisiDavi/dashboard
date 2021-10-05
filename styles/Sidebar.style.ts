@@ -22,6 +22,11 @@ export const sidebarStyle = makeStyles((theme: Theme) =>
                 width: "100%",
             },
         },
+        activeLink: {
+            backgroundColor: "rgba(255, 255, 255, 0.08)",
+            borderRight: "7px solid #303f9f",
+            margin: "10px 0",
+        },
         sidebar: {
             height: "100vh",
             padding: theme.spacing(2),
