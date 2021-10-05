@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import {
     Grid,
     AppBar,
@@ -5,9 +6,10 @@ import {
     Toolbar,
     IconButton,
     Tooltip,
+    Typography,
 } from "@material-ui/core";
 import { useDispatch } from "react-redux";
- import { useSession, signOut } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 
 import Logo from "@components/Logo";
 import MenuOutlinedIcon from "@material-ui/icons/MenuOutlined";
@@ -40,6 +42,17 @@ export default function Header() {
                     </Grid>
                     <Grid item lg={2} className={classes.gridItem}>
                         <div className={classes.menuGroup}>
+                            {session && (
+                                <img
+                                    src={session?.user.image}
+                                    alt={session?.user.name}
+                                    height="75px"
+                                    width="75px"
+                                />
+                            )}
+                            {session && (
+                                <Typography>{session?.user?.email}</Typography>
+                            )}
                             <Button onClick={logoutHandler} color="inherit">
                                 Logout
                             </Button>

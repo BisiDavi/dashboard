@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 import useRedux from "@hooks/useRedux";
 import {
     List,
@@ -18,6 +19,7 @@ import { sidebarStyle } from "@styles/Sidebar.style";
 export default function Sidebar() {
     const classes = sidebarStyle();
     const { dispatch } = useRedux();
+    const { data } = useSession();
     const matches = useMediaQuery("(max-width:768px)");
 
     function toggleMenu() {
@@ -27,6 +29,14 @@ export default function Sidebar() {
     return (
         <Paper className={clsx(classes.sidebar, classes.sidebarWidth)}>
             <div className={classes.list}>
+                {data && (
+                    <List>
+                        <ListItem>
+                            <ListItemIcon></ListItemIcon>
+                            <ListItemText primary={data.user.name} />
+                        </ListItem>
+                    </List>
+                )}
                 <List>
                     {menus.map(({ category, menu }) => (
                         <div key={category}>

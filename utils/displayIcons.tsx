@@ -5,6 +5,7 @@ import AddIcon from "@material-ui/icons/Add";
 import { FcGoogle } from "react-icons/fc";
 import LocalHospitalIcon from "@material-ui/icons/LocalHospital";
 import TimelineIcon from "@material-ui/icons/Timeline";
+import { Avatar } from "@material-ui/core";
 
 export default function displayIcons(iconName: string) {
     switch (iconName) {
@@ -26,6 +27,9 @@ export default function displayIcons(iconName: string) {
         }
         case "google": {
             return <FcGoogle />;
+        }
+        case "avatar": {
+            return <Avatar />;
         }
         default:
             return null;
