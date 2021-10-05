@@ -25,7 +25,7 @@ export default function ListItemView({ item }) {
     console.log("router", router, "item", item);
 
     useEffect(() => {
-        if (router.route.includes(item)) {
+        if (router.route.includes(item.link)) {
             setActive(true);
         }
     }, [item, router.route]);
