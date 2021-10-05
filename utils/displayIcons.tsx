@@ -1,3 +1,4 @@
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import CopyrightIcon from "@material-ui/icons/Copyright";
@@ -5,7 +6,6 @@ import AddIcon from "@material-ui/icons/Add";
 import { FcGoogle } from "react-icons/fc";
 import LocalHospitalIcon from "@material-ui/icons/LocalHospital";
 import TimelineIcon from "@material-ui/icons/Timeline";
-import { Avatar } from "@material-ui/core";
 
 export default function displayIcons(iconName: string) {
     switch (iconName) {
@@ -29,7 +29,7 @@ export default function displayIcons(iconName: string) {
             return <FcGoogle />;
         }
         case "avatar": {
-            return <Avatar />;
+            return <AccountCircleIcon />;
         }
         default:
             return null;

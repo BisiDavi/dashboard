@@ -32,7 +32,9 @@ export default function Sidebar() {
                 {data && (
                     <List>
                         <ListItem>
-                            <ListItemIcon></ListItemIcon>
+                            <ListItemIcon>
+                                {displayIcons("avatar")}
+                            </ListItemIcon>
                             <ListItemText primary={data.user.name} />
                         </ListItem>
                     </List>
