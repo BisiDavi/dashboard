@@ -35,7 +35,7 @@ export default function Header() {
         <AppBar className={classes.appBar} position="static">
             <Toolbar>
                 <Grid container className={classes.gridContainer}>
-                    <Grid item lg={2}>
+                    <Grid item lg={3}>
                         <Tooltip title="Office dashboard">
                             <Logo />
                         </Tooltip>
@@ -51,9 +51,11 @@ export default function Header() {
                                 />
                             )}
                             {session && (
-                                <Typography>{session?.user?.email}</Typography>
+                                <Typography className={classes.email}>
+                                    {session?.user?.email}
+                                </Typography>
                             )}
-                            <Button onClick={logoutHandler} color="inherit">
+                            <Button onClick={logoutHandler} className={classes.logout}>
                                 Logout
                             </Button>
                         </div>

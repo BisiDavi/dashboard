@@ -13,6 +13,20 @@ export const headerStyles = makeStyles((theme) => ({
         alignItems: "center",
         justifyContent: "space-around",
     },
+		logout:{
+			color:'red'
+		},
+    menuGroup: {
+        "& img": {
+            borderRadius: "50%",
+        },
+        flexDirection: "row",
+        width: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-around",
+        margin: "10px",
+    },
     [theme.breakpoints.up("md")]: {
         menu: {
             display: "none",
@@ -26,6 +40,9 @@ export const headerStyles = makeStyles((theme) => ({
             "& button": {
                 fontSize: 14,
             },
+        },
+        email: {
+            display: "none",
         },
     },
 }));
