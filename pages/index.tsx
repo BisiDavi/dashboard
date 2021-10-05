@@ -12,9 +12,9 @@ export default function Index() {
     const router = useRouter();
     const { status } = useSession({
         required: true,
-        onUnauthenticated() {
-            return router.push("/auth");
-        },
+        //onUnauthenticated() {
+        //    return router.push("/auth");
+        //},
     });
 
     console.log("status", status);
