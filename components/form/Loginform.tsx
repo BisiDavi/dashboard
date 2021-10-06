@@ -6,16 +6,22 @@ import { authFormStyles } from "@styles/Authform.style";
 import authJson from "@json/auth.json";
 import displayIcons from "@utils/displayIcons";
 
-export default function Loginform() {
+type providerType = {
+    name: string;
+    id: string;
+};
+
+export default function Loginform({ providers }) {
     const classes = authFormStyles();
+    console.log("providers", providers);
 
     return (
         <AuthCard content={authJson.login}>
             <div className={classes.iconGroup}>
-                {authJson.icons.map((icon) => (
-                    <Tooltip key={icon.name} title={icon.title}>
-                        <IconButton onClick={() => signIn(icon.name)}>
-                            {displayIcons(icon.name)}
+                {Object.values(providers).map((provider: providerType) => (
+                    <Tooltip key={provider.name} title={provider.name}>
+                        <IconButton onClick={() => signIn(provider.id)}>
+                            {displayIcons(provider.id)}
                         </IconButton>
                     </Tooltip>
                 ))}
