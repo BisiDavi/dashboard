@@ -23,7 +23,7 @@ export const sidebarStyle = makeStyles((theme: Theme) =>
             },
         },
         activeLink: {
-            backgroundColor: "rgba(255, 255, 255, 0.08)",
+            backgroundColor: "rgb(146 164 173 / 25%)",
             borderRight: "7px solid #303f9f",
             margin: "10px 0",
         },

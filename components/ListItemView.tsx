@@ -22,8 +22,6 @@ export default function ListItemView({ item }) {
 
     const activeStyle = active && classes.activeLink;
 
-    console.log("router", router, "item", item);
-
     useEffect(() => {
         if (router.route.includes(item.link)) {
             setActive(true);

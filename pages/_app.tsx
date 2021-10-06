@@ -34,11 +34,12 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
             Router.events.on("routeChangeError", end);
         };
     }, []);
-		
+
     return (
         <Provider store={store}>
             <PersistGate persistor={persistor}>
                 <SessionProvider session={session}>
+                    {console.log("component.auth", Component.auth)}
                     {Component.auth ? (
                         <Auth>
                             <Layout>

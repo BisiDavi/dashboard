@@ -4,7 +4,9 @@ import { useSession } from "next-auth/react";
 
 export default function Auth({ children }) {
     const { data: session, loading } = useSession();
-    const isUser = !!session?.user;
+    const isUser = session?.user;
+
+    console.log("session", session);
 
     useEffect(() => {
         if (loading) return;

@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { NewsCard, HeadlineLoader } from "@components/.";
 import { Grid, Typography, Divider } from "@material-ui/core";
+import { toast } from "react-toastify";
+
 import { contentType, newsCategoryType } from "../types/.";
 import { headlineNewsCardStyle } from "@styles/HeadlineNews.style";
 import displayNewsTitle from "@utils/displayNewsTitle";
@@ -22,6 +24,8 @@ export default function HeadlineNews({
     const [headlineNews, setHeadlineNews] = useState<contentType[]>([]);
     const isQuery = query ? `/${query}` : "";
 
+    const errorText = query ? query : newsCategory;
+
     useEffect(() => {
         if (headlineNews.length === 0) {
             axios
@@ -39,7 +43,12 @@ export default function HeadlineNews({
                     return setHeadlineNews(topHeadlines);
                 })
                 .catch((error) => {
-                    console.log("error", error.response);
+                    toast.error(
+                        `oops network error occured, unable to fetch ${errorText} news`,
+                        {
+                            autoClose: false,
+                        },
+                    );
                 });
         }
     }, [count, headlineNews, newsCategory, isQuery]);

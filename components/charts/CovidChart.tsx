@@ -14,7 +14,7 @@ import { Grid, Divider, Typography } from "@material-ui/core";
 import ThreeDots from "@components/ThreeDotsLoader";
 import { chartStyles } from "@styles/Chart.style";
 import covid19AxiosInstance from "@api/covid19AxiosInstance";
-import { SignalCellularNull } from "@material-ui/icons";
+import { toast } from "react-toastify";
 
 export default function CovidChart() {
     const [chartData, setChartData] = useState<any>(null);
@@ -30,8 +30,12 @@ export default function CovidChart() {
                     setChartData(response.data.Countries);
                 })
                 .catch((error) => {
-                    console.log("error", error);
-                    //onError(error);
+                    toast.error(
+                        `oops network error, unable to fetch covid data`,
+                        {
+                            autoClose: false,
+                        },
+                    );
                 });
         }
     }, []);
