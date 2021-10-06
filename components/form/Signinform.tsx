@@ -11,7 +11,7 @@ type providerType = {
     id: string;
 };
 
-export default function Loginform({ providers }) {
+export default function Signinform({ providers }) {
     const classes = authFormStyles();
     console.log("providers", providers);
 

@@ -1,11 +1,11 @@
-import Loginform from "@components/form/Loginform";
+import Signinform from "@components/form/Signinform";
 import Authlayout from "@layouts/Authlayout";
 import { getProviders } from "next-auth/react";
 
-export default function Login({ providers }) {
+export default function Signin({ providers }) {
     return (
-        <Authlayout title="Login">
-            <Loginform providers={providers} />
+        <Authlayout title="Signin">
+            <Signinform providers={providers} />
         </Authlayout>
     );
 }
