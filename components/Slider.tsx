@@ -13,6 +13,7 @@ function CarouselItem(slide) {
     return (
         <div className={classes.slide}>
             <div className={classes.overlay}></div>
+            <h4 className={classes.random}>Random Quotes</h4>
             <h3 className={classes.author}>Author: {slide.slide.author}</h3>
             <img
                 src={slide.slide.image}
@@ -34,7 +35,7 @@ function useRandomImages() {
 
 function useRandomQuotes() {
     return useQuery("randomQuotes", async () => {
-        const { data } = await axiosRandomQuotesInstance.get("/quotes?limit=3");
+        const { data } = await axiosRandomQuotesInstance.get("/quotes?limit=4");
         const randomQuotes = data.results;
         return randomQuotes;
     });

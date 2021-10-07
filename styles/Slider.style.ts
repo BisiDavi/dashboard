@@ -5,6 +5,7 @@ export const sliderStyles = makeStyles((theme: Theme) => ({
         position: "relative",
         height: "350px",
         width: "350px",
+        borderRadius: "20px",
     },
     overlay: {
         backgroundColor: "#1514147a",
@@ -15,6 +16,14 @@ export const sliderStyles = makeStyles((theme: Theme) => ({
         width: "100%",
         zIndex: 20,
         borderRadius: "20px",
+    },
+    random: {
+        color: "white",
+        textAlign: "center",
+        fontSize: "12px",
+        zIndex: 30,
+        position: "absolute",
+        top: 0,
     },
     image: {
         borderRadius: "20px",
@@ -37,7 +46,7 @@ export const sliderStyles = makeStyles((theme: Theme) => ({
         fontSize: "16px",
         zIndex: 30,
         position: "absolute",
-        top: 0,
+        top: 30,
     },
     content: {
         fontSize: "18px",

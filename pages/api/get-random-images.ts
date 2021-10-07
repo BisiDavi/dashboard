@@ -7,7 +7,7 @@ export default async function RandomImagesApiHandler(req, res) {
         case "GET": {
             let data;
             await axiosRandomImageInstance
-                .get("/search?query=nature&per_page=3")
+                .get("/search?query=nature&per_page=4")
                 .then((response) => {
                     data = response.data;
                     return data;
