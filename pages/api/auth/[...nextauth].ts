@@ -35,7 +35,7 @@ const options = {
             }
         },
     },
-    debug: false,
+    debug: true,
 };
 
 export default function CustomNextAuth(req, res) {
