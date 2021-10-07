@@ -73,19 +73,21 @@ export default function HeadlineNews({
                     },
                 )
             ) : (
-                articles.map((content: contentType) => (
-                    <Grid
-                        key={content.title}
-                        item
-                        xs={12}
-                        sm={6}
-                        md={6}
-                        lg={4}
-                        xl={2}
-                    >
-                        <NewsCard content={content} />
-                    </Grid>
-                ))
+                <Grid className={classes.newsGrid} spacing={2} container>
+                    {articles.map((content: contentType) => (
+                        <Grid
+                            item
+                            xs={12}
+                            sm={6}
+                            md={6}
+                            lg={4}
+                            xl={2}
+                            key={content.title}
+                        >
+                            <NewsCard content={content} />
+                        </Grid>
+                    ))}
+                </Grid>
             )}
         </Grid>
     );

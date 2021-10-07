@@ -12,4 +12,7 @@ export const headlineNewsCardStyle = makeStyles((theme) => ({
     headlineNews: {
         flexDirection: "column",
     },
+    newsGrid: {
+        display: "flex",
+    },
 }));
