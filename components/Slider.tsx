@@ -1,24 +1,26 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/exhaustive-deps */
 import Carousel from "react-material-ui-carousel";
+import { useEffect, useState } from "react";
+import { Grid } from "@material-ui/core";
 import axios from "axios";
-import { Paper } from "@material-ui/core";
 import { useQuery } from "react-query";
 import { axiosRandomQuotesInstance } from "@api/axiosInstance";
-import { useEffect, useState } from "react";
+import { sliderStyles } from "@styles/Slider.style";
 
-function CarouselItem(props) {
+function CarouselItem(slide) {
+    const classes = sliderStyles();
     return (
-        <Paper>
-            <h3>{props.author}</h3>
+        <div className={classes.slide}>
+            <div className={classes.overlay}></div>
+            <h3 className={classes.author}>Author: {slide.slide.author}</h3>
             <img
-                src={props.image}
-                alt={props.author}
-                height="300px"
-                width="300px"
+                src={slide.slide.image}
+                alt={slide.slide.author}
+                className={classes.image}
             />
-            <h6>{props.content}</h6>
-        </Paper>
+            <h6 className={classes.content}>{slide.slide.content}</h6>
+        </div>
     );
 }
 
@@ -60,24 +62,27 @@ export default function Slider() {
             randomImage.map((image, index) => {
                 slideArray[index] = {
                     ...slideArray[index],
-                    image: image.src.small,
+                    image: image.src.medium,
                 };
                 setSlideData([slideArray]);
             });
         }
     }, [randomQuotes, randomImage]);
 
-    console.log("slideData", slideData);
+    const classes = sliderStyles();
 
     return (
-        <>
-            {slideData.length > 0 && (
-                <Carousel>
-                    {slideData.map((slide) => (
-                        <CarouselItem key={slide.name} slide={slide} />
-                    ))}
-                </Carousel>
-            )}
-        </>
+        <Grid container>
+            <Grid item lg={8}></Grid>
+            <Grid className={classes.gridItem} item lg={4}>
+                {slideData[0]?.length > 0 && (
+                    <Carousel>
+                        {slideData[0].map((slide) => (
+                            <CarouselItem key={slide.author} slide={slide} />
+                        ))}
+                    </Carousel>
+                )}
+            </Grid>
+        </Grid>
     );
 }
