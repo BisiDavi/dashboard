@@ -1,6 +1,6 @@
 import Signinform from "@components/form/Signinform";
 import Authlayout from "@layouts/Authlayout";
-import { getProviders } from "next-auth/react";
+import { getProviders } from "next-auth/client";
 
 export default function Signin({ providers }) {
     return (

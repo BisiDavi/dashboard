@@ -9,7 +9,7 @@ import {
     Typography,
 } from "@material-ui/core";
 import { useDispatch } from "react-redux";
-import { useSession, signOut } from "next-auth/react";
+import { useSession, signOut } from "next-auth/client";
 
 import Logo from "@components/Logo";
 import MenuOutlinedIcon from "@material-ui/icons/MenuOutlined";
@@ -18,7 +18,7 @@ import { UIActions } from "@store/actions/uiActions";
 
 export default function Header() {
     const dispatch = useDispatch();
-    const { data: session, status } = useSession();
+    const [session] = useSession();
 
     const classes = headerStyles();
 
@@ -26,7 +26,7 @@ export default function Header() {
         dispatch(UIActions());
     }
 
-    console.log("data", session, "status", status);
+    console.log("data", session);
 
     function logoutHandler() {
         return signOut();
@@ -55,7 +55,10 @@ export default function Header() {
                                     {session?.user?.email}
                                 </Typography>
                             )}
-                            <Button onClick={logoutHandler} className={classes.logout}>
+                            <Button
+                                onClick={logoutHandler}
+                                className={classes.logout}
+                            >
                                 Logout
                             </Button>
                         </div>

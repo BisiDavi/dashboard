@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useSession } from "next-auth/react";
+import { useSession } from "next-auth/client";
 import dynamic from "next/dynamic";
 
 import CoinRate from "@components/charts/CoinRate";
@@ -10,18 +10,13 @@ const CryptoLineChart = dynamic(() => import("../components/charts/LineChart"));
 
 export default function Index() {
     const router = useRouter();
-    //const { status } = useSession({
-    //    required: true,
-    //    //onUnauthenticated() {
-    //    //    return router.push("/auth");
-    //    //},
-    //});
+    const [session, loading] = useSession();
 
-    //console.log("status", status);
+    console.log("session", session);
 
-    //if (status === "loading") {
-    //    return "Loading";
-    //}
+    if (loading) {
+        return "Loading";
+    }
 
     return (
         <Pagelayout title="Welcome">

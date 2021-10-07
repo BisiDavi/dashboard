@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { useSession } from "next-auth/react";
+import { useSession } from "next-auth/client";
 import { List, Typography, Paper } from "@material-ui/core";
 
 import menus from "@json/menu.json";
@@ -8,17 +8,17 @@ import { sidebarStyle } from "@styles/Sidebar.style";
 
 export default function Sidebar() {
     const classes = sidebarStyle();
-    const { data } = useSession();
+    const [session] = useSession();
 
     const userData = {
-        name: data?.user?.name,
+        name: session?.user?.name,
         icon: "avatar",
     };
 
     return (
         <Paper className={clsx(classes.sidebar, classes.sidebarWidth)}>
             <div className={classes.list}>
-                {data && <ListItemView item={userData} />}
+                {session && <ListItemView item={userData} />}
                 <List>
                     {menus.map(({ category, menu }) => (
                         <div key={category}>

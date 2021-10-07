@@ -1,4 +1,4 @@
-import { signIn } from "next-auth/react";
+import { signIn } from "next-auth/client";
 import { IconButton, Tooltip } from "@material-ui/core";
 
 import AuthCard from "@components/AuthCard";

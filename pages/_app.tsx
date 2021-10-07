@@ -1,13 +1,12 @@
 import { PersistGate } from "redux-persist/integration/react";
+import { Provider as AuthProvider } from "next-auth/client";
 import { useEffect, useState } from "react";
 import Router from "next/router";
-import { SessionProvider } from "next-auth/react";
 import NProgress from "nprogress";
 import { Provider } from "react-redux";
 
 import store, { persistor } from "@store/store";
 import Layout from "@layouts/Layout";
-import Auth from "@components/Auth";
 import "nprogress/nprogress.css";
 import "@styles/globals.css";
 
@@ -36,23 +35,18 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     }, []);
 
     return (
-        <Provider store={store}>
-            <PersistGate persistor={persistor}>
-                <SessionProvider session={session}>
-                    {Component.auth ? (
-                        <Auth>
-                            <Layout>
-                                <Component {...pageProps} />
-                            </Layout>
-                        </Auth>
-                    ) : (
-                        <Layout>
-                            <Component {...pageProps} />
-                        </Layout>
-                    )}
-                </SessionProvider>
-            </PersistGate>
-        </Provider>
+        <AuthProvider
+            options={{ clientMaxAge: 0, keepAlive: 0 }}
+            session={pageProps.session}
+        >
+            <Provider store={store}>
+                <PersistGate persistor={persistor}>
+                    <Layout>
+                        <Component {...pageProps} />
+                    </Layout>
+                </PersistGate>
+            </Provider>
+        </AuthProvider>
     );
 }
 
