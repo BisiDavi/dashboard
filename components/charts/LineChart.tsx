@@ -1,5 +1,5 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { useState, useEffect } from "react";
+import { Grid, Divider, Typography } from "@material-ui/core";
+import { useQuery } from "react-query";
 import {
     LineChart,
     Line,
@@ -10,33 +10,24 @@ import {
     Legend,
     ResponsiveContainer,
 } from "recharts";
-import { Grid, Divider, Typography } from "@material-ui/core";
 import axios from "axios";
 import { toast } from "react-toastify";
-import useError from "@hooks/useError";
+
 import ThreeDots from "@components/ThreeDotsLoader";
 import { chartStyles } from "@styles/Chart.style";
 
+function useCryptoData() {
+    return useQuery("crpytoGraph", async () => {
+        const { data } = await axios.get("/api/compare-coin");
+        return data;
+    });
+}
+
 export default function CryptoAreaChart() {
-    const [chartData, setChartData] = useState<any>([]);
-    const [data, setData] = useState<any>([]);
-    const { error, onError, displayError } = useError();
+    const { data, status } = useCryptoData();
+    const chartData = data?.data;
 
     const classes = chartStyles();
-
-    useEffect(() => {
-        if (chartData.length === 0) {
-            axios
-                .get("/api/compare-coin")
-                .then((response) => {
-                    setChartData(response.data.data);
-                })
-                .catch((error) => {
-                    console.log("error", error);
-                    toast.error("oops, network error, please refresh page.");
-                });
-        }
-    }, [chartData]);
 
     const convertToDate = (itemDate) => new Date(itemDate).toLocaleDateString();
     let dummyArray = [];
@@ -79,12 +70,7 @@ export default function CryptoAreaChart() {
         })[0];
     }
 
-    useEffect(() => {
-        if (chartData.length > 0) {
-            let coinData = serializeData();
-            setData(coinData);
-        }
-    }, [chartData]);
+    const cryptoChartData = data ? serializeData() : [];
 
     return (
         <Grid container className={classes.lineChart}>
@@ -93,12 +79,16 @@ export default function CryptoAreaChart() {
             </Typography>
             <Divider className={classes.divider} />
             <Grid container className={classes.chart}>
-                {chartData.length > 0 ? (
+                {status === "loading" ? (
+                    <ThreeDots />
+                ) : status === "error" ? (
+                    toast.error("an error occured")
+                ) : (
                     <ResponsiveContainer width="100%" height="100%">
                         <LineChart
                             width={500}
                             height={400}
-                            data={data}
+                            data={cryptoChartData}
                             margin={{
                                 top: 10,
                                 right: 30,
@@ -136,12 +126,7 @@ export default function CryptoAreaChart() {
                             />
                         </LineChart>
                     </ResponsiveContainer>
-                ) : (
-                    <ThreeDots />
                 )}
-            </Grid>
-            <Grid item>
-                {error && chartData.length === 0 && displayError()}
             </Grid>
         </Grid>
     );

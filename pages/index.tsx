@@ -10,7 +10,7 @@ export default function Index() {
         <Pagelayout title="Welcome">
             <CoinRate />
             {/*<CryptoLineChart />*/}
-            <HeadlineNews newsCategory="technology" count={6} />
+            <HeadlineNews newsCategory="technology" count={6} apiName="tech" />
         </Pagelayout>
     );
 }

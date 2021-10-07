@@ -12,6 +12,7 @@ export default function Crypto() {
                         query="crypto"
                         title="Top Crypto news"
                         count={6}
+												apiName="crypto"
                     />
                 </Grid>
             </Grid>

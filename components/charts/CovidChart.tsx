@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useState, useEffect } from "react";
+import { useQuery } from "react-query";
 import {
     AreaChart,
     Area,
@@ -17,29 +17,17 @@ import ThreeDots from "@components/ThreeDotsLoader";
 import { chartStyles } from "@styles/Chart.style";
 import covid19AxiosInstance from "@api/covid19AxiosInstance";
 
+function useCovidData() {
+    return useQuery("covidChart", async () => {
+        const { data } = await covid19AxiosInstance.get("/summary");
+        return data;
+    });
+}
+
 export default function CovidChart() {
-    const [chartData, setChartData] = useState<any>(null);
+    const { data, status } = useCovidData();
 
     const classes = chartStyles();
-
-    useEffect(() => {
-        if (chartData === null) {
-            covid19AxiosInstance
-                .get("/summary")
-                .then((response) => {
-                    console.log("response", response.data);
-                    setChartData(response.data.Countries);
-                })
-                .catch((error) => {
-                    toast.error(
-                        `oops network error, unable to fetch covid data`,
-                        {
-                            autoClose: false,
-                        },
-                    );
-                });
-        }
-    }, []);
 
     return (
         <Grid container className={classes.lineChart}>
@@ -56,12 +44,21 @@ export default function CovidChart() {
             </Typography>
             <Divider className={classes.divider} />
             <Grid container className={classes.chart}>
-                {chartData ? (
+                {status === "loading" ? (
+                    <ThreeDots />
+                ) : status === "error" ? (
+                    toast.error(
+                        `oops network error occured, unable to fetch covid data`,
+                        {
+                            autoClose: false,
+                        },
+                    )
+                ) : (
                     <ResponsiveContainer width="100%" height="100%">
                         <AreaChart
                             width={500}
                             height={400}
-                            data={chartData}
+                            data={data?.Countries}
                             margin={{
                                 top: 10,
                                 right: 30,
@@ -131,8 +128,6 @@ export default function CovidChart() {
                             />
                         </AreaChart>
                     </ResponsiveContainer>
-                ) : (
-                    <ThreeDots />
                 )}
             </Grid>
         </Grid>

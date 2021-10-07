@@ -15,7 +15,11 @@ export default function News() {
             <Grid container>
                 {newsCategories.map((newsCategory) => (
                     <Grid item key={newsCategory} xs={12}>
-                        <HeadlineNews newsCategory={newsCategory} count={3} />
+                        <HeadlineNews
+                            newsCategory={newsCategory}
+                            count={3}
+                            apiName="news"
+                        />
                     </Grid>
                 ))}
             </Grid>
@@ -23,4 +27,4 @@ export default function News() {
     );
 }
 
-News.auth = true
+News.auth = true;
