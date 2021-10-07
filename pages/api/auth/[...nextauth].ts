@@ -23,19 +23,6 @@ const options = {
         maxAge: 30 * 24 * 60 * 60,
         secret: process.env.NEXT_PUBLIC_SECRET,
     },
-    callbacks: {
-        async signIn(user, account, profile) {
-            if (
-                account.provider === "google" &&
-                profile.verified_email === true &&
-                profile.email.endsWith("@gmail.com")
-            ) {
-                return true;
-            } else {
-                return false;
-            }
-        },
-    },
     debug: true,
 };
 
