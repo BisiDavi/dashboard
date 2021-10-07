@@ -18,7 +18,7 @@ export default function News() {
                         <HeadlineNews
                             newsCategory={newsCategory}
                             count={3}
-                            apiName="news"
+                            apiName={newsCategory}
                         />
                     </Grid>
                 ))}
