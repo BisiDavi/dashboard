@@ -20,17 +20,10 @@ const options = {
     session: {
         jwt: true,
         maxAge: 30 * 24 * 60 * 60,
-				secret: process.env.NEXT_PUBLIC_SECRET,
+        secret: process.env.NEXT_PUBLIC_SECRET,
     },
-    callbacks: {
-        redirect: async (url, baseUrl) => {
-            console.log("url", url, "baseUrl", baseUrl);
-            return url.startsWith(baseUrl)
-                ? Promise.resolve(url)
-                : Promise.resolve(baseUrl);
-        },
-    },
-    debug: true,
+
+    debug: false,
 };
 
 export default function CustomNextAuth(req, res) {

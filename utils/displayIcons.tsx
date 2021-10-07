@@ -1,4 +1,4 @@
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import CopyrightIcon from "@material-ui/icons/Copyright";

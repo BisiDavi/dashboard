@@ -1,5 +1,9 @@
 import { PersistGate } from "redux-persist/integration/react";
-import { Provider as AuthProvider } from "next-auth/client";
+import {
+    Provider as AuthProvider,
+    useSession,
+    getProviders,
+} from "next-auth/client";
 import { useEffect, useState } from "react";
 import Router from "next/router";
 import NProgress from "nprogress";
@@ -7,6 +11,8 @@ import { Provider } from "react-redux";
 
 import store, { persistor } from "@store/store";
 import Layout from "@layouts/Layout";
+import Spinner from "@components/Spinner";
+import Signin from "@pages/auth/[...signin]";
 import "nprogress/nprogress.css";
 import "@styles/globals.css";
 
@@ -15,7 +21,9 @@ Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
-    const [loading, setLoading] = useState(false);
+    const [loadingState, setLoading] = useState(false);
+    const [loading] = useSession();
+    console.log("session _app", session, "loading _app", loading);
 
     useEffect(() => {
         const start = () => {
@@ -34,6 +42,9 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         };
     }, []);
 
+    //if (loading !== null && loading !== undefined) {
+    //    return <Spinner />;
+    //}
     return (
         <AuthProvider
             options={{ clientMaxAge: 0, keepAlive: 0 }}
@@ -41,9 +52,13 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         >
             <Provider store={store}>
                 <PersistGate persistor={persistor}>
-                    <Layout>
-                        <Component {...pageProps} />
-                    </Layout>
+                    {session ? (
+                        <Layout>
+                            <Component {...pageProps} />
+                        </Layout>
+                    ) : (
+                        <Signin />
+                    )}
                 </PersistGate>
             </Provider>
         </AuthProvider>

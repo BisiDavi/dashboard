@@ -1,12 +1,17 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useEffect } from "react";
+import router from "next/router";
+import { useSession } from "next-auth/client";
 import Head from "next/head";
 import { Grid } from "@material-ui/core";
 import { ToastContainer } from "react-toastify";
+
 import { pagelayoutStyle } from "@styles/Pagelayout.style";
 import Sidebar from "@components/Sidebar";
 import Header from "@components/Header";
+import Spinner from "@components/Spinner";
 import useRedux from "@hooks/useRedux";
 import "react-toastify/dist/ReactToastify.css";
+
 interface PagelayoutProps {
     title: string;
 }

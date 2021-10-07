@@ -27,7 +27,10 @@ export default function Header() {
     }
 
     function logoutHandler() {
-        return signOut({ redirect: true, callbackUrl: "/auth/signup" });
+        return signOut({
+            redirect: true,
+            callbackUrl: `${process.env.NEXTAUTH_URL}auth/signup`,
+        });
     }
     return (
         <AppBar className={classes.appBar} position="static">
