@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import axios from "axios";
+import { useQuery } from "react-query";
 import { NewsCard, HeadlineLoader } from "@components/.";
 import { Grid, Typography, Divider } from "@material-ui/core";
 import { toast } from "react-toastify";
@@ -15,43 +15,36 @@ interface HeadlineNewsProps {
     title?: string;
 }
 
+function useHeadlineNews(newsCategory, isQuery) {
+    return useQuery("headlineNews", async () => {
+        const { data } = await axios.get(`/api/news/${newsCategory}${isQuery}`);
+        return data;
+    });
+}
+
 export default function HeadlineNews({
     newsCategory,
     count,
     query,
     title,
 }: HeadlineNewsProps) {
-    const [headlineNews, setHeadlineNews] = useState<contentType[]>([]);
     const isQuery = query ? `/${query}` : "";
+    const { status, data } = useHeadlineNews(newsCategory, isQuery);
 
     const errorText = query ? query : newsCategory;
 
-    useEffect(() => {
-        if (headlineNews.length === 0) {
-            axios
-                .get(`/api/news/${newsCategory}${isQuery}`)
-                .then((response) => {
-                    const { result } = response.data;
-                    const filteredArticles = result.articles.filter(
-                        (article) =>
-                            article.urlToImage &&
-                            article.content &&
-                            article.title &&
-                            article.description,
-                    );
-                    const topHeadlines = filteredArticles.slice(0, count);
-                    return setHeadlineNews(topHeadlines);
-                })
-                .catch((error) => {
-                    toast.error(
-                        `oops network error occured, unable to fetch ${errorText} news`,
-                        {
-                            autoClose: false,
-                        },
-                    );
-                });
-        }
-    }, [count, headlineNews, errorText, newsCategory, isQuery]);
+    function formatResult(result) {
+        const filteredArticles = result?.articles.filter(
+            (article) =>
+                article.urlToImage &&
+                article.content &&
+                article.title &&
+                article.description,
+        );
+        const topHeadlines = filteredArticles?.slice(0, count);
+        return topHeadlines;
+    }
+    const articles = formatResult(data?.result);
 
     const classes = headlineNewsCardStyle();
 
@@ -70,24 +63,29 @@ export default function HeadlineNews({
                 )}
                 <Divider className={classes.divider} />
             </Grid>
-            {headlineNews.length > 0 ? (
-                <Grid container spacing={2}>
-                    {headlineNews.map((content: contentType) => (
-                        <Grid
-                            key={content.title}
-                            item
-                            xs={12}
-                            sm={6}
-                            md={6}
-                            lg={4}
-                            xl={2}
-                        >
-                            <NewsCard content={content} />
-                        </Grid>
-                    ))}
-                </Grid>
-            ) : (
+            {status === "loading" ? (
                 <HeadlineLoader count={count} />
+            ) : status === "error" ? (
+                toast.error(
+                    `oops network error occured, unable to fetch ${errorText} news`,
+                    {
+                        autoClose: false,
+                    },
+                )
+            ) : (
+                articles.map((content: contentType) => (
+                    <Grid
+                        key={content.title}
+                        item
+                        xs={12}
+                        sm={6}
+                        md={6}
+                        lg={4}
+                        xl={2}
+                    >
+                        <NewsCard content={content} />
+                    </Grid>
+                ))
             )}
         </Grid>
     );

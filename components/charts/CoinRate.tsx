@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-/* eslint-disable react-hooks/exhaustive-deps */
 import { Grid, Divider, Typography } from "@material-ui/core";
 import { toast } from "react-toastify";
-import { useQuery, useQueryClient } from "react-query";
+import { useQuery } from "react-query";
 
 import ViewCard from "@components/ViewCard";
 import axios from "axios";
