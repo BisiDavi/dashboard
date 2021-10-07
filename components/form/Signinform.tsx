@@ -15,7 +15,7 @@ type providerType = {
 export default function Signinform({ providers }) {
     const classes = authFormStyles();
     const router = useRouter();
-    const callbackURL: string = router.query.callbackUrl;
+    const callbackURL: any = router.query.callbackUrl;
 
     return (
         <AuthCard content={authJson.login}>
