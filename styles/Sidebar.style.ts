@@ -35,6 +35,13 @@ export const sidebarStyle = makeStyles((theme: Theme) =>
             backgroundColor: "rgb(146 164 173 / 25%)",
             borderRight: "7px solid #303f9f",
             margin: "10px 0",
+            "& span": {
+                color: "#303f9f",
+                fontWeight: "bold",
+            },
+            "& svg": {
+                color: "#303f9f",
+            },
         },
         sidebar: {
             height: "100vh",

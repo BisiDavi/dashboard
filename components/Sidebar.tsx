@@ -5,6 +5,7 @@ import { List, Typography, IconButton, Paper } from "@material-ui/core";
 import menus from "@json/menu.json";
 import ListItemView from "./ListItemView";
 import { sidebarStyle } from "@styles/Sidebar.style";
+import displayIcons from "@utils/displayIcons";
 
 export default function Sidebar() {
     const classes = sidebarStyle();
@@ -45,7 +46,7 @@ export default function Sidebar() {
                     ))}
                 </List>
                 <IconButton onClick={logoutHandler} className={classes.logout}>
-                    {displayIcons("logout")} {" "} Logout
+                    {displayIcons("logout")} Logout
                 </IconButton>
             </div>
         </Paper>

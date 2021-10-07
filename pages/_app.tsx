@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import Router, { useRouter } from "next/router";
 import NProgress from "nprogress";
 import { Provider } from "react-redux";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 import store, { persistor } from "@store/store";
 import Layout from "@layouts/Layout";
@@ -19,11 +20,10 @@ Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
 
+const queryClient = new QueryClient();
+
 function App({ Component, pageProps: { session, ...pageProps } }) {
-    const [loadingState, setLoading] = useState(false);
-    const [loading] = useSession();
-    const router = useRouter();
-    console.log("session _app", session, "loading _app", loading);
+    const [loading, setLoading] = useState(false);
 
     console.log("Component auth", Component?.auth);
 
@@ -49,19 +49,21 @@ function App({ Component, pageProps: { session, ...pageProps } }) {
             options={{ clientMaxAge: 0, keepAlive: 0 }}
             session={pageProps?.session}
         >
-            <Provider store={store}>
-                <PersistGate persistor={persistor}>
-                    {Component.auth ? (
-                        <Auth>
-                            <Layout>
-                                <Component {...pageProps} />
-                            </Layout>
-                        </Auth>
-                    ) : (
-                        <Component {...pageProps} />
-                    )}
-                </PersistGate>
-            </Provider>
+            <QueryClientProvider client={queryClient}>
+                <Provider store={store}>
+                    <PersistGate persistor={persistor}>
+                        {Component.auth ? (
+                            <Auth>
+                                <Layout>
+                                    <Component {...pageProps} />
+                                </Layout>
+                            </Auth>
+                        ) : (
+                            <Component {...pageProps} />
+                        )}
+                    </PersistGate>
+                </Provider>
+            </QueryClientProvider>
         </AuthProvider>
     );
 }

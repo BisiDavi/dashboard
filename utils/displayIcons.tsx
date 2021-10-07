@@ -6,7 +6,7 @@ import AddIcon from "@material-ui/icons/Add";
 import { FcGoogle } from "react-icons/fc";
 import LocalHospitalIcon from "@material-ui/icons/LocalHospital";
 import TimelineIcon from "@material-ui/icons/Timeline";
-import LogoutIcon from "@material-ui/icons/Logout";
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 export default function displayIcons(iconName: string) {
     switch (iconName) {
@@ -33,7 +33,7 @@ export default function displayIcons(iconName: string) {
             return <AccountCircleIcon />;
         }
         case "logout": {
-            return <LogoutIcon />;
+            return <ExitToAppIcon />;
         }
         default:
             return null;

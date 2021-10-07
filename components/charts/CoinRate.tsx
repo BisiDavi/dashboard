@@ -1,44 +1,43 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useState } from "react";
 import { Grid, Divider, Typography } from "@material-ui/core";
+import { toast } from "react-toastify";
+import { useQuery, useQueryClient } from "react-query";
 
-import Image from "@components/Image";
 import ViewCard from "@components/ViewCard";
 import axios from "axios";
-import useError from "@hooks/useError";
 import { coinRateStyles } from "@styles/CoinRate.style";
 import CryptoContentLoader from "@components/cryptoContentLoader";
 
-export default function CoinRate() {
-    const [coins, setCoins] = useState([]);
-    const { error, onError, displayError } = useError();
-    const classes = coinRateStyles();
+function useCoinRate() {
+    return useQuery("coinRate", async () => {
+        const { data } = await axios.get("/api/get-coin-rate");
+        return data;
+    });
+}
 
-    useEffect(() => {
-        if (coins.length === 0) {
-            axios
-                .get("/api/get-coin-rate")
-                .then((response) => {
-                    console.log("response coin-rate", response.data.data);
-                    setCoins(response.data.data);
-                })
-                .catch((error) => {
-                    console.log("error", error);
-                    //onError(error);
-                });
-        }
-    }, [coins]);
+export default function CoinRate() {
+    const classes = coinRateStyles();
+    const { status, data, } = useCoinRate();
+    console.log("data", data);
 
     return (
         <Grid container className={classes.coinRate}>
             <Typography className={classes.title} component="h3">
-                Top 6 Cryptocurrencies
+                Top 6 Cryptocurrencies (Source :{" "}
+                <a rel="noreferrer" target="_blank" href="https://nomics.com/">
+                    Nomics
+                </a>
+                )
             </Typography>
             <Divider className={classes.divider} />
             <Grid container spacing={2}>
-                {coins.length > 0 ? (
-                    coins.map((coin) => (
+                {status === "loading" ? (
+                    <CryptoContentLoader />
+                ) : status === "error" ? (
+                    toast.error(`oops, an error just occured`)
+                ) : (
+                    data.data.map((coin) => (
                         <Grid
                             key={coin.id}
                             item
@@ -77,11 +76,8 @@ export default function CoinRate() {
                             </ViewCard>
                         </Grid>
                     ))
-                ) : (
-                    <CryptoContentLoader />
                 )}
             </Grid>
-            <Grid>{error && coins.length === 0 && displayError()}</Grid>
         </Grid>
     );
 }

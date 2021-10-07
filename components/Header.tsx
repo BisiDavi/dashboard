@@ -14,6 +14,7 @@ import Logo from "@components/Logo";
 import MenuOutlinedIcon from "@material-ui/icons/MenuOutlined";
 import { headerStyles } from "@styles/Header.style";
 import { UIActions } from "@store/actions/uiActions";
+import displayIcons from "@utils/displayIcons";
 
 export default function Header() {
     const dispatch = useDispatch();
