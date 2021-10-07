@@ -13,6 +13,7 @@ export default function Sidebar() {
     const userData = {
         name: session?.user?.name,
         icon: "avatar",
+        link: "/",
     };
 
     return (
