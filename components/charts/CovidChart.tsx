@@ -11,10 +11,11 @@ import {
     ResponsiveContainer,
 } from "recharts";
 import { Grid, Divider, Typography } from "@material-ui/core";
+import { toast } from "react-toastify";
+
 import ThreeDots from "@components/ThreeDotsLoader";
 import { chartStyles } from "@styles/Chart.style";
 import covid19AxiosInstance from "@api/covid19AxiosInstance";
-import { toast } from "react-toastify";
 
 export default function CovidChart() {
     const [chartData, setChartData] = useState<any>(null);

@@ -1,6 +1,6 @@
 import clsx from "clsx";
-import { useSession } from "next-auth/client";
-import { List, Typography, Paper } from "@material-ui/core";
+import { useSession, signOut } from "next-auth/client";
+import { List, Typography, IconButton, Paper } from "@material-ui/core";
 
 import menus from "@json/menu.json";
 import ListItemView from "./ListItemView";
@@ -16,6 +16,12 @@ export default function Sidebar() {
         link: "/",
     };
 
+    function logoutHandler() {
+        return signOut({
+            redirect: true,
+            callbackUrl: `${process.env.NEXTAUTH_URL}/auth/signin`,
+        });
+    }
     return (
         <Paper className={clsx(classes.sidebar, classes.sidebarWidth)}>
             <div className={classes.list}>
@@ -38,6 +44,9 @@ export default function Sidebar() {
                         </div>
                     ))}
                 </List>
+                <IconButton onClick={logoutHandler} className={classes.logout}>
+                    {displayIcons("logout")} {" "} Logout
+                </IconButton>
             </div>
         </Paper>
     );

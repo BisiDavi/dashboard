@@ -13,6 +13,7 @@ export default async function CompareCoinApi(req, res) {
                 })
                 .catch((error) => {
                     data = error;
+                    console.log("error", error);
                 });
             //console.log("CompareCoinApi data", data);
             if (data.message) {

@@ -13,6 +13,8 @@ export default async function CryptoRateApi(req, res) {
                 })
                 .catch((error) => {
                     data = error;
+                    console.log("CryptoRateApi error", error);
+
                 });
             if (data.message) {
                 res.status(400).json({

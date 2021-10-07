@@ -12,6 +12,7 @@ import {
 } from "recharts";
 import { Grid, Divider, Typography } from "@material-ui/core";
 import axios from "axios";
+import { toast } from "react-toastify";
 import useError from "@hooks/useError";
 import ThreeDots from "@components/ThreeDotsLoader";
 import { chartStyles } from "@styles/Chart.style";
@@ -28,12 +29,11 @@ export default function CryptoAreaChart() {
             axios
                 .get("/api/compare-coin")
                 .then((response) => {
-                    console.log("response", response.data.data);
                     setChartData(response.data.data);
                 })
                 .catch((error) => {
                     console.log("error", error);
-                    //onError(error);
+                    toast.error("oops, network error, please refresh page.");
                 });
         }
     }, [chartData]);

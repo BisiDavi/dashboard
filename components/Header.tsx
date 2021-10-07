@@ -5,7 +5,6 @@ import {
     Button,
     Toolbar,
     IconButton,
-    Tooltip,
     Typography,
 } from "@material-ui/core";
 import { useDispatch } from "react-redux";
@@ -58,7 +57,7 @@ export default function Header() {
                                 onClick={logoutHandler}
                                 className={classes.logout}
                             >
-                                Logout
+                                {displayIcons("logout")} {" "} Logout
                             </Button>
                         </div>
                         <IconButton

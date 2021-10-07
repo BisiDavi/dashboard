@@ -7,7 +7,7 @@ export default function Auth({ children }) {
     const isUser = !!session?.user;
     useEffect(() => {
         if (loading) <Spinner />;
-        if (!isUser) signIn();
+        if (!isUser && !loading) signIn();
     }, [isUser, loading]);
 
     if (isUser) {

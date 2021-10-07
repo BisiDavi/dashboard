@@ -1,10 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { Grid, Divider, Typography } from "@material-ui/core";
 
 import Image from "@components/Image";
 import ViewCard from "@components/ViewCard";
-import cryptoAxiosInstance from "@api/cryptoAxiosInstance";
+import axios from "axios";
 import useError from "@hooks/useError";
 import { coinRateStyles } from "@styles/CoinRate.style";
 import CryptoContentLoader from "@components/cryptoContentLoader";
@@ -16,7 +17,7 @@ export default function CoinRate() {
 
     useEffect(() => {
         if (coins.length === 0) {
-            cryptoAxiosInstance
+            axios
                 .get("/api/get-coin-rate")
                 .then((response) => {
                     console.log("response coin-rate", response.data.data);
@@ -55,10 +56,9 @@ export default function CoinRate() {
                                     >
                                         {coin.name}
                                     </Typography>
-                                    <Image
+                                    <img
                                         alt={coin.currency}
                                         src={coin.logo_url}
-                                        layout="fixed"
                                         height="50"
                                         width="50"
                                     />

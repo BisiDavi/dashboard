@@ -12,6 +12,11 @@ export const sidebarStyle = makeStyles((theme: Theme) =>
                 width: "24%",
             },
         },
+        [theme.breakpoints.up("sm")]: {
+            logout: {
+                display: "none",
+            },
+        },
         [theme.breakpoints.down("sm")]: {
             sidebar: {
                 height: "100vh",
@@ -20,6 +25,10 @@ export const sidebarStyle = makeStyles((theme: Theme) =>
                 left: 0,
                 zIndex: 10,
                 width: "100%",
+            },
+            logout: {
+                marginTop: 50,
+                color: "red",
             },
         },
         activeLink: {
