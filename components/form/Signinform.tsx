@@ -31,7 +31,7 @@ export default function Signinform({ providers }) {
         <>
             <AuthCard content={authJson.login}>
                 <div className={classes.iconGroup}>
-                    {Object.values(providers).map((provider: any) => (
+                    {Object.values(providers).map((provider: providerType) => (
                         <Tooltip key={provider.id} title={provider.name}>
                             <IconButton onClick={() => signIn(provider.id)}>
                                 {displayIcons(provider.id)}
