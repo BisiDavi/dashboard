@@ -1,12 +1,11 @@
 import { Grid, Typography, Divider } from "@material-ui/core";
-import axios from "axios";
-import { useQuery } from "react-query";
 import { NewsCard, HeadlineLoader } from "@components/.";
 import { toast } from "react-toastify";
 
 import { contentType, newsCategoryType } from "../types/.";
 import { headlineNewsCardStyle } from "@styles/HeadlineNews.style";
 import displayNewsTitle from "@utils/displayNewsTitle";
+import useHeadlineNewsData from "@hooks/useHeadlineNewsData";
 
 interface HeadlineNewsProps {
     newsCategory: newsCategoryType;
@@ -14,13 +13,6 @@ interface HeadlineNewsProps {
     query?: string;
     title?: string;
     apiName: string;
-}
-
-function useHeadlineNews(apiName, newsCategory, isQuery) {
-    return useQuery(apiName, async () => {
-        const { data } = await axios.get(`/api/news/${newsCategory}${isQuery}`);
-        return data;
-    });
 }
 
 export default function HeadlineNews({
@@ -31,7 +23,11 @@ export default function HeadlineNews({
     apiName,
 }: HeadlineNewsProps) {
     const isQuery = query ? `/${query}` : "";
-    const { status, data } = useHeadlineNews(apiName, newsCategory, isQuery);
+    const { status, data } = useHeadlineNewsData(
+        apiName,
+        newsCategory,
+        isQuery,
+    );
 
     const errorText = query ? query : newsCategory;
 

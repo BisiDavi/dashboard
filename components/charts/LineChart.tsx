@@ -1,5 +1,4 @@
 import { Grid, Divider, Typography } from "@material-ui/core";
-import { useQuery } from "react-query";
 import {
     LineChart,
     Line,
@@ -10,18 +9,11 @@ import {
     Legend,
     ResponsiveContainer,
 } from "recharts";
-import axios from "axios";
 import { toast } from "react-toastify";
 
 import ThreeDots from "@components/ThreeDotsLoader";
 import { chartStyles } from "@styles/Chart.style";
-
-function useCryptoData() {
-    return useQuery("crpytoGraph", async () => {
-        const { data } = await axios.get("/api/compare-coin");
-        return data;
-    });
-}
+import useCryptoData from "@hooks/useCryptoData";
 
 export default function CryptoAreaChart() {
     const { data, status } = useCryptoData();

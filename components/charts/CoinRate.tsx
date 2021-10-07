@@ -1,23 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import { Grid, Divider, Typography } from "@material-ui/core";
 import { toast } from "react-toastify";
-import { useQuery } from "react-query";
 
 import ViewCard from "@components/ViewCard";
-import axios from "axios";
 import { coinRateStyles } from "@styles/CoinRate.style";
 import CryptoContentLoader from "@components/cryptoContentLoader";
-
-function useCoinRate() {
-    return useQuery("coinRate", async () => {
-        const { data } = await axios.get("/api/get-coin-rate");
-        return data;
-    });
-}
+import useCoinRate from "@hooks/useCoinRate";
 
 export default function CoinRate() {
     const classes = coinRateStyles();
-    const { status, data, } = useCoinRate();
+    const { status, data } = useCoinRate();
     console.log("data", data);
 
     return (
