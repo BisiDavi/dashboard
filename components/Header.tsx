@@ -26,10 +26,8 @@ export default function Header() {
         dispatch(UIActions());
     }
 
-    console.log("data", session);
-
     function logoutHandler() {
-        return signOut();
+        return signOut({ redirect: true, callbackUrl: "/auth/signup" });
     }
     return (
         <AppBar className={classes.appBar} position="static">
@@ -44,8 +42,8 @@ export default function Header() {
                         <div className={classes.menuGroup}>
                             {session && (
                                 <img
-                                    src={session?.user.image}
-                                    alt={session?.user.name}
+                                    src={session?.user?.image}
+                                    alt={session?.user?.name}
                                     height="75px"
                                     width="75px"
                                 />

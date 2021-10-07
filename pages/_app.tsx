@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     return (
         <AuthProvider
             options={{ clientMaxAge: 0, keepAlive: 0 }}
-            session={pageProps.session}
+            session={pageProps?.session}
         >
             <Provider store={store}>
                 <PersistGate persistor={persistor}>
