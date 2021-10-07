@@ -13,7 +13,6 @@ type providerType = {
 
 export default function Signinform({ providers }) {
     const classes = authFormStyles();
-    console.log("providers", providers);
 
     return (
         <AuthCard content={authJson.login}>

@@ -51,7 +51,7 @@ export default function HeadlineNews({
                     );
                 });
         }
-    }, [count, headlineNews, newsCategory, isQuery]);
+    }, [count, headlineNews, errorText, newsCategory, isQuery]);
 
     const classes = headlineNewsCardStyle();
 
