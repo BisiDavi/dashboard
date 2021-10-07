@@ -5,7 +5,6 @@ export default async function NewsHandler(req, res) {
     const { slug } = req.query;
     const category = slug[0];
     const query = slug[1];
-    console.log("query", query);
     const endpoint = query
         ? `/top-headlines?country=us&category=${category}&q=${query}&pageSize=20`
         : `/top-headlines?country=us&category=${category}&pageSize=20`;

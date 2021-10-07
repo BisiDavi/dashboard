@@ -1,13 +1,13 @@
-import axiosInstance from "../../axiosInstances/axiosInstance";
+import { axiosRandomImageInstance } from "../../axiosInstances/axiosInstance";
 
-export default async function CryptoRateApi(req, res) {
+export default async function RandomImagesApiHandler(req, res) {
     const { method } = req;
 
     switch (method) {
         case "GET": {
             let data;
-            await axiosInstance
-                .get("/ticker?interval=1d&convert=USD&per-page=6&page=1")
+            await axiosRandomImageInstance
+                .get("/search?query=nature&per_page=3")
                 .then((response) => {
                     data = response.data;
                     return data;
@@ -17,12 +17,12 @@ export default async function CryptoRateApi(req, res) {
                     return data;
                 });
             if (data.message) {
-                res.status(400).json({
+                return res.status(400).json({
                     success: false,
                     data,
                 });
-            } else if (data.length > 0) {
-                res.status(201).json({
+            } else if (data.photos.length > 0) {
+                return res.status(201).json({
                     success: true,
                     data,
                 });

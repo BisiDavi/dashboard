@@ -10,7 +10,6 @@ import useCoinRate from "@hooks/useCoinRate";
 export default function CoinRate() {
     const classes = coinRateStyles();
     const { status, data } = useCoinRate();
-    console.log("data", data);
 
     return (
         <Grid container className={classes.coinRate}>

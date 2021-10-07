@@ -10,12 +10,12 @@ export default async function CompareCoinApi(req, res) {
                 .get("/sparkline?ids=BTC,ETH&start=2021-08-21T00%3A00%3A00Z")
                 .then((response) => {
                     data = response.data;
+										return data
                 })
                 .catch((error) => {
                     data = error;
-                    console.log("error", error);
+										return data
                 });
-            //console.log("CompareCoinApi data", data);
             if (data.message) {
                 res.status(400).json({
                     success: false,

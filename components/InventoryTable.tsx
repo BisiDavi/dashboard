@@ -46,14 +46,12 @@ export default function EnhancedTable() {
     const { dispatch, stateFromRedux } = useRedux("inventory");
 
     const tableData = stateFromRedux.products;
-    console.log("tableData", tableData);
 
     function toggleModal(open) {
         return setModal(open);
     }
     function editProduct(index) {
         toggleModal(true);
-        console.log("editProduct index", index);
         const selectedProduct = stateFromRedux.products[index];
         setSelectedFormValues({
             ...selectedFormValues,
@@ -63,7 +61,6 @@ export default function EnhancedTable() {
     }
 
     function deleteProduct(index) {
-        console.log("selected index", index);
         dispatch(deleteProductInventoryAction(index));
         toast.error("Product deleted");
     }

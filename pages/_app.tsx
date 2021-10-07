@@ -25,8 +25,6 @@ const queryClient = new QueryClient();
 function App({ Component, pageProps: { session, ...pageProps } }) {
     const [loading, setLoading] = useState(false);
 
-    console.log("Component auth", Component?.auth);
-
     useEffect(() => {
         const start = () => {
             setLoading(true);

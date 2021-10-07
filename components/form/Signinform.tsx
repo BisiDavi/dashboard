@@ -14,12 +14,10 @@ type providerType = {
 };
 
 export default function Signinform({ providers }) {
-    console.log("providers Signinform", providers);
     const classes = authFormStyles();
     const router = useRouter();
     const [session] = useSession();
 
-    console.log("session Signinform", session);
 
     useEffect(() => {
         if (session) {

@@ -20,7 +20,6 @@ export default function Registerform() {
                 }}
                 validationSchema={authSchema}
                 onSubmit={(values) => {
-                    console.log("values", values);
                 }}
             >
                 {({

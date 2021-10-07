@@ -67,7 +67,6 @@ export default function useError() {
     const [error, setError] = useState(null);
 
     function onError(siteError) {
-        console.log("useError error", siteError);
         setError(siteError);
     }
     function displayError() {
