@@ -15,29 +15,29 @@ Object {
             class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
           >
             <svg
-              aria-labelledby="qpk7crn-aria"
+              aria-labelledby="z17hu4-aria"
               height="100%"
               role="img"
               viewBox="0 0 500 300"
               width="100%"
             >
               <title
-                id="qpk7crn-aria"
+                id="z17hu4-aria"
               >
                 Loading news...
               </title>
               <rect
-                clip-path="url(#qpk7crn-diff)"
+                clip-path="url(#z17hu4-diff)"
                 height="100%"
                 role="presentation"
-                style="fill: url(#qpk7crn-animated-diff);"
+                style="fill: url(#z17hu4-animated-diff);"
                 width="100%"
                 x="0"
                 y="0"
               />
               <defs>
                 <clippath
-                  id="qpk7crn-diff"
+                  id="z17hu4-diff"
                 >
                   <rect
                     height="10"
@@ -89,7 +89,7 @@ Object {
                   />
                 </clippath>
                 <lineargradient
-                  id="qpk7crn-animated-diff"
+                  id="z17hu4-animated-diff"
                 >
                   <stop
                     offset="0%"
@@ -142,29 +142,29 @@ Object {
             class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
           >
             <svg
-              aria-labelledby="hhry1o9-aria"
+              aria-labelledby="2y8lvh-aria"
               height="100%"
               role="img"
               viewBox="0 0 500 300"
               width="100%"
             >
               <title
-                id="hhry1o9-aria"
+                id="2y8lvh-aria"
               >
                 Loading news...
               </title>
               <rect
-                clip-path="url(#hhry1o9-diff)"
+                clip-path="url(#2y8lvh-diff)"
                 height="100%"
                 role="presentation"
-                style="fill: url(#hhry1o9-animated-diff);"
+                style="fill: url(#2y8lvh-animated-diff);"
                 width="100%"
                 x="0"
                 y="0"
               />
               <defs>
                 <clippath
-                  id="hhry1o9-diff"
+                  id="2y8lvh-diff"
                 >
                   <rect
                     height="10"
@@ -216,7 +216,7 @@ Object {
                   />
                 </clippath>
                 <lineargradient
-                  id="hhry1o9-animated-diff"
+                  id="2y8lvh-animated-diff"
                 >
                   <stop
                     offset="0%"
@@ -269,29 +269,29 @@ Object {
             class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
           >
             <svg
-              aria-labelledby="0rlykw-aria"
+              aria-labelledby="59pcv8r-aria"
               height="100%"
               role="img"
               viewBox="0 0 500 300"
               width="100%"
             >
               <title
-                id="0rlykw-aria"
+                id="59pcv8r-aria"
               >
                 Loading news...
               </title>
               <rect
-                clip-path="url(#0rlykw-diff)"
+                clip-path="url(#59pcv8r-diff)"
                 height="100%"
                 role="presentation"
-                style="fill: url(#0rlykw-animated-diff);"
+                style="fill: url(#59pcv8r-animated-diff);"
                 width="100%"
                 x="0"
                 y="0"
               />
               <defs>
                 <clippath
-                  id="0rlykw-diff"
+                  id="59pcv8r-diff"
                 >
                   <rect
                     height="10"
@@ -343,7 +343,7 @@ Object {
                   />
                 </clippath>
                 <lineargradient
-                  id="0rlykw-animated-diff"
+                  id="59pcv8r-animated-diff"
                 >
                   <stop
                     offset="0%"
@@ -396,29 +396,29 @@ Object {
             class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
           >
             <svg
-              aria-labelledby="qnbm4kq-aria"
+              aria-labelledby="e2bhtev-aria"
               height="100%"
               role="img"
               viewBox="0 0 500 300"
               width="100%"
             >
               <title
-                id="qnbm4kq-aria"
+                id="e2bhtev-aria"
               >
                 Loading news...
               </title>
               <rect
-                clip-path="url(#qnbm4kq-diff)"
+                clip-path="url(#e2bhtev-diff)"
                 height="100%"
                 role="presentation"
-                style="fill: url(#qnbm4kq-animated-diff);"
+                style="fill: url(#e2bhtev-animated-diff);"
                 width="100%"
                 x="0"
                 y="0"
               />
               <defs>
                 <clippath
-                  id="qnbm4kq-diff"
+                  id="e2bhtev-diff"
                 >
                   <rect
                     height="10"
@@ -470,7 +470,7 @@ Object {
                   />
                 </clippath>
                 <lineargradient
-                  id="qnbm4kq-animated-diff"
+                  id="e2bhtev-animated-diff"
                 >
                   <stop
                     offset="0%"
@@ -523,29 +523,29 @@ Object {
             class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
           >
             <svg
-              aria-labelledby="m9oq4tg-aria"
+              aria-labelledby="1tfxpr-aria"
               height="100%"
               role="img"
               viewBox="0 0 500 300"
               width="100%"
             >
               <title
-                id="m9oq4tg-aria"
+                id="1tfxpr-aria"
               >
                 Loading news...
               </title>
               <rect
-                clip-path="url(#m9oq4tg-diff)"
+                clip-path="url(#1tfxpr-diff)"
                 height="100%"
                 role="presentation"
-                style="fill: url(#m9oq4tg-animated-diff);"
+                style="fill: url(#1tfxpr-animated-diff);"
                 width="100%"
                 x="0"
                 y="0"
               />
               <defs>
                 <clippath
-                  id="m9oq4tg-diff"
+                  id="1tfxpr-diff"
                 >
                   <rect
                     height="10"
@@ -597,7 +597,7 @@ Object {
                   />
                 </clippath>
                 <lineargradient
-                  id="m9oq4tg-animated-diff"
+                  id="1tfxpr-animated-diff"
                 >
                   <stop
                     offset="0%"
@@ -650,29 +650,29 @@ Object {
             class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
           >
             <svg
-              aria-labelledby="bn381v-aria"
+              aria-labelledby="cwl5wge-aria"
               height="100%"
               role="img"
               viewBox="0 0 500 300"
               width="100%"
             >
               <title
-                id="bn381v-aria"
+                id="cwl5wge-aria"
               >
                 Loading news...
               </title>
               <rect
-                clip-path="url(#bn381v-diff)"
+                clip-path="url(#cwl5wge-diff)"
                 height="100%"
                 role="presentation"
-                style="fill: url(#bn381v-animated-diff);"
+                style="fill: url(#cwl5wge-animated-diff);"
                 width="100%"
                 x="0"
                 y="0"
               />
               <defs>
                 <clippath
-                  id="bn381v-diff"
+                  id="cwl5wge-diff"
                 >
                   <rect
                     height="10"
@@ -724,7 +724,7 @@ Object {
                   />
                 </clippath>
                 <lineargradient
-                  id="bn381v-animated-diff"
+                  id="cwl5wge-animated-diff"
                 >
                   <stop
                     offset="0%"
@@ -784,29 +784,29 @@ Object {
           class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
         >
           <svg
-            aria-labelledby="qpk7crn-aria"
+            aria-labelledby="z17hu4-aria"
             height="100%"
             role="img"
             viewBox="0 0 500 300"
             width="100%"
           >
             <title
-              id="qpk7crn-aria"
+              id="z17hu4-aria"
             >
               Loading news...
             </title>
             <rect
-              clip-path="url(#qpk7crn-diff)"
+              clip-path="url(#z17hu4-diff)"
               height="100%"
               role="presentation"
-              style="fill: url(#qpk7crn-animated-diff);"
+              style="fill: url(#z17hu4-animated-diff);"
               width="100%"
               x="0"
               y="0"
             />
             <defs>
               <clippath
-                id="qpk7crn-diff"
+                id="z17hu4-diff"
               >
                 <rect
                   height="10"
@@ -858,7 +858,7 @@ Object {
                 />
               </clippath>
               <lineargradient
-                id="qpk7crn-animated-diff"
+                id="z17hu4-animated-diff"
               >
                 <stop
                   offset="0%"
@@ -911,29 +911,29 @@ Object {
           class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
         >
           <svg
-            aria-labelledby="hhry1o9-aria"
+            aria-labelledby="2y8lvh-aria"
             height="100%"
             role="img"
             viewBox="0 0 500 300"
             width="100%"
           >
             <title
-              id="hhry1o9-aria"
+              id="2y8lvh-aria"
             >
               Loading news...
             </title>
             <rect
-              clip-path="url(#hhry1o9-diff)"
+              clip-path="url(#2y8lvh-diff)"
               height="100%"
               role="presentation"
-              style="fill: url(#hhry1o9-animated-diff);"
+              style="fill: url(#2y8lvh-animated-diff);"
               width="100%"
               x="0"
               y="0"
             />
             <defs>
               <clippath
-                id="hhry1o9-diff"
+                id="2y8lvh-diff"
               >
                 <rect
                   height="10"
@@ -985,7 +985,7 @@ Object {
                 />
               </clippath>
               <lineargradient
-                id="hhry1o9-animated-diff"
+                id="2y8lvh-animated-diff"
               >
                 <stop
                   offset="0%"
@@ -1038,29 +1038,29 @@ Object {
           class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
         >
           <svg
-            aria-labelledby="0rlykw-aria"
+            aria-labelledby="59pcv8r-aria"
             height="100%"
             role="img"
             viewBox="0 0 500 300"
             width="100%"
           >
             <title
-              id="0rlykw-aria"
+              id="59pcv8r-aria"
             >
               Loading news...
             </title>
             <rect
-              clip-path="url(#0rlykw-diff)"
+              clip-path="url(#59pcv8r-diff)"
               height="100%"
               role="presentation"
-              style="fill: url(#0rlykw-animated-diff);"
+              style="fill: url(#59pcv8r-animated-diff);"
               width="100%"
               x="0"
               y="0"
             />
             <defs>
               <clippath
-                id="0rlykw-diff"
+                id="59pcv8r-diff"
               >
                 <rect
                   height="10"
@@ -1112,7 +1112,7 @@ Object {
                 />
               </clippath>
               <lineargradient
-                id="0rlykw-animated-diff"
+                id="59pcv8r-animated-diff"
               >
                 <stop
                   offset="0%"
@@ -1165,29 +1165,29 @@ Object {
           class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
         >
           <svg
-            aria-labelledby="qnbm4kq-aria"
+            aria-labelledby="e2bhtev-aria"
             height="100%"
             role="img"
             viewBox="0 0 500 300"
             width="100%"
           >
             <title
-              id="qnbm4kq-aria"
+              id="e2bhtev-aria"
             >
               Loading news...
             </title>
             <rect
-              clip-path="url(#qnbm4kq-diff)"
+              clip-path="url(#e2bhtev-diff)"
               height="100%"
               role="presentation"
-              style="fill: url(#qnbm4kq-animated-diff);"
+              style="fill: url(#e2bhtev-animated-diff);"
               width="100%"
               x="0"
               y="0"
             />
             <defs>
               <clippath
-                id="qnbm4kq-diff"
+                id="e2bhtev-diff"
               >
                 <rect
                   height="10"
@@ -1239,7 +1239,7 @@ Object {
                 />
               </clippath>
               <lineargradient
-                id="qnbm4kq-animated-diff"
+                id="e2bhtev-animated-diff"
               >
                 <stop
                   offset="0%"
@@ -1292,29 +1292,29 @@ Object {
           class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
         >
           <svg
-            aria-labelledby="m9oq4tg-aria"
+            aria-labelledby="1tfxpr-aria"
             height="100%"
             role="img"
             viewBox="0 0 500 300"
             width="100%"
           >
             <title
-              id="m9oq4tg-aria"
+              id="1tfxpr-aria"
             >
               Loading news...
             </title>
             <rect
-              clip-path="url(#m9oq4tg-diff)"
+              clip-path="url(#1tfxpr-diff)"
               height="100%"
               role="presentation"
-              style="fill: url(#m9oq4tg-animated-diff);"
+              style="fill: url(#1tfxpr-animated-diff);"
               width="100%"
               x="0"
               y="0"
             />
             <defs>
               <clippath
-                id="m9oq4tg-diff"
+                id="1tfxpr-diff"
               >
                 <rect
                   height="10"
@@ -1366,7 +1366,7 @@ Object {
                 />
               </clippath>
               <lineargradient
-                id="m9oq4tg-animated-diff"
+                id="1tfxpr-animated-diff"
               >
                 <stop
                   offset="0%"
@@ -1419,29 +1419,29 @@ Object {
           class="MuiPaper-root MuiCard-root makeStyles-newsLoader-2 MuiPaper-elevation2 MuiPaper-rounded"
         >
           <svg
-            aria-labelledby="bn381v-aria"
+            aria-labelledby="cwl5wge-aria"
             height="100%"
             role="img"
             viewBox="0 0 500 300"
             width="100%"
           >
             <title
-              id="bn381v-aria"
+              id="cwl5wge-aria"
             >
               Loading news...
             </title>
             <rect
-              clip-path="url(#bn381v-diff)"
+              clip-path="url(#cwl5wge-diff)"
               height="100%"
               role="presentation"
-              style="fill: url(#bn381v-animated-diff);"
+              style="fill: url(#cwl5wge-animated-diff);"
               width="100%"
               x="0"
               y="0"
             />
             <defs>
               <clippath
-                id="bn381v-diff"
+                id="cwl5wge-diff"
               >
                 <rect
                   height="10"
@@ -1493,7 +1493,7 @@ Object {
                 />
               </clippath>
               <lineargradient
-                id="bn381v-animated-diff"
+                id="cwl5wge-animated-diff"
               >
                 <stop
                   offset="0%"

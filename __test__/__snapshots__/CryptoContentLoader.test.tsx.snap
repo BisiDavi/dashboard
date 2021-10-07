@@ -16,29 +16,29 @@ Object {
           >
             <svg
               alt="Loading coins details ..."
-              aria-labelledby="kthm9lc-aria"
+              aria-labelledby="eadf5ir-aria"
               height="124"
               role="img"
               viewBox="0 0 476 124"
               width="100%"
             >
               <title
-                id="kthm9lc-aria"
+                id="eadf5ir-aria"
               >
                 Loading...
               </title>
               <rect
-                clip-path="url(#kthm9lc-diff)"
+                clip-path="url(#eadf5ir-diff)"
                 height="100%"
                 role="presentation"
-                style="fill: url(#kthm9lc-animated-diff);"
+                style="fill: url(#eadf5ir-animated-diff);"
                 width="100%"
                 x="0"
                 y="0"
               />
               <defs>
                 <clippath
-                  id="kthm9lc-diff"
+                  id="eadf5ir-diff"
                 >
                   <rect
                     height="8"
@@ -79,7 +79,7 @@ Object {
                   />
                 </clippath>
                 <lineargradient
-                  id="kthm9lc-animated-diff"
+                  id="eadf5ir-animated-diff"
                 >
                   <stop
                     offset="0%"
@@ -133,29 +133,29 @@ Object {
           >
             <svg
               alt="Loading coins details ..."
-              aria-labelledby="mesh7v-aria"
+              aria-labelledby="dcjf0b-aria"
               height="124"
               role="img"
               viewBox="0 0 476 124"
               width="100%"
             >
               <title
-                id="mesh7v-aria"
+                id="dcjf0b-aria"
               >
                 Loading...
               </title>
               <rect
-                clip-path="url(#mesh7v-diff)"
+                clip-path="url(#dcjf0b-diff)"
                 height="100%"
                 role="presentation"
-                style="fill: url(#mesh7v-animated-diff);"
+                style="fill: url(#dcjf0b-animated-diff);"
                 width="100%"
                 x="0"
                 y="0"
               />
               <defs>
                 <clippath
-                  id="mesh7v-diff"
+                  id="dcjf0b-diff"
                 >
                   <rect
                     height="8"
@@ -196,7 +196,7 @@ Object {
                   />
                 </clippath>
                 <lineargradient
-                  id="mesh7v-animated-diff"
+                  id="dcjf0b-animated-diff"
                 >
                   <stop
                     offset="0%"
@@ -250,29 +250,29 @@ Object {
           >
             <svg
               alt="Loading coins details ..."
-              aria-labelledby="6mdmcjn-aria"
+              aria-labelledby="scyn6ot-aria"
               height="124"
               role="img"
               viewBox="0 0 476 124"
               width="100%"
             >
               <title
-                id="6mdmcjn-aria"
+                id="scyn6ot-aria"
               >
                 Loading...
               </title>
               <rect
-                clip-path="url(#6mdmcjn-diff)"
+                clip-path="url(#scyn6ot-diff)"
                 height="100%"
                 role="presentation"
-                style="fill: url(#6mdmcjn-animated-diff);"
+                style="fill: url(#scyn6ot-animated-diff);"
                 width="100%"
                 x="0"
                 y="0"
               />
               <defs>
                 <clippath
-                  id="6mdmcjn-diff"
+                  id="scyn6ot-diff"
                 >
                   <rect
                     height="8"
@@ -313,7 +313,7 @@ Object {
                   />
                 </clippath>
                 <lineargradient
-                  id="6mdmcjn-animated-diff"
+                  id="scyn6ot-animated-diff"
                 >
                   <stop
                     offset="0%"
@@ -367,29 +367,29 @@ Object {
           >
             <svg
               alt="Loading coins details ..."
-              aria-labelledby="2pcivf-aria"
+              aria-labelledby="h9hq6lj-aria"
               height="124"
               role="img"
               viewBox="0 0 476 124"
               width="100%"
             >
               <title
-                id="2pcivf-aria"
+                id="h9hq6lj-aria"
               >
                 Loading...
               </title>
               <rect
-                clip-path="url(#2pcivf-diff)"
+                clip-path="url(#h9hq6lj-diff)"
                 height="100%"
                 role="presentation"
-                style="fill: url(#2pcivf-animated-diff);"
+                style="fill: url(#h9hq6lj-animated-diff);"
                 width="100%"
                 x="0"
                 y="0"
               />
               <defs>
                 <clippath
-                  id="2pcivf-diff"
+                  id="h9hq6lj-diff"
                 >
                   <rect
                     height="8"
@@ -430,7 +430,7 @@ Object {
                   />
                 </clippath>
                 <lineargradient
-                  id="2pcivf-animated-diff"
+                  id="h9hq6lj-animated-diff"
                 >
                   <stop
                     offset="0%"
@@ -484,29 +484,29 @@ Object {
           >
             <svg
               alt="Loading coins details ..."
-              aria-labelledby="mr90k2-aria"
+              aria-labelledby="8yjysn-aria"
               height="124"
               role="img"
               viewBox="0 0 476 124"
               width="100%"
             >
               <title
-                id="mr90k2-aria"
+                id="8yjysn-aria"
               >
                 Loading...
               </title>
               <rect
-                clip-path="url(#mr90k2-diff)"
+                clip-path="url(#8yjysn-diff)"
                 height="100%"
                 role="presentation"
-                style="fill: url(#mr90k2-animated-diff);"
+                style="fill: url(#8yjysn-animated-diff);"
                 width="100%"
                 x="0"
                 y="0"
               />
               <defs>
                 <clippath
-                  id="mr90k2-diff"
+                  id="8yjysn-diff"
                 >
                   <rect
                     height="8"
@@ -547,7 +547,7 @@ Object {
                   />
                 </clippath>
                 <lineargradient
-                  id="mr90k2-animated-diff"
+                  id="8yjysn-animated-diff"
                 >
                   <stop
                     offset="0%"
@@ -601,29 +601,29 @@ Object {
           >
             <svg
               alt="Loading coins details ..."
-              aria-labelledby="yak2z9a-aria"
+              aria-labelledby="cb4xrkj-aria"
               height="124"
               role="img"
               viewBox="0 0 476 124"
               width="100%"
             >
               <title
-                id="yak2z9a-aria"
+                id="cb4xrkj-aria"
               >
                 Loading...
               </title>
               <rect
-                clip-path="url(#yak2z9a-diff)"
+                clip-path="url(#cb4xrkj-diff)"
                 height="100%"
                 role="presentation"
-                style="fill: url(#yak2z9a-animated-diff);"
+                style="fill: url(#cb4xrkj-animated-diff);"
                 width="100%"
                 x="0"
                 y="0"
               />
               <defs>
                 <clippath
-                  id="yak2z9a-diff"
+                  id="cb4xrkj-diff"
                 >
                   <rect
                     height="8"
@@ -664,7 +664,7 @@ Object {
                   />
                 </clippath>
                 <lineargradient
-                  id="yak2z9a-animated-diff"
+                  id="cb4xrkj-animated-diff"
                 >
                   <stop
                     offset="0%"
@@ -725,29 +725,29 @@ Object {
         >
           <svg
             alt="Loading coins details ..."
-            aria-labelledby="kthm9lc-aria"
+            aria-labelledby="eadf5ir-aria"
             height="124"
             role="img"
             viewBox="0 0 476 124"
             width="100%"
           >
             <title
-              id="kthm9lc-aria"
+              id="eadf5ir-aria"
             >
               Loading...
             </title>
             <rect
-              clip-path="url(#kthm9lc-diff)"
+              clip-path="url(#eadf5ir-diff)"
               height="100%"
               role="presentation"
-              style="fill: url(#kthm9lc-animated-diff);"
+              style="fill: url(#eadf5ir-animated-diff);"
               width="100%"
               x="0"
               y="0"
             />
             <defs>
               <clippath
-                id="kthm9lc-diff"
+                id="eadf5ir-diff"
               >
                 <rect
                   height="8"
@@ -788,7 +788,7 @@ Object {
                 />
               </clippath>
               <lineargradient
-                id="kthm9lc-animated-diff"
+                id="eadf5ir-animated-diff"
               >
                 <stop
                   offset="0%"
@@ -842,29 +842,29 @@ Object {
         >
           <svg
             alt="Loading coins details ..."
-            aria-labelledby="mesh7v-aria"
+            aria-labelledby="dcjf0b-aria"
             height="124"
             role="img"
             viewBox="0 0 476 124"
             width="100%"
           >
             <title
-              id="mesh7v-aria"
+              id="dcjf0b-aria"
             >
               Loading...
             </title>
             <rect
-              clip-path="url(#mesh7v-diff)"
+              clip-path="url(#dcjf0b-diff)"
               height="100%"
               role="presentation"
-              style="fill: url(#mesh7v-animated-diff);"
+              style="fill: url(#dcjf0b-animated-diff);"
               width="100%"
               x="0"
               y="0"
             />
             <defs>
               <clippath
-                id="mesh7v-diff"
+                id="dcjf0b-diff"
               >
                 <rect
                   height="8"
@@ -905,7 +905,7 @@ Object {
                 />
               </clippath>
               <lineargradient
-                id="mesh7v-animated-diff"
+                id="dcjf0b-animated-diff"
               >
                 <stop
                   offset="0%"
@@ -959,29 +959,29 @@ Object {
         >
           <svg
             alt="Loading coins details ..."
-            aria-labelledby="6mdmcjn-aria"
+            aria-labelledby="scyn6ot-aria"
             height="124"
             role="img"
             viewBox="0 0 476 124"
             width="100%"
           >
             <title
-              id="6mdmcjn-aria"
+              id="scyn6ot-aria"
             >
               Loading...
             </title>
             <rect
-              clip-path="url(#6mdmcjn-diff)"
+              clip-path="url(#scyn6ot-diff)"
               height="100%"
               role="presentation"
-              style="fill: url(#6mdmcjn-animated-diff);"
+              style="fill: url(#scyn6ot-animated-diff);"
               width="100%"
               x="0"
               y="0"
             />
             <defs>
               <clippath
-                id="6mdmcjn-diff"
+                id="scyn6ot-diff"
               >
                 <rect
                   height="8"
@@ -1022,7 +1022,7 @@ Object {
                 />
               </clippath>
               <lineargradient
-                id="6mdmcjn-animated-diff"
+                id="scyn6ot-animated-diff"
               >
                 <stop
                   offset="0%"
@@ -1076,29 +1076,29 @@ Object {
         >
           <svg
             alt="Loading coins details ..."
-            aria-labelledby="2pcivf-aria"
+            aria-labelledby="h9hq6lj-aria"
             height="124"
             role="img"
             viewBox="0 0 476 124"
             width="100%"
           >
             <title
-              id="2pcivf-aria"
+              id="h9hq6lj-aria"
             >
               Loading...
             </title>
             <rect
-              clip-path="url(#2pcivf-diff)"
+              clip-path="url(#h9hq6lj-diff)"
               height="100%"
               role="presentation"
-              style="fill: url(#2pcivf-animated-diff);"
+              style="fill: url(#h9hq6lj-animated-diff);"
               width="100%"
               x="0"
               y="0"
             />
             <defs>
               <clippath
-                id="2pcivf-diff"
+                id="h9hq6lj-diff"
               >
                 <rect
                   height="8"
@@ -1139,7 +1139,7 @@ Object {
                 />
               </clippath>
               <lineargradient
-                id="2pcivf-animated-diff"
+                id="h9hq6lj-animated-diff"
               >
                 <stop
                   offset="0%"
@@ -1193,29 +1193,29 @@ Object {
         >
           <svg
             alt="Loading coins details ..."
-            aria-labelledby="mr90k2-aria"
+            aria-labelledby="8yjysn-aria"
             height="124"
             role="img"
             viewBox="0 0 476 124"
             width="100%"
           >
             <title
-              id="mr90k2-aria"
+              id="8yjysn-aria"
             >
               Loading...
             </title>
             <rect
-              clip-path="url(#mr90k2-diff)"
+              clip-path="url(#8yjysn-diff)"
               height="100%"
               role="presentation"
-              style="fill: url(#mr90k2-animated-diff);"
+              style="fill: url(#8yjysn-animated-diff);"
               width="100%"
               x="0"
               y="0"
             />
             <defs>
               <clippath
-                id="mr90k2-diff"
+                id="8yjysn-diff"
               >
                 <rect
                   height="8"
@@ -1256,7 +1256,7 @@ Object {
                 />
               </clippath>
               <lineargradient
-                id="mr90k2-animated-diff"
+                id="8yjysn-animated-diff"
               >
                 <stop
                   offset="0%"
@@ -1310,29 +1310,29 @@ Object {
         >
           <svg
             alt="Loading coins details ..."
-            aria-labelledby="yak2z9a-aria"
+            aria-labelledby="cb4xrkj-aria"
             height="124"
             role="img"
             viewBox="0 0 476 124"
             width="100%"
           >
             <title
-              id="yak2z9a-aria"
+              id="cb4xrkj-aria"
             >
               Loading...
             </title>
             <rect
-              clip-path="url(#yak2z9a-diff)"
+              clip-path="url(#cb4xrkj-diff)"
               height="100%"
               role="presentation"
-              style="fill: url(#yak2z9a-animated-diff);"
+              style="fill: url(#cb4xrkj-animated-diff);"
               width="100%"
               x="0"
               y="0"
             />
             <defs>
               <clippath
-                id="yak2z9a-diff"
+                id="cb4xrkj-diff"
               >
                 <rect
                   height="8"
@@ -1373,7 +1373,7 @@ Object {
                 />
               </clippath>
               <lineargradient
-                id="yak2z9a-animated-diff"
+                id="cb4xrkj-animated-diff"
               >
                 <stop
                   offset="0%"
