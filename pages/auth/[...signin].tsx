@@ -1,11 +1,12 @@
+import { getProviders } from "next-auth/client";
 import Signinform from "@components/form/Signinform";
 import Authlayout from "@layouts/Authlayout";
-import { getProviders } from "next-auth/client";
 
-export default function Signin() {
+export default function Signin({ providers }) {
+    
     return (
         <Authlayout title="Signin">
-            <Signinform />
+            <Signinform providers={providers} />
         </Authlayout>
     );
 }

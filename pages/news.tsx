@@ -22,3 +22,5 @@ export default function News() {
         </Pagelayout>
     );
 }
+
+News.auth = true

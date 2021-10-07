@@ -18,3 +18,5 @@ export default function Crypto() {
         </Pagelayout>
     );
 }
+
+Crypto.auth = true

@@ -44,3 +44,5 @@ export default function InventoryManager() {
         </Pagelayout>
     );
 }
+
+InventoryManager.auth = true;

@@ -20,7 +20,7 @@ export default function ListItemView({ item }) {
     const matches = useMediaQuery("(max-width:768px)");
     const classes = sidebarStyle();
 
-    const activeStyle = active && classes.activeLink;
+    const activeStyle = active ? classes.activeLink : "";
 
     useEffect(() => {
         if (router.route.includes(item.link)) {

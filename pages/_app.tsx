@@ -5,14 +5,13 @@ import {
     getProviders,
 } from "next-auth/client";
 import { useEffect, useState } from "react";
-import Router from "next/router";
+import Router, { useRouter } from "next/router";
 import NProgress from "nprogress";
 import { Provider } from "react-redux";
 
 import store, { persistor } from "@store/store";
 import Layout from "@layouts/Layout";
-import Spinner from "@components/Spinner";
-import Signin from "@pages/auth/[...signin]";
+import Auth from "@components/Auth";
 import "nprogress/nprogress.css";
 import "@styles/globals.css";
 
@@ -20,10 +19,13 @@ Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
 
-function MyApp({ Component, pageProps: { session, ...pageProps } }) {
+function App({ Component, pageProps: { session, ...pageProps } }) {
     const [loadingState, setLoading] = useState(false);
     const [loading] = useSession();
+    const router = useRouter();
     console.log("session _app", session, "loading _app", loading);
+
+    console.log("Component auth", Component?.auth);
 
     useEffect(() => {
         const start = () => {
@@ -42,9 +44,6 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         };
     }, []);
 
-    //if (loading !== null && loading !== undefined) {
-    //    return <Spinner />;
-    //}
     return (
         <AuthProvider
             options={{ clientMaxAge: 0, keepAlive: 0 }}
@@ -52,12 +51,14 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         >
             <Provider store={store}>
                 <PersistGate persistor={persistor}>
-                    {session ? (
-                        <Layout>
-                            <Component {...pageProps} />
-                        </Layout>
+                    {Component.auth ? (
+                        <Auth>
+                            <Layout>
+                                <Component {...pageProps} />
+                            </Layout>
+                        </Auth>
                     ) : (
-                        <Signin />
+                        <Component {...pageProps} />
                     )}
                 </PersistGate>
             </Provider>
@@ -65,4 +66,4 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     );
 }
 
-export default MyApp;
+export default App;

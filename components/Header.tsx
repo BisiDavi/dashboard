@@ -29,26 +29,24 @@ export default function Header() {
     function logoutHandler() {
         return signOut({
             redirect: true,
-            callbackUrl: `${process.env.NEXTAUTH_URL}auth/signup`,
+            callbackUrl: `${process.env.NEXTAUTH_URL}/auth/signin`,
         });
     }
     return (
         <AppBar className={classes.appBar} position="static">
             <Toolbar>
                 <Grid container className={classes.gridContainer}>
-                    <Grid className={classes.logo} item lg={3}>
-                        <Tooltip title="Office dashboard">
-                            <Logo />
-                        </Tooltip>
+                    <Grid className={classes.logo} item lg={2}>
+                        <Logo />
                     </Grid>
-                    <Grid item lg={2} className={classes.gridItem}>
+                    <Grid item lg={3} className={classes.gridItem}>
                         <div className={classes.menuGroup}>
                             {session && (
                                 <img
                                     src={session?.user?.image}
                                     alt={session?.user?.name}
-                                    height="75px"
-                                    width="75px"
+                                    height="60px"
+                                    width="60px"
                                 />
                             )}
                             {session && (

@@ -11,3 +11,5 @@ export default function Covid19() {
         </Pagelayout>
     );
 }
+
+Covid19.auth = true;
