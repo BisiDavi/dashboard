@@ -39,7 +39,6 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         <Provider store={store}>
             <PersistGate persistor={persistor}>
                 <SessionProvider session={session}>
-                    {console.log("component.auth", Component?.auth)}
                     {Component.auth ? (
                         <Auth>
                             <Layout>
