@@ -37,7 +37,7 @@ function CarouselItem({ slide }) {
             </Paper>
         </a>
     );
-}c
+}
 
 export default function NewsSlider() {
     const { data, status } = useQuery("newsSlider", newsAxiosInstance);

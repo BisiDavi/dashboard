@@ -146,88 +146,72 @@ export default function EnhancedTable() {
                                 rowCount={tableData.length}
                             />
                             <TableBody>
-                                {stableSort(
-                                    tableData,
-                                    getComparator(order, orderBy),
-                                )
-                                    .slice(
-                                        page * rowsPerPage,
-                                        page * rowsPerPage + rowsPerPage,
-                                    )
-                                    .map((row, index) => {
-                                        const isItemSelected = isSelected(
-                                            row.name,
-                                        );
-                                        const labelId = `enhanced-table-checkbox-${index}`;
+                                {tableData.map((row, index) => {
+                                    const isItemSelected = isSelected(row.name);
+                                    const labelId = `enhanced-table-checkbox-${index}`;
 
-                                        return (
-                                            <TableRow
-                                                hover
-                                                tabIndex={-1}
-                                                key={row.name}
+                                    return (
+                                        <TableRow
+                                            hover
+                                            tabIndex={-1}
+                                            key={row.name}
+                                        >
+                                            <TableCell padding="checkbox">
+                                                <Checkbox
+                                                    checked={isItemSelected}
+                                                    onClick={(event) =>
+                                                        handleClick(
+                                                            event,
+                                                            row.name,
+                                                        )
+                                                    }
+                                                    inputProps={{
+                                                        "aria-labelledby":
+                                                            labelId,
+                                                    }}
+                                                />
+                                            </TableCell>
+                                            <TableCell
+                                                component="th"
+                                                id={labelId}
+                                                scope="row"
+                                                padding="none"
                                             >
-                                                <TableCell padding="checkbox">
-                                                    <Checkbox
-                                                        checked={isItemSelected}
-                                                        onClick={(event) =>
-                                                            handleClick(
-                                                                event,
-                                                                row.name,
-                                                            )
+                                                {row.name}
+                                            </TableCell>
+                                            <TableCell>
+                                                {row.category}
+                                            </TableCell>
+                                            <TableCell>{row.price}</TableCell>
+                                            <TableCell>
+                                                {row.quantity}
+                                            </TableCell>
+                                            <TableCell>
+                                                {row.description}
+                                            </TableCell>
+                                            <TableCell>
+                                                <Tooltip title="Edit Product">
+                                                    <IconButton
+                                                        onClick={() =>
+                                                            editProduct(index)
                                                         }
-                                                        inputProps={{
-                                                            "aria-labelledby":
-                                                                labelId,
-                                                        }}
-                                                    />
-                                                </TableCell>
-                                                <TableCell
-                                                    component="th"
-                                                    id={labelId}
-                                                    scope="row"
-                                                    padding="none"
-                                                >
-                                                    {row.name}
-                                                </TableCell>
-                                                <TableCell>
-                                                    {row.category}
-                                                </TableCell>
-                                                <TableCell>
-                                                    {row.price}
-                                                </TableCell>
-                                                <TableCell>
-                                                    {row.quantity}
-                                                </TableCell>
-                                                <TableCell>
-                                                    {row.description}
-                                                </TableCell>
-                                                <TableCell>
-                                                    <Tooltip title="Edit Product">
-                                                        <IconButton
-                                                            onClick={() =>
-                                                                editProduct(
-                                                                    index,
-                                                                )
-                                                            }
-                                                        >
-                                                            <EditIcon />
-                                                        </IconButton>
-                                                    </Tooltip>
-                                                    <Tooltip title="Delete Product">
-                                                        <IconButton
-                                                            onClick={() =>
-                                                                deleteProduct(
-                                                                    index,
-                                                                )
-                                                            }
-                                                        >
-                                                            <DeleteIcon />
-                                                        </IconButton>
-                                                    </Tooltip>
-                                                </TableCell>
-                                            </TableRow>
-                                        );
-                                    })}
+                                                    >
+                                                        <EditIcon />
+                                                    </IconButton>
+                                                </Tooltip>
+                                                <Tooltip title="Delete Product">
+                                                    <IconButton
+                                                        onClick={() =>
+                                                            deleteProduct(index)
+                                                        }
+                                                    >
+                                                        <DeleteIcon />
+                                                    </IconButton>
+                                                </Tooltip>
+                                            </TableCell>
+                                        </TableRow>
+                                    );
+                                })}
                                 {emptyRows > 0 && (
                                     <TableRow>
                                         <TableCell colSpan={6} />
