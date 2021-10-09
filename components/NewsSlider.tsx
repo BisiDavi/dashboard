@@ -22,7 +22,7 @@ function CarouselItem({ slide }) {
         >
             <Paper elevation={3} className={classes.paper}>
                 <img
-                    src={slide.image.thumbnail.contentUrl}
+                    src={slide?.image?.thumbnail?.contentUrl}
                     alt={slide.name}
                     className={classes.newsImage}
                 />
@@ -37,7 +37,7 @@ function CarouselItem({ slide }) {
             </Paper>
         </a>
     );
-}
+}c
 
 export default function NewsSlider() {
     const { data, status } = useQuery("newsSlider", newsAxiosInstance);
