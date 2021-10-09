@@ -28,4 +28,19 @@ export const axiosRandomQuotesInstance = axios.create({
     },
 });
 
+const options: any = {
+    method: "GET",
+    url: process.env.NEXT_PUBLIC_RAPIDAPI_API,
+    params: { safeSearch: "Off", textFormat: "Raw", mkt: "en-us", cc: "us" },
+    headers: {
+        "x-bingapis-sdk": "true",
+        "x-rapidapi-host": process.env.NEXT_PUBLIC_RAPIDAPI_HOST,
+        "x-rapidapi-key": process.env.NEXT_PUBLIC_RAPIDAPI_KEY,
+    },
+};
+export async function newsAxiosInstance() {
+    const { data } = await axios.request(options);
+    return data.value;
+}
+
 export default axiosInstance;

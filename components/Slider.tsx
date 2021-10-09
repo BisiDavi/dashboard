@@ -5,8 +5,10 @@ import { useEffect, useState } from "react";
 import { Grid } from "@material-ui/core";
 import axios from "axios";
 import { useQuery } from "react-query";
+
 import { axiosRandomQuotesInstance } from "@api/axiosInstance";
 import { sliderStyles } from "@styles/Slider.style";
+import NewsSlider from "@components/NewsSlider";
 
 function CarouselItem(slide) {
     const classes = sliderStyles();
@@ -73,11 +75,13 @@ export default function Slider() {
     const classes = sliderStyles();
 
     return (
-        <Grid container>
-            <Grid item lg={8}></Grid>
+        <Grid container className={classes.gridContainer} spacing={2}>
+            <Grid item lg={5}>
+                <NewsSlider />
+            </Grid>
             <Grid className={classes.gridItem} item lg={4}>
                 {slideData[0]?.length > 0 && (
-                    <Carousel>
+                    <Carousel  interval={6000}>
                         {slideData[0].map((slide) => (
                             <CarouselItem key={slide.author} slide={slide} />
                         ))}

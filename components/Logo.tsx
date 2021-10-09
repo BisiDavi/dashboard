@@ -35,7 +35,7 @@ export default function Logo() {
             <a>
                 <div className={classes.logo}>
                     <div className="triangle"></div>
-                    <h1 data-testid="logo-text">Office Dashboard</h1>
+                    <h1 data-testid="logo-text">News Dashboard</h1>
                 </div>
             </a>
         </Link>
