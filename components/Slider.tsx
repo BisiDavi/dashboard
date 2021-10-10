@@ -76,12 +76,12 @@ export default function Slider() {
 
     return (
         <Grid container className={classes.gridContainer} spacing={2}>
-            <Grid item lg={5}>
+            <Grid  className={classes.newsGridItem} item lg={5} xs={12}>
                 <NewsSlider />
             </Grid>
-            <Grid className={classes.gridItem} item lg={4}>
+            <Grid className={classes.gridItem} item xs={12} lg={4}>
                 {slideData[0]?.length > 0 && (
-                    <Carousel  interval={6000}>
+                    <Carousel interval={6000}>
                         {slideData[0].map((slide) => (
                             <CarouselItem key={slide.author} slide={slide} />
                         ))}
