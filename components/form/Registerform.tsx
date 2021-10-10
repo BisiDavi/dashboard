@@ -19,8 +19,7 @@ export default function Registerform() {
                     password: "",
                 }}
                 validationSchema={authSchema}
-                onSubmit={(values) => {
-                }}
+                onSubmit={(values) => {}}
             >
                 {({
                     handleChange,

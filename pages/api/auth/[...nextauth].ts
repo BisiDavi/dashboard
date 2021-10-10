@@ -11,6 +11,20 @@ const options = {
             clientId: process.env.NEXT_PUBLIC_GITHUB_ID,
             clientSecret: process.env.NEXT_PUBLIC_GITHUB_SECRET,
         }),
+        Providers.Credentials({
+            name: "Credentials",
+            async authorize(credentials, req) {
+                const { username, password } = req.body;
+                if (username !== "guest" && password !== "guest") return;
+                const user = { name: username, password };
+
+                if (user) {
+                    return user;
+                } else {
+                    return null;
+                }
+            },
+        }),
     ],
     pages: {
         signIn: "/auth/signin",

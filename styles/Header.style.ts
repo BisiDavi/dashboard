@@ -21,6 +21,9 @@ export const headerStyles = makeStyles((theme) => ({
     logout: {
         color: "red",
     },
+    email: {
+        fontWeight: "bold",
+    },
     menuGroup: {
         "& img": {
             borderRadius: "50%",

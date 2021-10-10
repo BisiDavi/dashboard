@@ -46,4 +46,17 @@ export const authFormStyles = makeStyles((theme) => ({
         justifyContent: "space-around",
         margin: "10px auto",
     },
+    alternative: {
+        display: "flex",
+        alignItems: "center",
+        padding: "10px",
+        "& h3": {
+            fontSize: "20px",
+            margin: "auto",
+        },
+        "& h5": {
+            fontSize: "15px",
+            fontWeight: "bold",
+        },
+    },
 }));

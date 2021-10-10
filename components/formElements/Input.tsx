@@ -1,5 +1,5 @@
-import { useState, ChangeEvent } from "react";
 import { TextField, makeStyles } from "@material-ui/core";
+import { useState, ChangeEvent } from "react";
 import { FormikErrors, FormikTouched } from "formik";
 import { formValues } from "../../types";
 
@@ -40,23 +40,20 @@ export default function Input({
 }: InputProps) {
     const classes = useStyles();
     return (
-            <TextField
-                variant="outlined"
-                type={input.type}
-                data-testid="text-input"
-                fullWidth
-                name={input.name}
-                placeholder={input.placeholder}
-                value={values[input.name]}
-                className={classes.input}
-                label={input.label}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                helperText={
-                    errors &&
-                    errors[values[input.name]] &&
-                    touched[values[input.name]]
-                }
-            />
+        <TextField
+            variant="outlined"
+            type={input.type}
+            data-testid="text-input"
+            fullWidth
+            name={input.name}
+            placeholder={input.placeholder}
+            value={values[input.name]}
+            className={classes.input}
+            label={input.label}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            error={errors[input.name]}
+            helperText={errors[input.name]}
+        />
     );
 }

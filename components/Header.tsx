@@ -41,7 +41,7 @@ export default function Header() {
                     </Grid>
                     <Grid item lg={3} className={classes.gridItem}>
                         <div className={classes.menuGroup}>
-                            {session && (
+                            {session?.user?.image && (
                                 <img
                                     src={session?.user?.image}
                                     alt={session?.user?.name}
@@ -51,14 +51,17 @@ export default function Header() {
                             )}
                             {session && (
                                 <Typography className={classes.email}>
-                                    {session?.user?.email}
+                                    Welcome{"  "}
+                                    {session?.user.email
+                                        ? session?.user.email
+                                        : session?.user.name}
                                 </Typography>
                             )}
                             <Button
                                 onClick={logoutHandler}
                                 className={classes.logout}
                             >
-                                {displayIcons("logout")} {" "} Logout
+                                {displayIcons("logout")} Logout
                             </Button>
                         </div>
                         <IconButton

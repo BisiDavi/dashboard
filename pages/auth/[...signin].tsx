@@ -1,12 +1,11 @@
-import { getProviders } from "next-auth/client";
+import { getCsrfToken, getProviders } from "next-auth/client";
 import Signinform from "@components/form/Signinform";
 import Authlayout from "@layouts/Authlayout";
 
-export default function Signin({ providers }) {
-    
+export default function Signin({ providers, csrfToken }) {
     return (
         <Authlayout title="Signin">
-            <Signinform providers={providers} />
+            <Signinform csrfToken={csrfToken} providers={providers} />
         </Authlayout>
     );
 }
@@ -14,6 +13,6 @@ export default function Signin({ providers }) {
 export async function getServerSideProps(context) {
     const providers = await getProviders();
     return {
-        props: { providers },
+        props: { providers, csrfToken: await getCsrfToken(context) },
     };
 }
