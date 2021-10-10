@@ -111,9 +111,27 @@ export const sliderStyles = makeStyles((theme: Theme) => ({
         fontSize: "13px",
         margin: "10px 0px",
     },
+    newsOverlay: {
+        display: "none",
+    },
     [theme.breakpoints.down("xs")]: {
         newsImage: {
-            display: "none",
+            //display: "none",
+            position: "absolute",
+            left: 0,
+            width: "100%",
+            height: "200px",
+            zIndex: 1,
+        },
+        newsOverlay: {
+            zIndex: 10,
+            backgroundColor: "#1514147a",
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "200px",
+            display: "flex",
         },
         title: {
             textAlign: "center",
@@ -122,6 +140,7 @@ export const sliderStyles = makeStyles((theme: Theme) => ({
             height: "200px",
             alignItem: "center",
             padding: "10px",
+            position: "relative",
         },
         gridContainer: {
             justifyContent: "flex-start",
@@ -134,6 +153,8 @@ export const sliderStyles = makeStyles((theme: Theme) => ({
         },
         news: {
             justifyContent: "center",
+            zIndex: 20,
+            color: "white",
         },
         row: {
             width: "unset",
@@ -141,6 +162,7 @@ export const sliderStyles = makeStyles((theme: Theme) => ({
         newsSlide: {
             width: "100%",
             height: "200px",
+            position: "relative",
         },
     },
 }));

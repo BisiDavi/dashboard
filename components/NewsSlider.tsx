@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Carousel from "react-material-ui-carousel";
-import { Paper } from "@material-ui/core";
+import { Paper, useMediaQuery } from "@material-ui/core";
 import React from "react";
 import { useQuery } from "react-query";
 import { ToastContainer } from "react-toastify";
@@ -19,6 +19,7 @@ function CarouselItem({ slide }) {
             className={classes.newsSlide}
         >
             <Paper elevation={3} className={classes.paper}>
+                <div className={classes.newsOverlay}></div>
                 <img
                     src={slide?.image?.thumbnail?.contentUrl}
                     alt={slide.name}
