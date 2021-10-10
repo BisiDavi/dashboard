@@ -110,6 +110,11 @@ export const sliderStyles = makeStyles((theme: Theme) => ({
     newsContent: {
         fontSize: "13px",
         margin: "10px 0px",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        display: "-webkit-box",
+        "-webkit-line-clamp": 3,
+        "-webkit-box-orient": "vertical",
     },
     newsOverlay: {
         display: "none",
