@@ -29,6 +29,11 @@ export const sidebarStyle = makeStyles((theme: Theme) =>
             logout: {
                 marginTop: 50,
                 color: "red",
+                fontSize: "16px",
+                fontWeight: "bold",
+                "& svg": {
+                    margin: "0px 5px",
+                },
             },
         },
         activeLink: {

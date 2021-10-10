@@ -46,7 +46,8 @@ export default function Sidebar() {
                     ))}
                 </List>
                 <IconButton onClick={logoutHandler} className={classes.logout}>
-                    {displayIcons("logout")} Logout
+                    {displayIcons("logout")}
+                    {"  "} Logout
                 </IconButton>
             </div>
         </Paper>
