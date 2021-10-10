@@ -33,8 +33,6 @@ export default function Signinform({ providers, csrfToken }: SigninformProps) {
     const router = useRouter();
     const [session] = useSession();
 
-    console.log("session", session);
-
     useEffect(() => {
         if (session) {
             router.push("/");

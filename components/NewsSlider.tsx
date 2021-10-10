@@ -11,8 +11,6 @@ import formatDate from "@utils/formatDate";
 function CarouselItem({ slide }) {
     const classes = sliderStyles();
 
-    console.log("slide", slide);
-
     return (
         <a
             target="_blank"
