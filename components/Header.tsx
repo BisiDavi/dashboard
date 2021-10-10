@@ -60,7 +60,7 @@ export default function Header() {
                             <Button
                                 onClick={logoutHandler}
                                 className={classes.logout}
-                            >
+                            
                                 {displayIcons("logout")} Logout
                             </Button>
                         </div>

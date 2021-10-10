@@ -27,6 +27,7 @@ export const headerStyles = makeStyles((theme) => ({
     menuGroup: {
         "& img": {
             borderRadius: "50%",
+            margin: "0px 10px",
         },
         flexDirection: "row",
         width: "100%",
